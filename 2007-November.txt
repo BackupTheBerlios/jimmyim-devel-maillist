@@ -1,0 +1,216 @@
+From usajusaj at gmail.com  Fri Nov 16 20:11:28 2007
+From: usajusaj at gmail.com (Matej Usaj)
+Date: Fri, 16 Nov 2007 20:11:28 +0100
+Subject: [Jimmyim-devel] Merged usajusaj-jabber with trunk
+Message-ID: <698b8f7f0711161111v4b207ea2p6ef0dc3167575a99@mail.gmail.com>
+
+Hi,
+
+Just merged my version with trunk.
+Here is svn merge log:
+- Merge with usajusaj-jabber
+- Implemented Yahoo protocol (Some code and challenge binary data file
+borrowed from jYMSG project)
+- Jabber optimizations and minor bug fixes
+- ServerHandler code optimisations (getReply(...) methods were implemented 3
+times allmost identicaly)
+- Added contact sorting. Primary sort is by status, secondary by name
+- Added Yahoo protocol to new account wizzard
+- Optimizations in Utils (too much type casting)
+- XmlNode toString() method implemented
+
+Please test it and report any bugs.
+
+Also found out that MSN and ICQ protocols are out of order. Check their code
+asap for protocol changes (I excluded my changes to the code from causes. I
+tested both protocols on last stable trunk version and it didn't work there
+either).
+
+I also have a question regarding account login/logout.
+How can I fire account logout procedure from within my protocol?
+Reason: I get LOGOFF packet in Yahoo protocol when I login with the same
+account from some other client. When this happens I should change the
+Display to MainMenu and execute the same code as it would be executed when I
+press Logout button on that Account in MainMenu.
+
+Regards,
+Matej U?aj
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071116/e6e57b40/attachment.html>
+
+From zoran.mesec at gmail.com  Sat Nov 17 13:51:02 2007
+From: zoran.mesec at gmail.com (Zoran Mesec)
+Date: Sat, 17 Nov 2007 13:51:02 +0100
+Subject: [Jimmyim-devel] Jimmyim-devel Digest, Vol 10, Issue 1
+In-Reply-To: <mailman.94.1195297289.917.jimmyim-devel@lists.berlios.de>
+References: <mailman.94.1195297289.917.jimmyim-devel@lists.berlios.de>
+Message-ID: <473EE3B6.4080103@gmail.com>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071117/b8c6fa0e/attachment.html>
+
+From usajusaj at usajusaj.org  Sat Nov 17 15:17:17 2007
+From: usajusaj at usajusaj.org (Matej Usaj)
+Date: Sat, 17 Nov 2007 15:17:17 +0100
+Subject: [Jimmyim-devel] Jimmyim-devel Digest, Vol 10, Issue 1
+In-Reply-To: <473EE3B6.4080103@gmail.com>
+References: <mailman.94.1195297289.917.jimmyim-devel@lists.berlios.de>
+	<473EE3B6.4080103@gmail.com>
+Message-ID: <ca54e7f60711170617g12bdd175wa6ce5d17432b1849@mail.gmail.com>
+
+Hi
+
+On 11/17/07, Zoran Mesec <zoran.mesec at gmail.com> wrote:
+>
+>  Hi!
+>
+> ------------------------------
+>
+> Today's Topics:
+>
+>    1. Merged usajusaj-jabber with trunk (Matej Usaj)
+>
+>
+>
+> ------------------------------
+>
+>   Zadeva:
+> [Jimmyim-devel] Merged usajusaj-jabber with trunk  Od:
+> "Matej Usaj" <usajusaj at gmail.com> <usajusaj at gmail.com>  Datum:
+> Fri, 16 Nov 2007 20:11:28 +0100  Za:
+> jimmyim-devel at lists.berlios.de    Za:
+> jimmyim-devel at lists.berlios.de
+> Hi,
+>
+> Just merged my version with trunk.
+> Here is svn merge log:
+> - Merge with usajusaj-jabber
+> - Implemented Yahoo protocol (Some code and challenge binary data file
+> borrowed from jYMSG project)
+> - Jabber optimizations and minor bug fixes
+> - ServerHandler code optimisations (getReply(...) methods were implemented
+> 3 times allmost identicaly)
+> - Added contact sorting. Primary sort is by status, secondary by name
+> - Added Yahoo protocol to new account wizzard
+> - Optimizations in Utils (too much type casting)
+> - XmlNode toString() method implemented
+>
+> Please test it and report any bugs.
+>
+> Very cool! :D
+> I have tried logging/chatting and found no problems.
+> Is there any option to avoid the usage of java.security package? Because
+> some devices do not have this installed.
+>
+
+I'll try to rewrite it using our local MD5 library.
+
+Also found out that MSN and ICQ protocols are out of order. Check their code
+> asap for protocol changes (I excluded my changes to the code from causes. I
+> tested both protocols on last stable trunk version and it didn't work there
+> either).
+>
+> MSN server is pretty f**** up, and it did not work in Pidgin in the last
+> few days either.
+>
+
+Noted. On the other hand, ICQ is really busted, so I've rewritten the
+authentication procedure in a more dynamic way. Expect updates soon. I had
+to stop testing it yesterday because I was banned from the server for
+flooding it :) I hope they've unbanned be allready. Authentication is
+completed, only roster parsing is still busted.
+
+I also have a question regarding account login/logout.
+> How can I fire account logout procedure from within my protocol?
+> Reason: I get LOGOFF packet in Yahoo protocol when I login with the same
+> account from some other client. When this happens I should change the
+> Display to MainMenu and execute the same code as it would be executed when I
+> press Logout button on that Account in MainMenu.
+>
+> This is how you fire account logout from inside a protocol:
+>                     this.connected_=false;
+>                     this.status_=DISCONNECTED;
+>                     this.logout();    //optional - only if you need to
+> send packages for log out
+> ...the disconnected protocol is then automatically removed from the list
+> of connected protocols by the outside loop.
+>
+
+Thanks, I'll try it.
+
+cheers,
+> Zoran
+>
+>
+> Regards,
+> Matej U?aj
+>
+> ------------------------------
+>
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.dehttps://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+>
+>
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+>
+cheers
+matej
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071117/c2c9efb3/attachment.html>
+
+From sakdean at gmail.com  Sat Nov 17 15:24:28 2007
+From: sakdean at gmail.com (Dejan Sakelsak)
+Date: Sat, 17 Nov 2007 15:24:28 +0100
+Subject: [Jimmyim-devel] Jimmyim-devel Digest, Vol 10, Issue 1
+In-Reply-To: <ca54e7f60711170617g12bdd175wa6ce5d17432b1849@mail.gmail.com>
+References: <mailman.94.1195297289.917.jimmyim-devel@lists.berlios.de>
+	<473EE3B6.4080103@gmail.com>
+	<ca54e7f60711170617g12bdd175wa6ce5d17432b1849@mail.gmail.com>
+Message-ID: <3568adfc0711170624w76035a92saacfe38793cf4eef@mail.gmail.com>
+
+On 11/17/07, Matej Usaj <usajusaj at usajusaj.org> wrote:
+
+> Noted. On the other hand, ICQ is really busted, so I've rewritten the
+> authentication procedure in a more dynamic way. Expect updates soon. I had
+> to stop testing it yesterday because I was banned from the server for
+> flooding it :) I hope they've unbanned be allready. Authentication is
+> completed, only roster parsing is still busted.
+>
+> You're crazy :D
+
+To not get blocked from the server, try to login/logout a maximum of 5
+minutes between retries. Anyway the normally ban you for about 30min, but if
+you keep tring when your banned, than the number increases for every tetry.
+:) Yeah, security... :)
+
+Matje, thanks! You've done what i was telling to myself to fix for a year
+now :)
+
+regards
+Dejan
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071117/e797a292/attachment.html>
+
+From zoran.mesec at gmail.com  Tue Nov 20 22:49:37 2007
+From: zoran.mesec at gmail.com (Zoran Mesec)
+Date: Tue, 20 Nov 2007 22:49:37 +0100
+Subject: [Jimmyim-devel] MSN working again
+Message-ID: <8cf12d460711201349o58d924aao33eb1c345b7493c3@mail.gmail.com>
+
+MSN is working again. I fixed it.
+
+cheers,
+Zoran
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071120/5a05f1a4/attachment.html>
+

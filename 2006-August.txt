@@ -1,0 +1,95 @@
+From zoran.mesec at siol.net  Thu Aug 10 13:51:19 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Thu, 10 Aug 2006 13:51:19 +0200
+Subject: [Jimmyim-devel] MSNProtocol downgrade
+Message-ID: <000001c6bc73$4c7b0770$0200a8c0@HlevZoran60c246b6a2>
+
+I downgraded the MSN protocol version to 10 (Gaim uses the same version),
+because of challenge.Challenge algorithm for v.11 is too demanding for
+mobile phones, therefore it is better to implement v.9. A great amount of
+code for implementation of v.11 is already written (3/4 steps). This code
+was uploaded in branches/Zoran/MSNP11challenge.java. 
+
+ 
+
+Upload comment to branches/Zoran/MSNP11challenge.java:
+
+>This is a piece of source code that originates from the function
+parseChallenge() in file MSNProtocol.java. Due to a downgrade to protocol
+version 10, this code is not neccessary anymore. Challenge algorithm for MSN
+protocol v.11 is tough and hard to implement on mobile devices. Three steps
+out of for are implemented in this code.<
+
+ 
+
+Best regards, 
+
+Zoran
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20060810/96ab1a41/attachment.html>
+
+From sakdean at gmail.com  Thu Aug 10 14:11:25 2006
+From: sakdean at gmail.com (Sahel)
+Date: Thu, 10 Aug 2006 14:11:25 +0200
+Subject: [Jimmyim-devel] Introducing the new JimmyIM beta!!!
+In-Reply-To: <000001c6bc73$c0a02720$0200a8c0@HlevZoran60c246b6a2>
+References: <000001c6bc73$c0a02720$0200a8c0@HlevZoran60c246b6a2>
+Message-ID: <3568adfc0608100511o6b5349f8pa17e7b66eb6979f8@mail.gmail.com>
+
+I don't think so. We still didn't implemented all the needed features.
+I think we should announce the beta release in a few days.
+by
+Dejan
+
+On 8/10/06, Zoran Mesec <zoran.mesec at siol.net> wrote:
+>
+>
+>
+>
+> Jimmy is ready for a beta release!!!
+>
+>
+>
+> Yeah!
+
+
+From sakdean at gmail.com  Thu Aug 10 14:18:06 2006
+From: sakdean at gmail.com (Sahel)
+Date: Thu, 10 Aug 2006 14:18:06 +0200
+Subject: [Jimmyim-devel] Introducing the new JimmyIM beta!!!
+In-Reply-To: <3568adfc0608100511o6b5349f8pa17e7b66eb6979f8@mail.gmail.com>
+References: <000001c6bc73$c0a02720$0200a8c0@HlevZoran60c246b6a2>
+	<3568adfc0608100511o6b5349f8pa17e7b66eb6979f8@mail.gmail.com>
+Message-ID: <3568adfc0608100518m6b07ae21oeaacd08c88bdfc33@mail.gmail.com>
+
+steps to do to beta1:
+- fix some bugs with the jabber protocol - it doesn't seem to work
+quite well with gristle.org to me
+- finish the implementation of ICQ
+i think we should do that too:
+- change the data structure of the contacts_ attribute in the
+protocols to a mapped one for faster access to contacts by userID
+bye
+Dejan
+
+On 8/10/06, Sahel <sakdean at gmail.com> wrote:
+> I don't think so. We still didn't implemented all the needed features.
+> I think we should announce the beta release in a few days.
+> by
+> Dejan
+>
+> On 8/10/06, Zoran Mesec <zoran.mesec at siol.net> wrote:
+> >
+> >
+> >
+> >
+> > Jimmy is ready for a beta release!!!
+> >
+> >
+> >
+> > Yeah!
+>
+
+

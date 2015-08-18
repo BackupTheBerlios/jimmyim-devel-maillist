@@ -1,0 +1,588 @@
+From zoran.mesec at siol.net  Mon Jun  5 20:50:17 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Mon, 5 Jun 2006 20:50:17 +0200
+Subject: [Jimmyim-devel] public class RMS
+Message-ID: <001501c688d0$e647d440$0100a8c0@HlevZoran60c246b6a2>
+
+Hello!
+
+I have uploaded RMS.java into jimmy/util. This class handles communication
+with persistent storage.
+
+Usage:
+RMS rms = new RMS();
+// or new RMS(String RSName) if you know what are you doing
+
+String[] stores = rms.getStores();
+
+        for(int i=0; i<stores.length;i++)
+        {
+            System.out.println("Store nr." + i + ":" + stores[i]);
+            if(a[i].substring(0,5).compareTo("Jimmy") == 0)
+            {
+			// this Record Store is of type Jimmy. Print to
+display!!!
+            }
+        }
+
+Explanation:
+Mobile phones have so called Record stores for storing information. Each
+store has a unique name. In my case (WTK emulator), 6 stores were present by
+default:
+Store nr.0:Config.3
+Store nr.1:HighScores
+Store nr.2:ImMIDPSettings
+Store nr.3:PhotoAlbum
+Store nr.4:Strings.1
+Store nr.5:im_tr_settingsM
+Store nr.6:wv:ImportantNote
+
+I dont know what are they. 
+So, later on I have created my own Jimmy store:
+
+        rms.openStore("JimmyZoranMesec");  
+
+IMPORTANT: every store that Jimmy creates must start with Jimmy. After this
+any name can follow.
+Example:
+"JimmyXXXXXXXXXX..."
+
+Then I have added data (my personal login data for each protocol):
+
+String u = "zoran.mesec at siol.net";
+	int protocolType = 1;
+        rms.addRecord((char)protocolType + "" +(char)u.length() + u + "
+mysecretMSNpassword ");
+u = "zoran.mesec at siol.net";
+	protocolType = 2;
+        rms.addRecord((char)protocolType + "" +(char)u.length() + u + "
+mysecretJabberpassword ");
+
+Explanation:
+all microedition persistent data is stored as a byte array, therefore we
+have to improvise a bit. 
+In our case, first byte of data represents ProtocolType (1 for MSN, 2 for
+Jabber, ...). The second byte is the length of the username. Then username
+and password follow.
+
+
+Further reading:
+ 
+after user selects one of stores, we need to get data (usernames and
+passwords) that were stored before (see above) for each protocol:
+
+Account[] accounts = rms.getAccounts();
+
+This could follow:
+System.out.println(accounts[0].getUser());	// Prints my MSN username
+"zoran.mesec at siol.net"
+System.out.println(accounts[0].getPassword());	// prints my MSN password
+"mysecretMSNpassword"
+System.out.println(accounts[0].getProtocolType());	// prints 1, that
+stands for MSN Messenger Protocol
+
+System.out.println(accounts[1].getUser());	// Prints my Jabber username
+"zoran.mesec at jabber.org"
+System.out.println(accounts[1].getPassword());	// prints my MSN password
+"mysecretJabberpassword"
+System.out.println(accounts[1].getProtocolType());	// prints 2, that
+stands for Jabber Protocol
+
+...
+
+To delete a record, simply type this:
+
+        rms.deleteStore("JimmyZoranMesec");
+
+
+All code is also well commented. 
+
+What is going on with UI ?!
+
+Best regards, 
+Zoran
+
+
+
+From matevz.jekovec at gmail.com  Mon Jun  5 22:54:03 2006
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Mon, 05 Jun 2006 22:54:03 +0200
+Subject: [Jimmyim-devel] public class RMS
+In-Reply-To: <001501c688d0$e647d440$0100a8c0@HlevZoran60c246b6a2>
+References: <001501c688d0$e647d440$0100a8c0@HlevZoran60c246b6a2>
+Message-ID: <448499EB.9070800@gmail.com>
+
+Great!
+
+I've been thinking about this and I think the best way would be to
+create a single store named "JimmyIM". We should store the data using
+the \n (newline) separator character. I wouldn't complicate things up
+with XML, but simply pre-define the series of data correctly and
+wouldn't use any variables and special syntax (like .ini files, XML,
+scripting languages etc.) in the store format besides the simple \n
+character for the next value.
+
+I'd design the store buffer in the following order:
+1) Program version
+2) Program settings (like auto-connect/login etc.)
+3) Account settings - directly stored Protocol classes:
+3.1) Account type (as defined in Account.java, protocolType)
+3.2) Account username
+3.3) Account password
+3.4) Account server (optional, leave \n if empty)
+3.5) Server's port (optional, leave \n if set to default)
+
+The config file parser would be very simplified this way in comparison
+to XML parser. Any other stuff I forgot?
+
+
+Regards.
+- Matev?
+
+
+
+From zoran.mesec at siol.net  Mon Jun  5 23:16:37 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Mon, 5 Jun 2006 23:16:37 +0200
+Subject: [Jimmyim-devel] splash screen
+Message-ID: <000001c688e5$55dad190$0100a8c0@HlevZoran60c246b6a2>
+
+Hello!!
+
+Jimmy Splash screen is now in /trunk. If anyone has a nicer splash ... it is
+time to show his work :)
+
+
+Data:
+- 240x320 pixels (the default WTK emulator resolution)
+- png 128 colors(8 bit)
+- 5,9 kB
+
+Best regards, 
+Zoran
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: JimmyIM_splash.png
+Type: image/png
+Size: 6069 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20060605/2a8acae1/attachment.png>
+
+From janez.urevc at siol.net  Tue Jun  6 00:16:56 2006
+From: janez.urevc at siol.net (JAnez Urevc)
+Date: Tue, 06 Jun 2006 00:16:56 +0200
+Subject: [Jimmyim-devel] public class RMS
+In-Reply-To: <448499EB.9070800@gmail.com>
+References: <001501c688d0$e647d440$0100a8c0@HlevZoran60c246b6a2> <448499EB.9070800@gmail.com>
+Message-ID: <4484AD58.1020004@siol.net>
+
+I agree with Matev?.
+
+Reason:
+I tried to use RMS to save data entered in new account form and works
+quite fine. The only problem is that getAccounts() uses variable "user"
+to save whole string (user at jabber.org e.g.), but it should separate into
+user and server. I think it would be easiest if we separate data using
+newline character.
+
+JAnez
+
+Matev? Jekovec wrote:
+> Great!
+> 
+> I've been thinking about this and I think the best way would be to
+> create a single store named "JimmyIM". We should store the data using
+> the \n (newline) separator character. I wouldn't complicate things up
+> with XML, but simply pre-define the series of data correctly and
+> wouldn't use any variables and special syntax (like .ini files, XML,
+> scripting languages etc.) in the store format besides the simple \n
+> character for the next value.
+> 
+> I'd design the store buffer in the following order:
+> 1) Program version
+> 2) Program settings (like auto-connect/login etc.)
+> 3) Account settings - directly stored Protocol classes:
+> 3.1) Account type (as defined in Account.java, protocolType)
+> 3.2) Account username
+> 3.3) Account password
+> 3.4) Account server (optional, leave \n if empty)
+> 3.5) Server's port (optional, leave \n if set to default)
+> 
+> The config file parser would be very simplified this way in comparison
+> to XML parser. Any other stuff I forgot?
+> 
+> 
+> Regards.
+> - Matev?
+> 
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+> 
+
+
+From zoran.mesec at siol.net  Wed Jun  7 09:46:32 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Wed, 7 Jun 2006 09:46:32 +0200
+Subject: [Jimmyim-devel] public class RMS
+In-Reply-To: <4484AD58.1020004@siol.net>
+Message-ID: <002401c68a06$7ffbc0c0$0100a8c0@HlevZoran60c246b6a2>
+
+I agree also, but there are some issues unsolved:
+
+a)unique identifier for each "Jimmy" account, because there can be more
+users on the same mobile phone:
+
+User1:
+> 3.1) Account type (as defined in Account.java, protocolType)
+> 3.2) Account username
+> 3.3) Account password
+> 3.4) Account server (optional, leave \n if empty)
+> 3.5) Server's port (optional, leave \n if set to default)
+
+User2:
+> 3.1) Account type (as defined in Account.java, protocolType)
+> 3.2) Account username
+> 3.3) Account password
+> 3.4) Account server (optional, leave \n if empty)
+> 3.5) Server's port (optional, leave \n if set to default)
+
+We can't differenciate by usernames(if so, by what username?), so lets add
+an identifier:
+> 3.0) JimmySettings identifier (when creating settings for protocols, user
+should also type his real name as an identifier). E.q.: Zoran Mesec
+
+The result of the store fetch would be:
+- Zoran Mesec settings (which includes my usernames and passwords)
+- AnyOther Member (which also includes all usernames and passwords for
+AnyOther Member)
+
+
+b)how do we know the number of protocols the user is connected to? By trying
+to read \n k*5-times, where k is the number of protocols? If I have created
+settings for only one protocol(e.q. for MSN), the store would look like:
+111zoran.mesec at siol.net\npassword\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+n\n
+// all \n at the end mean that Jabber, ICQ and Yahoo are left empty.
+Is not that a vaste of computer memory?
+
+How should we name Jimmy's Record Store then? (Jimmy perhaps?)
+
+Best regards, 
+Zoran
+
+
+-----Original Message-----
+From: jimmyim-devel-admin at lists.berlios.de
+[mailto:jimmyim-devel-admin at lists.berlios.de] On Behalf Of JAnez Urevc
+Sent: Tuesday, June 06, 2006 12:17 AM
+Cc: jimmyim-devel at berlios.de
+Subject: Re: [Jimmyim-devel] public class RMS
+
+I agree with Matev?.
+
+Reason:
+I tried to use RMS to save data entered in new account form and works
+quite fine. The only problem is that getAccounts() uses variable "user"
+to save whole string (user at jabber.org e.g.), but it should separate into
+user and server. I think it would be easiest if we separate data using
+newline character.
+
+JAnez
+
+Matev? Jekovec wrote:
+> Great!
+> 
+> I've been thinking about this and I think the best way would be to
+> create a single store named "JimmyIM". We should store the data using
+> the \n (newline) separator character. I wouldn't complicate things up
+> with XML, but simply pre-define the series of data correctly and
+> wouldn't use any variables and special syntax (like .ini files, XML,
+> scripting languages etc.) in the store format besides the simple \n
+> character for the next value.
+> 
+> I'd design the store buffer in the following order:
+> 1) Program version
+> 2) Program settings (like auto-connect/login etc.)
+> 3) Account settings - directly stored Protocol classes:
+> 3.1) Account type (as defined in Account.java, protocolType)
+> 3.2) Account username
+> 3.3) Account password
+> 3.4) Account server (optional, leave \n if empty)
+> 3.5) Server's port (optional, leave \n if set to default)
+> 
+> The config file parser would be very simplified this way in comparison
+> to XML parser. Any other stuff I forgot?
+> 
+> 
+> Regards.
+> - Matev?
+> 
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+> 
+
+
+
+
+
+From matevz.jekovec at gmail.com  Wed Jun  7 14:30:54 2006
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Wed, 07 Jun 2006 14:30:54 +0200
+Subject: [Jimmyim-devel] public class RMS
+In-Reply-To: <002401c68a06$7ffbc0c0$0100a8c0@HlevZoran60c246b6a2>
+References: <002401c68a06$7ffbc0c0$0100a8c0@HlevZoran60c246b6a2>
+Message-ID: <4486C6FE.60703@gmail.com>
+
+Zoran Mesec pravi:
+> I agree also, but there are some issues unsolved:
+>
+> a)unique identifier for each "Jimmy" account, because there can be more
+> users on the same mobile phone:
+>   
+Hm... obviously I didn't make it clear enough. There's always a single
+user using the mobile phone. He can use multiple protocols to chat, thus
+multiple accounts are needed for login.
+
+> We can't differenciate by usernames(if so, by what username?), so lets add
+> an identifier:
+>   
+To uniquely define the account you can simply use ProtolType + Username.
+Although I agree we could also provide names for the accounts like
+"Matevz's Jabber account" or "Matevz's Jabber account 2".
+> b)how do we know the number of protocols the user is connected to? By trying
+> to read \n k*5-times, where k is the number of protocols? If I have created
+> settings for only one protocol(e.q. for MSN), the store would look like:
+> 111zoran.mesec at siol.net\npassword\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+> n\n
+> // all \n at the end mean that Jabber, ICQ and Yahoo are left empty.
+> Is not that a vaste of computer memory?
+>
+>   
+No, each account takes 5 (or 6, if account name is now included as well)
+lines to read. User could optionally have any number of accounts for any
+protocol. The store should look like:
+0.98b\n1\n1\nmatevz.jekovec at guest.arnes.si\nblahblah\n\n\n0\nthepianoguy at jabber.org\nblahblah\n\n\n0\njimmy at gristle.org\njimmy\n\n\n
+
+(the last two new lines for each account stand for optional server name
+and port)
+
+The upper example describes the following:
+- config file was written using program version 0.98b
+- auto-connect enabled
+- one account type 1 (MSN) for matevz.jekovec at guest.arnes.si
+- two accounts type 0 (Jabber) for thepianoguy at jabber.org and
+jimmy at gristle.org
+
+When the end of the stream is reached, no accounts are left to parse and
+add to the list.
+> How should we name Jimmy's Record Store then? (Jimmy perhaps?)
+>   
+I'd say "JimmyIM".
+
+
+Regards.
+- Matev?
+
+
+
+From sakdean at gmail.com  Fri Jun  9 22:20:06 2006
+From: sakdean at gmail.com (Sahel)
+Date: Fri, 9 Jun 2006 22:20:06 +0200
+Subject: [Jimmyim-devel] SVN problems
+Message-ID: <3568adfc0606091320i56cf1acdxacfbcf1f569474e6@mail.gmail.com>
+
+What the hell is going on with the SVN?
+it merges a lot of crap together like:
+
+<<<<<<<<<.mine
+============
+
+and some more duplicates
+anybody knows anything?
+bye
+Dejan
+
+
+From matevz.jekovec at gmail.com  Sat Jun 10 12:26:53 2006
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Sat, 10 Jun 2006 12:26:53 +0200
+Subject: [Jimmyim-devel] SVN problems
+In-Reply-To: <3568adfc0606091320i56cf1acdxacfbcf1f569474e6@mail.gmail.com>
+References: <3568adfc0606091320i56cf1acdxacfbcf1f569474e6@mail.gmail.com>
+Message-ID: <448A9E6D.7000109@gmail.com>
+
+This happens when a file in SVN conflicts with the local file.
+
+
+Regards.
+- Matev?
+
+Sahel pravi:
+> What the hell is going on with the SVN?
+> it merges a lot of crap together like:
+>
+> <<<<<<<<<.mine
+> ============
+>
+> and some more duplicates
+> anybody knows anything?
+> bye
+> Dejan
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+
+
+
+
+From sakdean at gmail.com  Sun Jun 18 20:52:37 2006
+From: sakdean at gmail.com (Sahel)
+Date: Sun, 18 Jun 2006 20:52:37 +0200
+Subject: [Jimmyim-devel] Protocol -> Jimmy interaction
+Message-ID: <3568adfc0606181152sbf9a1abg936fb304b78ece00@mail.gmail.com>
+
+I discovered, that if a Protocol dies, Jimmy won't really know when it
+happens and won'd delete the protocol from the list. So I've added an
+Interface (ProtocolInterface), that allows to communicate with the
+main Jimmy instance and execute some methods.
+
+You should all create something like this in your protocol constructors:
+Ex:
+
+public ICQProtocol(Jimmy j){
+     this.connected_ = false;
+     this.me = this.addProtocolInteractionIF(j);
+}
+
+
+And on creation of a new instance in Jimmy:
+
+ICQProtocol icq = new ICQProtocol(this);
+
+
+To invoke a method in Jimmy from the Protocol:
+
+this.me.stopProtocol(this);
+
+bye
+Dejan
+
+
+From matevz.jekovec at gmail.com  Sun Jun 18 21:13:55 2006
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Sun, 18 Jun 2006 21:13:55 +0200
+Subject: [Jimmyim-devel] Protocol -> Jimmy interaction
+In-Reply-To: <3568adfc0606181152sbf9a1abg936fb304b78ece00@mail.gmail.com>
+References: <3568adfc0606181152sbf9a1abg936fb304b78ece00@mail.gmail.com>
+Message-ID: <4495A5F3.2010200@gmail.com>
+
+Sahel pravi:
+> I discovered, that if a Protocol dies, Jimmy won't really know when it
+> happens and won'd delete the protocol from the list. So I've added an
+> Interface (ProtocolInterface), that allows to communicate with the
+> main Jimmy instance and execute some methods.
+What do you mean by Protocol dies? We have isConnected() method that
+returns if the protocol is connected (active) or not. If you're
+referring to the garbage collector, every protocol should be deleted
+from the memory automatically, when we have no references to them in
+Jimmy class. Or not?
+
+
+Regards.
+- Matev?
+
+
+
+From sakdean at gmail.com  Sun Jun 18 21:34:05 2006
+From: sakdean at gmail.com (Sahel)
+Date: Sun, 18 Jun 2006 21:34:05 +0200
+Subject: [Jimmyim-devel] Protocol -> Jimmy interaction
+In-Reply-To: <4495A5F3.2010200@gmail.com>
+References: <3568adfc0606181152sbf9a1abg936fb304b78ece00@mail.gmail.com>
+	 <4495A5F3.2010200@gmail.com>
+Message-ID: <3568adfc0606181234u7cc4b697qa783a96f0208f896@mail.gmail.com>
+
+You know. A protocol can have a true or false "connected_" value.
+By default it should have false.
+When an error occurs during login (for example - wrong username or
+password) the login sequence can't continue and the protocol "dies",
+because of the limitations of the architecture we made, every
+connection (if you have many accounts for one protocol) must be in his
+own Protocol object. If in the protocol occured an irrecoverable error
+the object is dead. So we have to clear the memory from the junk that
+remained. Then we alter the account settings and restart the
+connection from a new instance of the protocol. When a protocol dies
+jimmy can't know what happend, so the protocol itself cleans the
+memory by calling the stopProtocol() method in Jimmy.
+The "connected_" atribute from itsel doesn't tell anything to Jimmy
+about errors.
+So we shoul use the interface as an error bus for displaying error
+pop-ups and so on. Check the source.
+bye
+Dejan
+
+On 6/18/06, Matev? Jekovec <matevz.jekovec at gmail.com> wrote:
+> Sahel pravi:
+> > I discovered, that if a Protocol dies, Jimmy won't really know when it
+> > happens and won'd delete the protocol from the list. So I've added an
+> > Interface (ProtocolInterface), that allows to communicate with the
+> > main Jimmy instance and execute some methods.
+> What do you mean by Protocol dies? We have isConnected() method that
+> returns if the protocol is connected (active) or not. If you're
+> referring to the garbage collector, every protocol should be deleted
+> from the memory automatically, when we have no references to them in
+> Jimmy class. Or not?
+>
+>
+> Regards.
+> - Matev?
+>
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+
+
+From matevz.jekovec at gmail.com  Sun Jun 18 21:53:56 2006
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Sun, 18 Jun 2006 21:53:56 +0200
+Subject: [Jimmyim-devel] Protocol -> Jimmy interaction
+In-Reply-To: <3568adfc0606181234u7cc4b697qa783a96f0208f896@mail.gmail.com>
+References: <3568adfc0606181152sbf9a1abg936fb304b78ece00@mail.gmail.com>	 <4495A5F3.2010200@gmail.com> <3568adfc0606181234u7cc4b697qa783a96f0208f896@mail.gmail.com>
+Message-ID: <4495AF54.4040907@gmail.com>
+
+Sahel pravi:
+> You know. A protocol can have a true or false "connected_" value.
+> By default it should have false.
+> When an error occurs during login (for example - wrong username or
+> password) the login sequence can't continue and the protocol "dies",
+> because of the limitations of the architecture we made, every
+> connection (if you have many accounts for one protocol) must be in his
+No, you simply call Protocol.login() again for the specified protocol
+and wait for the result. There are (should be?) some methods to find out
+why the protocol failed on the connection, if it did. Currently
+isConnected() has return type boolean which only tells you if it's
+connected or not. I'd return different status numbers according to the
+state.
+int statusNo:
+    0 - disconnected, ok
+    1 - connected, ok
+    -1 - error, wrong password
+    -2 - error, connection lost
+
+These ones could be hardcoded to Protocol and some custom ones could be
+added too for each protocol. I wouldn't create any other classes or more
+complex structures.
+
+Regards.
+- Matev?
+
+
+

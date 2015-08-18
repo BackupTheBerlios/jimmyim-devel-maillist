@@ -1,0 +1,902 @@
+From zoran.mesec at siol.net  Sun Apr  9 22:44:54 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Sun, 9 Apr 2006 22:44:54 +0200
+Subject: [Jimmyim-devel] =?iso-8859-2?Q?povezava_s_stre=BEnikom?=
+Message-ID: <20060409204457.PCRA7870.edge2.siol.net@pujski>
+
+Pozdravljeni razvijalci na?e seminarske naloge!
+
+ 
+
+Da ne bomo izgubljali ?asa, je tukaj ?e prvi issue(te?ava, problem),ki jo je
+potrebno prebroditi. Posku?al sem se povezati z MSN Messenger stre?nikom,
+toda neuspe?no. Moj poskus je dostopen na svn-ju pod
+branches/Zoran/Main.java. Gre za povsem preprosto povezavo, ki po?lje uvodni
+'pozdrav' stre?niku, ki potem no?e odgovoriti. Tu je ?e zelo uporaben link,
+ki opisuje komunikacije preko tega protokola: 
+
+http://www.devarticles.com/c/a/HTML/The-MSN-Messenger-Protocol-Torn-Apart-Pa
+rt-1/
+
+ 
+
+lp, Zoran
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20060409/ff6c3669/attachment.html>
+
+From zoran.mesec at siol.net  Wed Apr 12 00:39:00 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Wed, 12 Apr 2006 00:39:00 +0200
+Subject: [Jimmyim-devel] Nov razred
+Message-ID: <000301c65db8$bb9445a0$ef5cfea9@hlev60c246b6a2>
+
+Pozdravljeni!
+ Uspel sem napisati razred, ki se (uspe?no) pove?e s stre?nikom, mu po?lje
+sporo?ilo in vrne odgovor. Uporabil sem SocketConnection, OutputStream in
+InputStreamReader. Zaenkrat je fajl na svn-ju ?e na
+/branches/Zoran/Povezava.java, ker ga moram ?e revidirati, jutri zve?er ga
+bom premaknil v glavno mapo. V tem ?asu, ste tudi Vi vabljeni, da si to
+datoteko ogledate. 
+
+Pa kaj vsi ?akate? Naj vsaj nekdo po?lje kak?en odgovor!!! Lahko tudi "ne
+vem", samo da je nek feedback!
+
+Lp, Zoran
+
+
+
+From sakdean at gmail.com  Wed Apr 12 01:43:04 2006
+From: sakdean at gmail.com (Sahel)
+Date: Wed, 12 Apr 2006 01:43:04 +0200
+Subject: [Jimmyim-devel] Nov razred
+In-Reply-To: <000301c65db8$bb9445a0$ef5cfea9@hlev60c246b6a2>
+References: <000301c65db8$bb9445a0$ef5cfea9@hlev60c246b6a2>
+Message-ID: <3568adfc0604111643s46dc39a1hf3ebd4ce582db9dc@mail.gmail.com>
+
+No ja... jst se ucim. :) mam v cetrtek izpit. tko da...
+lp
+Dejan
+
+On 4/12/06, Zoran Mesec <zoran.mesec at siol.net> wrote:
+> Pozdravljeni!
+>  Uspel sem napisati razred, ki se (uspe?no) pove?e s stre?nikom, mu po?lje
+> sporo?ilo in vrne odgovor. Uporabil sem SocketConnection, OutputStream in
+> InputStreamReader. Zaenkrat je fajl na svn-ju ?e na
+> /branches/Zoran/Povezava.java, ker ga moram ?e revidirati, jutri zve?er ga
+> bom premaknil v glavno mapo. V tem ?asu, ste tudi Vi vabljeni, da si to
+> datoteko ogledate.
+>
+> Pa kaj vsi ?akate? Naj vsaj nekdo po?lje kak?en odgovor!!! Lahko tudi "ne
+> vem", samo da je nek feedback!
+>
+> Lp, Zoran
+>
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+
+
+From sakdean at gmail.com  Wed Apr 12 10:46:47 2006
+From: sakdean at gmail.com (Sahel)
+Date: Wed, 12 Apr 2006 10:46:47 +0200
+Subject: [Jimmyim-devel] Nov razred
+In-Reply-To: <28612851.1144825549658.JavaMail.root@fep1>
+References: <28612851.1144825549658.JavaMail.root@fep1>
+Message-ID: <3568adfc0604120146l3bf1d80bpce25da7a6e6ada10@mail.gmail.com>
+
+En dan se magari dobimo v pipi. Imamo prostor in internet.
+lp
+Dejan
+
+On 4/12/06, JAnez Urevc <janez.urevc at siol.net> wrote:
+> Jaz bom pa pogledal zadevo,ko bom doma. A bi se dalo zmenit, da bi se en popoldan dobili nekje za jimmzja in da se mar konkretno pogovorimo od idej in mogce tud skupi kaj pokodiramo?
+>
+> JAnez
+>
+> P.S: Bi bilo mogoce v redu, ce bi na tejle listi komunicirali v anglescini? Tko, ce bi koga kdaj nase delo zanimalo, da mu nebi blo treba se najprej slovenscine ucit?
+> ---- Sahel <sakdean at gmail.com> pi?e:
+> > No ja... jst se ucim. :) mam v cetrtek izpit. tko da...
+> > lp
+> > Dejan
+> >
+> > On 4/12/06, Zoran Mesec <zoran.mesec at siol.net> wrote:
+> > > Pozdravljeni!
+> > >  Uspel sem napisati razred, ki se (uspe?no) pove?e s stre?nikom, mu po?lje
+> > > sporo?ilo in vrne odgovor. Uporabil sem SocketConnection, OutputStream in
+> > > InputStreamReader. Zaenkrat je fajl na svn-ju ?e na
+> > > /branches/Zoran/Povezava.java, ker ga moram ?e revidirati, jutri zve?er ga
+> > > bom premaknil v glavno mapo. V tem ?asu, ste tudi Vi vabljeni, da si to
+> > > datoteko ogledate.
+> > >
+> > > Pa kaj vsi ?akate? Naj vsaj nekdo po?lje kak?en odgovor!!! Lahko tudi "ne
+> > > vem", samo da je nek feedback!
+> > >
+> > > Lp, Zoran
+> > >
+> > > _______________________________________________
+> > > Jimmyim-devel mailing list
+> > > Jimmyim-devel at lists.berlios.de
+> > > http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+> > >
+> > _______________________________________________
+> > Jimmyim-devel mailing list
+> > Jimmyim-devel at lists.berlios.de
+> > http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+>
+
+
+From sakdean at gmail.com  Wed Apr 12 11:22:38 2006
+From: sakdean at gmail.com (Sahel)
+Date: Wed, 12 Apr 2006 11:22:38 +0200
+Subject: [Jimmyim-devel] Nov razred
+In-Reply-To: <9713142.1144832641714.JavaMail.root@fep1>
+References: <9713142.1144832641714.JavaMail.root@fep1>
+Message-ID: <3568adfc0604120222t7fd4e9c2i3ca9a6e4b577644a@mail.gmail.com>
+
+Hej! Ta lista ni kul skonfigurirana... Kr posilja dejanko samo naprej
+kot, da je posiljatelj poslal vsem.
+V osnovi mora biti tudi polje "reply-to" izpolnjeno kot pogoj za
+normalno komunikacijo, ker cene ti reply-a posiljatelju.
+lp
+Dejan
+PS: Janez... se bomo se zmenli. v tem trenutku imam vecjo ribo za
+ulovit... :P (drugi teden?)
+
+On 4/12/06, JAnez Urevc <janez.urevc at siol.net> wrote:
+> Jaz sem za. Kdaj?
+>
+> JAnez
+> ---- Sahel <sakdean at gmail.com> pi?e:
+> > En dan se magari dobimo v pipi. Imamo prostor in internet.
+> > lp
+> > Dejan
+> >
+> > On 4/12/06, JAnez Urevc <janez.urevc at siol.net> wrote:
+> > > Jaz bom pa pogledal zadevo,ko bom doma. A bi se dalo zmenit, da bi se en popoldan dobili nekje za jimmzja in da se mar konkretno pogovorimo od idej in mogce tud skupi kaj pokodiramo?
+> > >
+> > > JAnez
+> > >
+> > > P.S: Bi bilo mogoce v redu, ce bi na tejle listi komunicirali v anglescini? Tko, ce bi koga kdaj nase delo zanimalo, da mu nebi blo treba se najprej slovenscine ucit?
+> > > ---- Sahel <sakdean at gmail.com> pi?e:
+> > > > No ja... jst se ucim. :) mam v cetrtek izpit. tko da...
+> > > > lp
+> > > > Dejan
+> > > >
+> > > > On 4/12/06, Zoran Mesec <zoran.mesec at siol.net> wrote:
+> > > > > Pozdravljeni!
+> > > > >  Uspel sem napisati razred, ki se (uspe?no) pove?e s stre?nikom, mu po?lje
+> > > > > sporo?ilo in vrne odgovor. Uporabil sem SocketConnection, OutputStream in
+> > > > > InputStreamReader. Zaenkrat je fajl na svn-ju ?e na
+> > > > > /branches/Zoran/Povezava.java, ker ga moram ?e revidirati, jutri zve?er ga
+> > > > > bom premaknil v glavno mapo. V tem ?asu, ste tudi Vi vabljeni, da si to
+> > > > > datoteko ogledate.
+> > > > >
+> > > > > Pa kaj vsi ?akate? Naj vsaj nekdo po?lje kak?en odgovor!!! Lahko tudi "ne
+> > > > > vem", samo da je nek feedback!
+> > > > >
+> > > > > Lp, Zoran
+> > > > >
+> > > > > _______________________________________________
+> > > > > Jimmyim-devel mailing list
+> > > > > Jimmyim-devel at lists.berlios.de
+> > > > > http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+> > > > >
+> > > > _______________________________________________
+> > > > Jimmyim-devel mailing list
+> > > > Jimmyim-devel at lists.berlios.de
+> > > > http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+> > >
+> > >
+> > _______________________________________________
+> > Jimmyim-devel mailing list
+> > Jimmyim-devel at lists.berlios.de
+> > http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+>
+
+
+From zoran.mesec at siol.net  Sat Apr 15 16:50:05 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Sat, 15 Apr 2006 16:50:05 +0200
+Subject: [Jimmyim-devel] class ServerCommunication
+Message-ID: <002a01c6609b$e40f8ea0$ef5cfea9@hlev60c246b6a2>
+
+Hello!
+
+I have uploaded a new class ServerCommunication into the main folder of
+jimmy. This class handles communication with some server. It uses socket
+connection.
+
+Future tasks:
+-class Message with methods: 
+ ~ void addArgument("some string");
+ ~ String toString();
+This class should assemble arguments and then returns the String to use in
+the ServerCommunication.sendMsg call.
+Something like:
+
+We want this:  String message = "VER 0 MSNP8 CVR0\r\n";
+Message m1=new Message();
+M1.addArgument("VER");
+M1.addArgument("VER");
+M1.addArgument("VER");
+
+Usage:
+      ServerCommunication sc = new ServerCommunication(server,port);
+	ServerCommunication sc = new ServerCommunication(server);   //if
+port is not used
+void	sc.connect();	//initialize connector and streams
+void	sc.sendMsg("some string");
+String	sc.getReply();	//gets reply from the previous sendMsg call
+
+
+Usage EXAMPLE(this example is in /branches/Zoran/Main.java)
+
+        ServerCommunication sc = new
+ServerCommunication("messenger.hotmail.com",1863);
+        sc.connect();
+
+        String message = "VER 0 MSNP8 CVR0\r\n";
+        sc.sendMsg(message);
+        System.out.print(message);
+        System.out.println(sc.getReply());
+        System.out.println("*************************************");
+        message = "CVR 2 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+avgustin.ocepek at yahoo.com.au\r\n";
+        sc.sendMsg(message);
+        
+        System.out.println(message);
+        System.out.println(sc.getReply());
+        System.out.println("*************************************");        
+        message="USR 3 TWN I avgustin.ocepek at yahoo.com.au\r\n";
+        sc.sendMsg(message);
+        System.out.println(message);
+        System.out.println(sc.getReply());
+        System.out.println("*************************************");        
+        sc.disconnect();
+        
+        
+        ServerCommunication sc2 = new
+ServerCommunication("baym-cs118.msgr.hotmail.com",1863);
+        sc2.connect();
+        message="VER 4 MSNP8 CVR0\r\n";
+        sc2.sendMsg(message);
+        System.out.println(message);
+        System.out.println(sc2.getReply());
+        System.out.println("*************************************");   
+        
+        
+        message = "CVR 5 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+avgustin.ocepek at yahoo.com.au\r\n";
+        sc2.sendMsg(message);
+        System.out.println(message);
+        System.out.println(sc2.getReply());      
+        System.out.println("*************************************"); 
+        message = "USR 6 TWN I avgustin.ocepek at yahoo.com.au\r\n";
+        System.out.println(message);
+        sc2.sendMsg(message);
+        System.out.println(sc2.getReply());  
+        ...and so on.
+
+
+        sc2.disconnect();   
+
+
+Prints this:
+
+
+
+
+VER 0 MSNP8 CVR0
+
+VER 0 MSNP8 CVR0
+
+
+*************************************
+
+CVR 2 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+avgustin.ocepek at yahoo.com.au
+
+
+CVR 2 7.0.0816 7.0.0816 6.2.0205
+http://msgr.dlservice.microsoft.com/download/4/b/c/4bc83bb2-18dd-486f-943f-3
+32a9b3e01dc/Install_MSN_Messenger_DL.exe http://messenger.msn.com
+
+*************************************
+
+USR 3 TWN I avgustin.ocepek at yahoo.com.au
+
+XFR 3 NS 207.46.114.23:1863 0 65.54.239.210:1863
+
+*************************************
+
+VER 4 MSNP8 CVR0
+
+VER 4 MSNP8 CVR0
+
+*************************************
+
+CVR 5 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+avgustin.ocepek at yahoo.com.au
+
+
+CVR 5 7.0.0816 7.0.0816 6.2.0205
+http://msgr.dlservice.microsoft.com/download/4/b/c/4bc83bb2-18dd-486f-943f-3
+32a9b3e01dc/Install_MSN_Messenger_DL.exe http://messenger.msn.com
+
+*************************************
+
+USR 6 TWN I avgustin.ocepek at yahoo.com.au
+
+USR 6 TWN S
+lc=1033,id=507,tw=40,fs=1,ru=http%3A%2F%2Fmessenger%2Emsn%2Ecom,ct=114511176
+7,kpp=1,kv=7,ver=2.1.6000.1,rn=tkhsEJ!C,tpf=977bdb7fd6d74a15cea78348b589f600
+
+
+
+
+
+
+
+From zoran.mesec at siol.net  Sat Apr 15 16:56:12 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Sat, 15 Apr 2006 16:56:12 +0200
+Subject: [Jimmyim-devel] class ServerConnection (ignore first message with this subject)
+Message-ID: <002b01c6609c$be31feb0$ef5cfea9@hlev60c246b6a2>
+
+Hello!
+
+I have uploaded a new class ServerCommunication into the main folder of
+jimmy. This class handles communication with some server. It uses socket
+connection.
+
+Future tasks:
+-class Message with methods: 
+ ~ void addArgument("some string");
+ ~ String toString();
+This class should assemble arguments and then returns the String to use in
+the ServerCommunication.sendMsg call.
+Something like:
+
+We want this:  String message = "VER 0 MSNP8 CVR0\r\n";
+Message M1=new Message();
+M1.addArgument("VER");
+M1.addArgument("0");
+M1.addArgument("MSNP8");
+M1.addArgument("CVR0");
+M1.addEnding();
+M1.toString();		//returns "VER 0 MSNP8 CVR0\r\n"
+
+SOMEBODY SHOULD WRITE THIS CLASS ASP!!!
+(and the so called Project leader should decide who is the person
+responsible for this task) 
+
+
+
+USAGE OF CLASS ServerCommunication:
+
+      ServerCommunication sc = new ServerCommunication(server,port);
+	ServerCommunication sc = new ServerCommunication(server);   //if
+port is not used
+void	sc.connect();	//initialize connection and streams
+void	sc.sendMsg("some string");
+String	sc.getReply();	//gets reply from the previous sendMsg call
+Void sc.disconnect();	//closes streams and disconnects the Connection
+
+Usage EXAMPLE(this example is in /branches/Zoran/Main.java)
+
+        ServerCommunication sc = new
+ServerCommunication("messenger.hotmail.com",1863);
+        sc.connect();
+
+        String message = "VER 0 MSNP8 CVR0\r\n";
+        sc.sendMsg(message);
+        System.out.print(message);
+        System.out.println(sc.getReply());
+        System.out.println("*************************************");
+        message = "CVR 2 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+avgustin.ocepek at yahoo.com.au\r\n";
+        sc.sendMsg(message);
+        
+        System.out.println(message);
+        System.out.println(sc.getReply());
+        System.out.println("*************************************");        
+        message="USR 3 TWN I avgustin.ocepek at yahoo.com.au\r\n";
+        sc.sendMsg(message);
+        System.out.println(message);
+        System.out.println(sc.getReply());
+        System.out.println("*************************************");        
+        sc.disconnect();
+        
+        
+        ServerCommunication sc2 = new
+ServerCommunication("baym-cs118.msgr.hotmail.com",1863);
+        sc2.connect();
+        message="VER 4 MSNP8 CVR0\r\n";
+        sc2.sendMsg(message);
+        System.out.println(message);
+        System.out.println(sc2.getReply());
+        System.out.println("*************************************");   
+        
+        
+        message = "CVR 5 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+avgustin.ocepek at yahoo.com.au\r\n";
+        sc2.sendMsg(message);
+        System.out.println(message);
+        System.out.println(sc2.getReply());      
+        System.out.println("*************************************"); 
+        message = "USR 6 TWN I avgustin.ocepek at yahoo.com.au\r\n";
+        System.out.println(message);
+        sc2.sendMsg(message);
+        System.out.println(sc2.getReply());  
+        ...and so on.
+
+
+        sc2.disconnect();   
+
+
+
+Prints this:
+
+VER 0 MSNP8 CVR0
+
+VER 0 MSNP8 CVR0
+
+
+*************************************
+
+CVR 2 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+avgustin.ocepek at yahoo.com.au
+
+
+CVR 2 7.0.0816 7.0.0816 6.2.0205
+http://msgr.dlservice.microsoft.com/download/4/b/c/4bc83bb2-18dd-486f-943f-3
+32a9b3e01dc/Install_MSN_Messenger_DL.exe http://messenger.msn.com
+
+*************************************
+
+USR 3 TWN I avgustin.ocepek at yahoo.com.au
+
+XFR 3 NS 207.46.114.23:1863 0 65.54.239.210:1863
+
+*************************************
+
+VER 4 MSNP8 CVR0
+
+VER 4 MSNP8 CVR0
+
+*************************************
+
+CVR 5 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+avgustin.ocepek at yahoo.com.au
+
+
+CVR 5 7.0.0816 7.0.0816 6.2.0205
+http://msgr.dlservice.microsoft.com/download/4/b/c/4bc83bb2-18dd-486f-943f-3
+32a9b3e01dc/Install_MSN_Messenger_DL.exe http://messenger.msn.com
+
+*************************************
+
+USR 6 TWN I avgustin.ocepek at yahoo.com.au
+
+USR 6 TWN S
+lc=1033,id=507,tw=40,fs=1,ru=http%3A%2F%2Fmessenger%2Emsn%2Ecom,ct=114511176
+7,kpp=1,kv=7,ver=2.1.6000.1,rn=tkhsEJ!C,tpf=977bdb7fd6d74a15cea78348b589f600
+
+
+
+
+
+
+
+From zoran.mesec at siol.net  Mon Apr 17 18:02:59 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Mon, 17 Apr 2006 18:02:59 +0200
+Subject: [Jimmyim-devel] new class MSNTransaction
+Message-ID: <000201c66238$67902b70$ef5cfea9@hlev60c246b6a2>
+
+Pozdravljeni!
+ Za komunikacijo s MSN Messenger stre?nikom potrebuje stringe oblike:
+[type] [transaction_id] [arg0] [arg1] ... [argn]\r\n
+
+Type = VER, CVR, USR,...
+Transaction_id se pove?uje z vsakim poro?ilom, ki ga po?ljemo. 
+Vsako sporo?ilo se kon?a z \r\n
+
+V glavni mapi je sedaj razred MSNTransaction, ki to nalogo opravlja.
+
+Uporaba:
+
+        MSNTransaction test = new MSNTransaction();
+        test.setType("VER");
+        test.addArgument("MSNP8");
+        test.addArgument("CVR0");
+        System.out.println(test.toString());	// prints "VER 0 MSNP8
+CVR0\r\n"
+
+        test.newTransaction();	// empties argument list, type and
+increments transaction id
+
+        test.setType("CVR");
+        test.addArgument("0x0409");
+        test.addArgument("win");
+        test.addArgument("4.10");
+        test.addArgument("i386");
+        test.addArgument("MSNMSGR");
+        test.addArgument("5.0.0544");
+        test.addArgument("MSMSGS");
+        test.addArgument("avgustin.ocepek at yahoo.com.au");
+        System.out.println(test.toString());	
+// prints "CVR 2 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+avgustin.ocepek at yahoo.com.au\r\n"
+		...
+
+V razredu sta ?e metodi:
+~getTransactionID() ki vrne trenutni transaction_ID 
+~main za testiranje.
+
+Lp, Zoran Mesec
+
+
+
+From matevz.jekovec at guest.arnes.si  Mon Apr 17 19:19:07 2006
+From: matevz.jekovec at guest.arnes.si (Matevz Jekovec)
+Date: Mon, 17 Apr 2006 19:19:07 +0200
+Subject: [Jimmyim-devel] test
+Message-ID: <4443CE0B.20504@guest.arnes.si>
+
+To je en testen mail, ker testiramo, ?e dela reply-to stvar.
+
+lp.
+-M
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 252 bytes
+Desc: OpenPGP digital signature
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20060417/ce2c938b/attachment.pgp>
+
+From zoran.mesec at siol.net  Mon Apr 17 22:01:59 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Mon, 17 Apr 2006 22:01:59 +0200
+Subject: [Jimmyim-devel] public interface Protocol
+Message-ID: <000001c66259$caa54d00$ef5cfea9@hlev60c246b6a2>
+
+Pozdravljeni!
+
+V glavno mapo na?ega Jimmy-ja sem nalo?il abstraktni razred Protocol, ki bo
+osnova za vse kasnej?e implementacije protokolov. Zaenkrat ima naslednje
+metode:
+~ void sendRequest(String Message)
+~ String getReply()
+~ void connect()
+~ void disconnect()
+
+Nisem prepri?an, ?e sta zadnji dve pomembni, bomo videli sproti.
+
+Uporabili ga bomo nekako tako:
+JabberProtocol extends Protocol
+YahooProtocol extends Protocol
+...
+
+Tisti moj razred ServerCommunication bom v kratkem preimenoval v
+MSNProtocol. 
+
+Lp ,Zoran
+
+
+
+From matevz.jekovec at gmail.com  Mon Apr 17 22:22:37 2006
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Mon, 17 Apr 2006 22:22:37 +0200
+Subject: [Jimmyim-devel] public interface Protocol
+In-Reply-To: <000001c66259$caa54d00$ef5cfea9@hlev60c246b6a2>
+References: <000001c66259$caa54d00$ef5cfea9@hlev60c246b6a2>
+Message-ID: <4443F90D.7060200@gmail.com>
+
+Zoran Mesec wrote:
+> Pozdravljeni!
+>
+> V glavno mapo na?ega Jimmy-ja sem nalo?il abstraktni razred Protocol, ki bo
+> osnova za vse kasnej?e implementacije protokolov. Zaenkrat ima naslednje
+> metode:
+> ~ void sendRequest(String Message)
+>   
+> ~ String getReply()
+>   
+Sej to bo? ?e malo opisal na Wikiju, ane? To gre v grobem pod Classes
+overview, podrobnosti pa pod Protocols overview.
+> ~ void connect()
+> ~ void disconnect()
+>
+> Nisem prepri?an, ?e sta zadnji dve pomembni, bomo videli sproti.
+>   
+Hm... jest sm si pa connect ne-void predstavljov:
+int connect() - vrne 0 ob ok, in -neki ob napaki
+
+Potem pa:
+connect() in disconnect() sta javni metodi - v bistvu bi ju poklical
+program.
+Metode getReply() in sendRequest() so privatne, ja? V bistvu se
+uporabljajo znotraj razreda, od zunaj se ne kli?ejo, ?e prav razumem.
+
+Potem pa ?e glavni dve:
+void sendMessage(String oz. int prejemnik, String sporocilo) - po?lje
+sporo?ilo.
+void setStatus(int status) - nastavi stanje uporabnika: prost, zaseden etc.
+List getContacts() - dobi seznam kontaktov
+
+Vse metode bi v bistvu bile abstraktne in bi jih na novo napisali vsi
+podedovani razredi.
+> Uporabili ga bomo nekako tako:
+> JabberProtocol extends Protocol
+> YahooProtocol extends Protocol
+> ...
+>   
+Ok.
+
+
+lp.
+- M
+
+
+
+From zoran.mesec at siol.net  Thu Apr 20 13:44:14 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Thu, 20 Apr 2006 13:44:14 +0200
+Subject: [Jimmyim-devel] Getting data from an input stream - big issue resolved
+Message-ID: <000301c6646f$c0ff6bb0$ef5cfea9@hlev60c246b6a2>
+
+Hello!
+
+The problem is, that the method read() of InputStreamReader doesn't return
+-1 when the end of the stream is reached(as specified in the documentation),
+instead the method blocks and throws nonBufferedRead exception. Due to this
+fact we have to use something else...
+
+The solution is DataInputStream and the use of method available() - btw
+InputStreamReader does not have this method - which returns the number of
+bytes available on the InputStream. Then we read bytes into a byte array(the
+length of the array is specified by method available()).	
+
+
+The right way to get data from the inputStream:
+
+    public String getReply()
+    {
+            StringBuffer sb = new StringBuffer();             
+        try 
+        {
+           byte[] b;
+           int l = this.isr.available();
+// isr is InputStream
+
+           b = new byte[l];
+           this.isr.read(b);	//reads bytes into an array
+
+           for(int i=0; i<b.length; i++)
+           {
+                sb.append((char)b[i]);
+           }
+           
+            return sb.toString();
+            
+        } catch (IOException ex) 
+        {
+            ex.printStackTrace();
+
+            return sb.toString();
+        }
+    }
+
+Bye bye
+
+
+
+From zoran.mesec at siol.net  Fri Apr 21 19:44:32 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Fri, 21 Apr 2006 19:44:32 +0200
+Subject: [Jimmyim-devel] ServerHandler, metoda readLine()
+Message-ID: <000001c6656b$412704a0$ef5cfea9@hlev60c246b6a2>
+
+Yo!
+	
+	Re?itev od Bombusa, ki potegne reply s serverja ni v redu!!! V
+primeru Jabberja verjetno dela, pri MSN pa ne bo. Zakaj? Glejte, mi smo
+nazaj dobili samo eno vrstico v odgovor. ?e pa presko?imo nekaj korakov pri
+logiranju, ko moramo dobiti seznam kontaktov(skupine), bo pa prejeto
+sporo?ilo izgledalo nekako takole:
+
+<<< LSG 0 Other%20Contacts 0\r\n
+    LSG 1 Coworkers 0\r\n
+    LSG 2 Friends 0\r\n
+    LSG 3 Family 0\r\n
+
+In v tem primeru methoda read() blokira!!!
+
+Takole sem posku?al izpisati vse vrstice:
+
+            while ((line= this.readLine())!=null) 
+            {
+                System.out.println(line);
+             }
+
+?e mi ne verjamete, pa poskusite tole:
+line = this.readLine();
+line2 = this.readLine();
+
+Zgodi se natanko, kar se je zgodilo meni... nonBufferedRead
+Saj ta koda naredi isto kot moja, samo druga?e je napisana. ?e dobimo nazaj
+eno vrstico je ok, ker bere do \n, ?e jih je pa ve? je pa exception ...
+
+ No, zbiram predloge koliko bajtov naj dam v buffer ... :)
+			
+Lp, Zoran
+
+
+
+From matevz.jekovec at gmail.com  Sat Apr 22 10:19:25 2006
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Sat, 22 Apr 2006 10:19:25 +0200
+Subject: [Jimmyim-devel] ServerHandler, metoda readLine()
+In-Reply-To: <001401c665e3$73423c20$ef5cfea9@hlev60c246b6a2>
+References: <001401c665e3$73423c20$ef5cfea9@hlev60c246b6a2>
+Message-ID: <4449E70D.90200@gmail.com>
+
+Zoran Mesec wrote:
+> Seznam kontaktov se zaklju?i tako kot vidi?... ni znaka, ki bi zaznamoval
+> konec.
+>   
+Hm... kuko misli? "ne ve?, kdaj se zaklju?i". A poj sprejema? LSG*
+vrstice, ko pa, ne vem, ve? kot 5 sekund ni nobenega ve?, pa sklepa?, da
+je konec seznama, al kaj??
+
+
+lp.
+-M
+
+
+
+From zoran.mesec at siol.net  Wed Apr 26 18:50:10 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Wed, 26 Apr 2006 18:50:10 +0200
+Subject: [Jimmyim-devel] iRule
+Message-ID: <000001c66951$7c990b70$ef5cfea9@hlev60c246b6a2>
+
+?ivjo!
+
+Z Matev?em sva imela eno debato...in sva ugotovila, da bi se dalo narediti
+na?ega Jimmy-ja brez uporabe niti(in dodatnih listenerjev). Jaz sem to
+sprobal in stvar deluje!
+
+ ?e bomo ?eleli biti naenkrat priklopljeni na ve? protokolov bo ?e vseeno
+treba uporabiti niti, za en protokol naenkrat pa to ne bo potrebno.
+
+?e vas zanima kako je to sploh mo?no, naj malo namignem: na komandah
+telefona je nastavljen commandListener, ki ves ?as kli?e isto metodo, ?e
+pritisne? katerokoli tipko. Ko se listener spro?i, prekine tudi ?e tako
+trdno neskon?no zanko ;)
+
+Lp, Zoran 
+
+
+
+From matevz.jekovec at gmail.com  Wed Apr 26 22:20:58 2006
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Wed, 26 Apr 2006 22:20:58 +0200
+Subject: [Jimmyim-devel] iRule
+In-Reply-To: <000001c66951$7c990b70$ef5cfea9@hlev60c246b6a2>
+References: <000001c66951$7c990b70$ef5cfea9@hlev60c246b6a2>
+Message-ID: <444FD62A.5070802@gmail.com>
+
+V glavnem, ideja je v tem, da ?e realiziramo samo 1 aktiven protokol:
+- bi glavni program tekel v neskon?ni zanki in preverjal, ?e ima doti?ni
+razred kaj novega za sprejeti
+?e bi imeli ve? kot 1 aktiven protokol:
+- bi glavni program tekel v neskon?ni zanki in preverjal, ?e ima kateri
+koli protokol kaj novega za sprejeti.
+
+Interakcija z uporabnikom (komande na gumbih) pa so realizirane ?e v
+j2me, ko jih ustvari? in zve?e? z metodami in ?e avtomati?no te?ejo kot
+threadi zadej. Mislim, da bi bila stvar izvedljiva, klub temu, da mogo?e
+ni najlep?a (vendar za raziskavo kaj se bolj procesorsko spla?a -
+n-protokolov, n-vzporednih niti ali n-protokolov in 1 glavno nit, ki
+preveri vseh n protokolov). Prvomajski prazniki bodo potekali v smislu
+na?rtovanja in programiranja temeljnih razredov. Wiki dela! juhej :)
+Jutri bom ri?em ;).
+
+Z Zoranom se bova verjetno enkrat ?e dobila med prazniki, da mal
+razi??eva stvari ?e naprej. Urevc, UI? Dejan, kaj meni? o vsem skupej?
+
+
+lp.
+-M
+
+Zoran Mesec wrote:
+> ?ivjo!
+>
+> Z Matev?em sva imela eno debato...in sva ugotovila, da bi se dalo narediti
+> na?ega Jimmy-ja brez uporabe niti(in dodatnih listenerjev). Jaz sem to
+> sprobal in stvar deluje!
+>
+>  ?e bomo ?eleli biti naenkrat priklopljeni na ve? protokolov bo ?e vseeno
+> treba uporabiti niti, za en protokol naenkrat pa to ne bo potrebno.
+>
+> ?e vas zanima kako je to sploh mo?no, naj malo namignem: na komandah
+> telefona je nastavljen commandListener, ki ves ?as kli?e isto metodo, ?e
+> pritisne? katerokoli tipko. Ko se listener spro?i, prekine tudi ?e tako
+> trdno neskon?no zanko ;)
+>
+> Lp, Zoran 
+
+
+
+From sakdean at gmail.com  Wed Apr 26 23:58:12 2006
+From: sakdean at gmail.com (Sahel)
+Date: Wed, 26 Apr 2006 23:58:12 +0200
+Subject: [Jimmyim-devel] iRule
+In-Reply-To: <444FD62A.5070802@gmail.com>
+References: <000001c66951$7c990b70$ef5cfea9@hlev60c246b6a2>
+	 <444FD62A.5070802@gmail.com>
+Message-ID: <3568adfc0604261458x19194f80la384c886571f801d@mail.gmail.com>
+
+Hmmmm...
+dokler ne vidim stvar v delovanju na dejanskem telfonu. ne bom nic reku. :)
+lp
+Dejan
+
+On 4/26/06, Matev? Jekovec <matevz.jekovec at gmail.com> wrote:
+> V glavnem, ideja je v tem, da ?e realiziramo samo 1 aktiven protokol:
+> - bi glavni program tekel v neskon?ni zanki in preverjal, ?e ima doti?ni
+> razred kaj novega za sprejeti
+> ?e bi imeli ve? kot 1 aktiven protokol:
+> - bi glavni program tekel v neskon?ni zanki in preverjal, ?e ima kateri
+> koli protokol kaj novega za sprejeti.
+>
+> Interakcija z uporabnikom (komande na gumbih) pa so realizirane ?e v
+> j2me, ko jih ustvari? in zve?e? z metodami in ?e avtomati?no te?ejo kot
+> threadi zadej. Mislim, da bi bila stvar izvedljiva, klub temu, da mogo?e
+> ni najlep?a (vendar za raziskavo kaj se bolj procesorsko spla?a -
+> n-protokolov, n-vzporednih niti ali n-protokolov in 1 glavno nit, ki
+> preveri vseh n protokolov). Prvomajski prazniki bodo potekali v smislu
+> na?rtovanja in programiranja temeljnih razredov. Wiki dela! juhej :)
+> Jutri bom ri?em ;).
+>
+> Z Zoranom se bova verjetno enkrat ?e dobila med prazniki, da mal
+> razi??eva stvari ?e naprej. Urevc, UI? Dejan, kaj meni? o vsem skupej?
+>
+>
+> lp.
+> -M
+>
+> Zoran Mesec wrote:
+> > ?ivjo!
+> >
+> > Z Matev?em sva imela eno debato...in sva ugotovila, da bi se dalo narediti
+> > na?ega Jimmy-ja brez uporabe niti(in dodatnih listenerjev). Jaz sem to
+> > sprobal in stvar deluje!
+> >
+> >  ?e bomo ?eleli biti naenkrat priklopljeni na ve? protokolov bo ?e vseeno
+> > treba uporabiti niti, za en protokol naenkrat pa to ne bo potrebno.
+> >
+> > ?e vas zanima kako je to sploh mo?no, naj malo namignem: na komandah
+> > telefona je nastavljen commandListener, ki ves ?as kli?e isto metodo, ?e
+> > pritisne? katerokoli tipko. Ko se listener spro?i, prekine tudi ?e tako
+> > trdno neskon?no zanko ;)
+> >
+> > Lp, Zoran
+>
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+
+

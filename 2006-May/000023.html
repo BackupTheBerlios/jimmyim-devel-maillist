@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] MSNProtocol progress
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-May/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20MSNProtocol%20progress&In-Reply-To=%3C446B7C44.2070009%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000022.html">
+   <LINK REL="Next"  HREF="000024.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] MSNProtocol progress</H1>
+    <B>Matev&#382; Jekovec</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20MSNProtocol%20progress&In-Reply-To=%3C446B7C44.2070009%40gmail.com%3E"
+       TITLE="[Jimmyim-devel] MSNProtocol progress">matevz.jekovec at gmail.com
+       </A><BR>
+    <I>Wed May 17 21:40:52 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000022.html">[Jimmyim-devel] MSNProtocol progress
+</A></li>
+        <LI>Next message: <A HREF="000024.html">[Jimmyim-devel] Config file storage
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23">[ date ]</a>
+              <a href="thread.html#23">[ thread ]</a>
+              <a href="subject.html#23">[ subject ]</a>
+              <a href="author.html#23">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Tole sem zdej premislu in sem se odlo&#269;u, da ne bo cs.sendMsg(), ampak
+myProtocol.sendMsg(). S tem, da bo&#353; zravn dodal &#353;e argument chat
+session. Metoda sendMsg() bo vrnila kak&#353;n exception, &#269;e podan
+chatSession ne bo obstajal.
+
+lp.
+-M
+
+Zoran Mesec wrote:
+&gt;<i> Uporaba:
+</I>&gt;<i>
+</I>&gt;<i>         MSNProtocol myProtocol = new MSNProtocol();
+</I>&gt;<i>         if(myProtocol.login(&quot;<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">example at example.com</A>&quot;, &quot;secret_passwd))
+</I>&gt;<i>         {
+</I>&gt;<i>             myProtocol.printContacts();
+</I>&gt;<i>             ChatSession cs =
+</I>&gt;<i> myProtocol.startChatSession((Contact)myProtocol.getContacts().firstElement()
+</I>&gt;<i> );
+</I>&gt;<i>             cs.sendMsg(&quot;Wazzupp!!!&quot;);
+</I>&gt;<i>             cs.sendMsg(&quot;Gremo jutri na kavo?&quot;);
+</I>&gt;<i>             try {
+</I>&gt;<i>                 Thread.sleep(5000);
+</I>&gt;<i>             } catch (InterruptedException ex) {
+</I>&gt;<i>                 ex.printStackTrace();
+</I>&gt;<i>             }
+</I>&gt;<i>             myProtocol.logout();
+</I>&gt;<i>         }
+</I>&gt;<i>         else
+</I>&gt;<i>         {
+</I>&gt;<i>             System.out.println(&quot;Login failed!!!&quot;);
+</I>&gt;<i>         }
+</I>&gt;<i>
+</I>&gt;<i> Lp, Zoran
+</I>&gt;<i>   
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000022.html">[Jimmyim-devel] MSNProtocol progress
+</A></li>
+	<LI>Next message: <A HREF="000024.html">[Jimmyim-devel] Config file storage
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23">[ date ]</a>
+              <a href="thread.html#23">[ thread ]</a>
+              <a href="subject.html#23">[ subject ]</a>
+              <a href="author.html#23">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

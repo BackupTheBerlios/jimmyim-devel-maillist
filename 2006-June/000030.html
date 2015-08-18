@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] public class RMS
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-June/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20public%20class%20RMS&In-Reply-To=%3C448499EB.9070800%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000029.html">
+   <LINK REL="Next"  HREF="000032.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] public class RMS</H1>
+    <B>Matev&#382; Jekovec</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20public%20class%20RMS&In-Reply-To=%3C448499EB.9070800%40gmail.com%3E"
+       TITLE="[Jimmyim-devel] public class RMS">matevz.jekovec at gmail.com
+       </A><BR>
+    <I>Mon Jun  5 22:54:03 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000029.html">[Jimmyim-devel] public class RMS
+</A></li>
+        <LI>Next message: <A HREF="000032.html">[Jimmyim-devel] public class RMS
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#30">[ date ]</a>
+              <a href="thread.html#30">[ thread ]</a>
+              <a href="subject.html#30">[ subject ]</a>
+              <a href="author.html#30">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Great!
+
+I've been thinking about this and I think the best way would be to
+create a single store named &quot;JimmyIM&quot;. We should store the data using
+the \n (newline) separator character. I wouldn't complicate things up
+with XML, but simply pre-define the series of data correctly and
+wouldn't use any variables and special syntax (like .ini files, XML,
+scripting languages etc.) in the store format besides the simple \n
+character for the next value.
+
+I'd design the store buffer in the following order:
+1) Program version
+2) Program settings (like auto-connect/login etc.)
+3) Account settings - directly stored Protocol classes:
+3.1) Account type (as defined in Account.java, protocolType)
+3.2) Account username
+3.3) Account password
+3.4) Account server (optional, leave \n if empty)
+3.5) Server's port (optional, leave \n if set to default)
+
+The config file parser would be very simplified this way in comparison
+to XML parser. Any other stuff I forgot?
+
+
+Regards.
+- Matev&#382;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000029.html">[Jimmyim-devel] public class RMS
+</A></li>
+	<LI>Next message: <A HREF="000032.html">[Jimmyim-devel] public class RMS
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#30">[ date ]</a>
+              <a href="thread.html#30">[ thread ]</a>
+              <a href="subject.html#30">[ subject ]</a>
+              <a href="author.html#30">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

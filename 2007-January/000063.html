@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] Kateri kreten ...
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2007-January/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Kateri%20kreten%20...&In-Reply-To=%3C3568adfc0701010722w67b3119ap2b46c2ae08aefbf8%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000062.html">
+   <LINK REL="Next"  HREF="000065.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] Kateri kreten ...</H1>
+    <B>Sahel</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Kateri%20kreten%20...&In-Reply-To=%3C3568adfc0701010722w67b3119ap2b46c2ae08aefbf8%40mail.gmail.com%3E"
+       TITLE="[Jimmyim-devel] Kateri kreten ...">sakdean at gmail.com
+       </A><BR>
+    <I>Mon Jan  1 16:22:51 CET 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000062.html">[Jimmyim-devel] Kateri kreten ...
+</A></li>
+        <LI>Next message: <A HREF="000065.html">[Jimmyim-devel] Kateri kreten ...
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#63">[ date ]</a>
+              <a href="thread.html#63">[ thread ]</a>
+              <a href="subject.html#63">[ subject ]</a>
+              <a href="author.html#63">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ja pa je, ker si s tem razbil delovanje vsega ostalega
+apija se ne spreminja, ce se za karkoli naredi, se to naredi v obliki
+deprecated metod
+in tega se moramo drzat, ce pa ze karkoli popravljamo, to naredim z
+refactoring-om ali
+sporocimo mantainerjem dolocenega kosa kode, da se je neki spremenilo
+in da je sedaj
+drugacna verzija apija
+
+porabil sem kar nekaj ur, da sem ugotovil, da je ta rec spremenjena.
+
+lp
+Dejan
+
+On 1/1/07, Matev&#382; Jekovec &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">matevz.jekovec at gmail.com</A>&gt; wrote:
+&gt;<i> To&#269;n ja, tega ni ve&#269;.
+</I>&gt;<i> login() se lahko kli&#269;e samo, &#269;e mu poda&#353; &#382;e ustvarjen account. Ta s sabo
+</I>&gt;<i> prinese username, password, ssl itd. Tko bi mogl bit &#382;e od za&#269;etka -
+</I>&gt;<i> stringa smo mel samo za test.
+</I>&gt;<i>
+</I>&gt;<i> Sj ni tko hudo, no :D
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> lp
+</I>&gt;<i> -M
+</I>&gt;<i>
+</I>&gt;<i> Sahel pravi:
+</I>&gt;<i> &gt; login(String, String)@Protocol.java
+</I>&gt;<i> &gt; kje je to?
+</I>&gt;<i> &gt; Arhivi te izdajajo.
+</I>&gt;<i> &gt; lpisnl
+</I>&gt;<i> &gt; Dejan
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; On 12/31/06, Matev&#382; Jekovec &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">matevz.jekovec at gmail.com</A>&gt; wrote:
+</I>&gt;<i> &gt;&gt; Kaj konkretno je problem?
+</I>&gt;<i> &gt;&gt; Kode se nisem dotikal &#382;e od septembra. Zadnja stvar, ki sem jo delal iz
+</I>&gt;<i> &gt;&gt; moje strani je SSL povezava, ki je vse pripravljeno, samo ni je bilo
+</I>&gt;<i> &gt;&gt; mogo&#269;e na lep na&#269;in implementirati, zato so lastnosti ostale tam, ni pa
+</I>&gt;<i> &gt;&gt; &#353;e nobene logike zadej.
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Ne spomnim se, da bi kaj brisov.
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; -M
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Sahel pravi:
+</I>&gt;<i> &gt;&gt; &gt; je sel spreminjat API Protocol.java classa!?!?!?!?!?!?
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt; Pa koj kurac vam ni jasen!?!?!?
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt; APIja se ne spreminja, ko se cloveku sprdne!
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt; Pa ce je ze to potrebno (ampak ni bilo) se to sporoci na listo glede
+</I>&gt;<i> &gt;&gt; &gt; na to, da je to Osnovni gradnik!
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt; To niste naredili prvic in zato sm popizdu!
+</I>&gt;<i> &gt;&gt; &gt; APIja se ne tika! Metode se da pod deprecated ne pa da se jih brise!
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt; matr vam za novo leto
+</I>&gt;<i> &gt;&gt; &gt; Dejan
+</I>&gt;<i> &gt;&gt; &gt; _______________________________________________
+</I>&gt;<i> &gt;&gt; &gt; Jimmyim-devel mailing list
+</I>&gt;<i> &gt;&gt; &gt; <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">Jimmyim-devel at lists.berlios.de</A>
+</I>&gt;<i> &gt;&gt; &gt; <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">https://lists.berlios.de/mailman/listinfo/jimmyim-devel</A>
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; _______________________________________________
+</I>&gt;<i> &gt;&gt; Jimmyim-devel mailing list
+</I>&gt;<i> &gt;&gt; <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">Jimmyim-devel at lists.berlios.de</A>
+</I>&gt;<i> &gt;&gt; <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">https://lists.berlios.de/mailman/listinfo/jimmyim-devel</A>
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Jimmyim-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">Jimmyim-devel at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">https://lists.berlios.de/mailman/listinfo/jimmyim-devel</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I></PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000062.html">[Jimmyim-devel] Kateri kreten ...
+</A></li>
+	<LI>Next message: <A HREF="000065.html">[Jimmyim-devel] Kateri kreten ...
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#63">[ date ]</a>
+              <a href="thread.html#63">[ thread ]</a>
+              <a href="subject.html#63">[ subject ]</a>
+              <a href="author.html#63">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

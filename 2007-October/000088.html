@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] Jimmyim-devel Digest, Vol 9, Issue 1
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2007-October/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Jimmyim-devel%20Digest%2C%20Vol%209%2C%20Issue%201&In-Reply-To=%3C8cf12d460710181410g4f210f6en7375204ee0e2c992%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000087.html">
+   <LINK REL="Next"  HREF="000089.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] Jimmyim-devel Digest, Vol 9, Issue 1</H1>
+    <B>Zoran Mesec</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Jimmyim-devel%20Digest%2C%20Vol%209%2C%20Issue%201&In-Reply-To=%3C8cf12d460710181410g4f210f6en7375204ee0e2c992%40mail.gmail.com%3E"
+       TITLE="[Jimmyim-devel] Jimmyim-devel Digest, Vol 9, Issue 1">zoran.mesec at gmail.com
+       </A><BR>
+    <I>Thu Oct 18 23:10:22 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000087.html">[Jimmyim-devel] Jabber protocol fix
+</A></li>
+        <LI>Next message: <A HREF="000089.html">[Jimmyim-devel] Jimmyim-devel Digest, Vol 9, Issue 1
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88">[ date ]</a>
+              <a href="thread.html#88">[ thread ]</a>
+              <a href="subject.html#88">[ subject ]</a>
+              <a href="author.html#88">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all!
+
+Great work. I've tried it and it works, exept gTalk does not work - probably
+I used false settings. Username, server? In pidgin I have:
+username: zoran.mesec
+server: gmail.com
+
+Also some exception occured after some time chatting in jabber:
+[DEBUG] Found Contact to start chat with: <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">sahel at gristle.org</A>
+[REC]:&lt;stream:error&gt;&lt;xml-not-well-formed
+xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;
+
+java.io.IOException: error 0 during TCP write
+at com.sun.midp.io.j2me.socket.Protocol.writeBytes(Protocol.java:360)
+at com.sun.midp.io.BaseOutputStream.write(ConnectionBaseAdapter.java:830)
+
+People, do me a favor. Put this
+line somewhere in JimmyIM and send me the output.
+System.out.println(System.getProperty(&quot;microedition.encoding&quot;));
+Thank you very much and please write also your OS, default charset...
+
+regards,
+Zoran Mesec
+
+2007/10/18, <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-devel-request at lists.berlios.de</A>
+&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-devel-request at lists.berlios.de</A>
+&gt;:<i>
+</I>&gt;<i>
+</I>&gt;<i> Send Jimmyim-devel mailing list submissions to
+</I>&gt;<i>        <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-devel at lists.berlios.de</A>
+</I>&gt;<i>
+</I>&gt;<i> To subscribe or unsubscribe via the World Wide Web, visit
+</I>&gt;<i>        <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">https://lists.berlios.de/mailman/listinfo/jimmyim-devel</A>
+</I>&gt;<i> or, via email, send a message with subject or body 'help' to
+</I>&gt;<i>        <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-devel-request at lists.berlios.de</A>
+</I>&gt;<i>
+</I>&gt;<i> You can reach the person managing the list at
+</I>&gt;<i>        <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-devel-owner at lists.berlios.de</A>
+</I>&gt;<i>
+</I>&gt;<i> When replying, please edit your Subject line so it is more specific
+</I>&gt;<i> than &quot;Re: Contents of Jimmyim-devel digest...&quot;
+</I>&gt;<i>
+</I>&gt;<i> Today's Topics:
+</I>&gt;<i>
+</I>&gt;<i>   1. Jabber protocol fix (Matej Usaj)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -------------- Posredovano sporo&#269;ilo --------------
+</I>&gt;<i> From: &quot;Matej Usaj&quot; &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">usajusaj at gmail.com</A>&gt;
+</I>&gt;<i> To:  <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-devel at lists.berlios.de</A>
+</I>&gt;<i> Date: Thu, 18 Oct 2007 09:33:43 +0200
+</I>&gt;<i> Subject: [Jimmyim-devel] Jabber protocol fix
+</I>&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> I just merged my branch with trunk.
+</I>&gt;<i>
+</I>&gt;<i> Updates are:
+</I>&gt;<i> - Rewritten jabber protocol (jimmy.jabber.*)
+</I>&gt;<i> - Very tiny xml parser (jimmy.util.XmlNode)
+</I>&gt;<i> - Fixed timestamps in ChatWindow (jimmy.ui.ChatWindow)
+</I>&gt;<i>
+</I>&gt;<i> Jabber protocol now supports DIGEST-MD5, X-GOOGLE-TOKEN and PLAIN
+</I>&gt;<i> authentication, so most of the jabber servers are now supported (including
+</I>&gt;<i> GTalk).
+</I>&gt;<i> Functional add, delete and update contact methods.
+</I>&gt;<i> Automatically accepts buddy requests (There could maybe be a check box for
+</I>&gt;<i> this).
+</I>&gt;<i>
+</I>&gt;<i> TODO:
+</I>&gt;<i> - zlib connection compression (implemented in bombus project)
+</I>&gt;<i> - some special features for gtalk
+</I>&gt;<i> - bug check and testing on cuple of more jabber servers
+</I>&gt;<i>
+</I>&gt;<i> Comments/ideas/requests?
+</I>&gt;<i>
+</I>&gt;<i> Cheers!
+</I>&gt;<i>
+</I>&gt;<i> Matej U&#353;aj
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Jimmyim-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">Jimmyim-devel at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">https://lists.berlios.de/mailman/listinfo/jimmyim-devel</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071018/7e7202a0/attachment.html">https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071018/7e7202a0/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000087.html">[Jimmyim-devel] Jabber protocol fix
+</A></li>
+	<LI>Next message: <A HREF="000089.html">[Jimmyim-devel] Jimmyim-devel Digest, Vol 9, Issue 1
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88">[ date ]</a>
+              <a href="thread.html#88">[ thread ]</a>
+              <a href="subject.html#88">[ subject ]</a>
+              <a href="author.html#88">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

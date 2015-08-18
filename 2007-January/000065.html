@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] Kateri kreten ...
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2007-January/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Kateri%20kreten%20...&In-Reply-To=%3C4599A3DD.7080009%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000063.html">
+   <LINK REL="Next"  HREF="000066.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] Kateri kreten ...</H1>
+    <B>Matev&#382; Jekovec</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Kateri%20kreten%20...&In-Reply-To=%3C4599A3DD.7080009%40gmail.com%3E"
+       TITLE="[Jimmyim-devel] Kateri kreten ...">matevz.jekovec at gmail.com
+       </A><BR>
+    <I>Tue Jan  2 01:14:21 CET 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000063.html">[Jimmyim-devel] Kateri kreten ...
+</A></li>
+        <LI>Next message: <A HREF="000066.html">[Jimmyim-devel] Kateri kreten ...
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#65">[ date ]</a>
+              <a href="thread.html#65">[ thread ]</a>
+              <a href="subject.html#65">[ subject ]</a>
+              <a href="author.html#65">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>No fantje, mal se pomirmo, da ne bo preve&#269; vro&#269;e krvi.
+
+<A HREF="https://lists.berlios.de/pipermail/jimmyim-devel/2006-October/000052.html">https://lists.berlios.de/pipermail/jimmyim-devel/2006-October/000052.html</A>
+
+Da, 24. oktobra sem implementiral SSL povezavo in odstranil login(u,p)
+metodo. &#352;e enkrat, login(u,p) je bila tukaj samo za vsak slu&#269;aj -
+refactoring je bil kmalu potreben, ko login() ni ve&#269; potreboval samo
+username in password ampak tudi ostale podatke o povezavi (SSL je
+spro&#382;il to).
+
+Edina koda, ki je uporabljala login(u,p) takrat, je bil MSN modul. In to
+kodo sem tudi popravil in omenil Zoranu (zato tudi za&#269;etek odstavka v
+mailu z Zoran), naj poskusi, &#269;e deluje vse ok (v kolikor sem jaz
+testiral, je delovalo bp). Celoten Jimmy se je v tistem trenutku
+prevedel brez problema, zato sem stvar tudi commital v mainstream.
+
+Glede APIja ne bit tko strikten - &#269;e se osredoto&#269;imo na teh nekaj
+razredov, ki jih imamo (&#269;e temu re&#269;emo API), je to ~1000 vrstic kode
+(ostalo so moduli, GUI, kontrole al pa zunanja dokumentacija), ki bi jo
+s prve moral vsak programer pribli&#382;no preleteti in brez te&#382;av razumeti.
+Ne more&#353; porabiti &quot;ve&#269; ur&quot; za to, da ugotovi&#353;, da login(u,p) v bistvu ne
+obstaja ve&#269; in ti klikniti, da jo je mogo&#269;e login(account) nadomestila,
+kar je dost straightforward razvidno no.
+
+
+btw. Vse naj naj v 2007, sploh kar se izpitov ti&#269;e! Upam, da se vidimo kaj!
+-M
+
+Sahel pravi:
+&gt;<i> ja pa je, ker si s tem razbil delovanje vsega ostalega
+</I>&gt;<i> apija se ne spreminja, ce se za karkoli naredi, se to naredi v obliki
+</I>&gt;<i> deprecated metod
+</I>&gt;<i> in tega se moramo drzat, ce pa ze karkoli popravljamo, to naredim z
+</I>&gt;<i> refactoring-om ali
+</I>&gt;<i> sporocimo mantainerjem dolocenega kosa kode, da se je neki spremenilo
+</I>&gt;<i> in da je sedaj
+</I>&gt;<i> drugacna verzija apija
+</I>&gt;<i>
+</I>&gt;<i> porabil sem kar nekaj ur, da sem ugotovil, da je ta rec spremenjena.
+</I>&gt;<i>
+</I>&gt;<i> lp
+</I>&gt;<i> Dejan
+</I>&gt;<i>   
+</I>&gt;<i>
+</I>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 252 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070102/a3e10536/attachment.pgp">https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070102/a3e10536/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000063.html">[Jimmyim-devel] Kateri kreten ...
+</A></li>
+	<LI>Next message: <A HREF="000066.html">[Jimmyim-devel] Kateri kreten ...
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#65">[ date ]</a>
+              <a href="thread.html#65">[ thread ]</a>
+              <a href="subject.html#65">[ subject ]</a>
+              <a href="author.html#65">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

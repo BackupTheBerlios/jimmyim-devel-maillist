@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] Protocol -&gt; Jimmy interaction
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-June/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Protocol%20-%3E%20Jimmy%20interaction&In-Reply-To=%3C3568adfc0606181152sbf9a1abg936fb304b78ece00%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000036.html">
+   <LINK REL="Next"  HREF="000038.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] Protocol -&gt; Jimmy interaction</H1>
+    <B>Sahel</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Protocol%20-%3E%20Jimmy%20interaction&In-Reply-To=%3C3568adfc0606181152sbf9a1abg936fb304b78ece00%40mail.gmail.com%3E"
+       TITLE="[Jimmyim-devel] Protocol -&gt; Jimmy interaction">sakdean at gmail.com
+       </A><BR>
+    <I>Sun Jun 18 20:52:37 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000036.html">[Jimmyim-devel] SVN problems
+</A></li>
+        <LI>Next message: <A HREF="000038.html">[Jimmyim-devel] Protocol -&gt; Jimmy interaction
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#37">[ date ]</a>
+              <a href="thread.html#37">[ thread ]</a>
+              <a href="subject.html#37">[ subject ]</a>
+              <a href="author.html#37">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I discovered, that if a Protocol dies, Jimmy won't really know when it
+happens and won'd delete the protocol from the list. So I've added an
+Interface (ProtocolInterface), that allows to communicate with the
+main Jimmy instance and execute some methods.
+
+You should all create something like this in your protocol constructors:
+Ex:
+
+public ICQProtocol(Jimmy j){
+     this.connected_ = false;
+     this.me = this.addProtocolInteractionIF(j);
+}
+
+
+And on creation of a new instance in Jimmy:
+
+ICQProtocol icq = new ICQProtocol(this);
+
+
+To invoke a method in Jimmy from the Protocol:
+
+this.me.stopProtocol(this);
+
+bye
+Dejan
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000036.html">[Jimmyim-devel] SVN problems
+</A></li>
+	<LI>Next message: <A HREF="000038.html">[Jimmyim-devel] Protocol -&gt; Jimmy interaction
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#37">[ date ]</a>
+              <a href="thread.html#37">[ thread ]</a>
+              <a href="subject.html#37">[ subject ]</a>
+              <a href="author.html#37">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

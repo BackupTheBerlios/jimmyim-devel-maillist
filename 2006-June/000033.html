@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] public class RMS
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-June/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20public%20class%20RMS&In-Reply-To=%3C002401c68a06%247ffbc0c0%240100a8c0%40HlevZoran60c246b6a2%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000032.html">
+   <LINK REL="Next"  HREF="000034.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] public class RMS</H1>
+    <B>Zoran Mesec</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20public%20class%20RMS&In-Reply-To=%3C002401c68a06%247ffbc0c0%240100a8c0%40HlevZoran60c246b6a2%3E"
+       TITLE="[Jimmyim-devel] public class RMS">zoran.mesec at siol.net
+       </A><BR>
+    <I>Wed Jun  7 09:46:32 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000032.html">[Jimmyim-devel] public class RMS
+</A></li>
+        <LI>Next message: <A HREF="000034.html">[Jimmyim-devel] public class RMS
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#33">[ date ]</a>
+              <a href="thread.html#33">[ thread ]</a>
+              <a href="subject.html#33">[ subject ]</a>
+              <a href="author.html#33">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I agree also, but there are some issues unsolved:
+
+a)unique identifier for each &quot;Jimmy&quot; account, because there can be more
+users on the same mobile phone:
+
+User1:
+&gt;<i> 3.1) Account type (as defined in Account.java, protocolType)
+</I>&gt;<i> 3.2) Account username
+</I>&gt;<i> 3.3) Account password
+</I>&gt;<i> 3.4) Account server (optional, leave \n if empty)
+</I>&gt;<i> 3.5) Server's port (optional, leave \n if set to default)
+</I>
+User2:
+&gt;<i> 3.1) Account type (as defined in Account.java, protocolType)
+</I>&gt;<i> 3.2) Account username
+</I>&gt;<i> 3.3) Account password
+</I>&gt;<i> 3.4) Account server (optional, leave \n if empty)
+</I>&gt;<i> 3.5) Server's port (optional, leave \n if set to default)
+</I>
+We can't differenciate by usernames(if so, by what username?), so lets add
+an identifier:
+&gt;<i> 3.0) JimmySettings identifier (when creating settings for protocols, user
+</I>should also type his real name as an identifier). E.q.: Zoran Mesec
+
+The result of the store fetch would be:
+- Zoran Mesec settings (which includes my usernames and passwords)
+- AnyOther Member (which also includes all usernames and passwords for
+AnyOther Member)
+
+
+b)how do we know the number of protocols the user is connected to? By trying
+to read \n k*5-times, where k is the number of protocols? If I have created
+settings for only one protocol(e.q. for MSN), the store would look like:
+<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">111zoran.mesec at siol.net</A>\npassword\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+n\n
+// all \n at the end mean that Jabber, ICQ and Yahoo are left empty.
+Is not that a vaste of computer memory?
+
+How should we name Jimmy's Record Store then? (Jimmy perhaps?)
+
+Best regards, 
+Zoran
+
+
+-----Original Message-----
+From: <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-devel-admin at lists.berlios.de</A>
+[mailto:<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-devel-admin at lists.berlios.de</A>] On Behalf Of JAnez Urevc
+Sent: Tuesday, June 06, 2006 12:17 AM
+Cc: <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-devel at berlios.de</A>
+Subject: Re: [Jimmyim-devel] public class RMS
+
+I agree with Matev&#382;.
+
+Reason:
+I tried to use RMS to save data entered in new account form and works
+quite fine. The only problem is that getAccounts() uses variable &quot;user&quot;
+to save whole string (<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">user at jabber.org</A> e.g.), but it should separate into
+user and server. I think it would be easiest if we separate data using
+newline character.
+
+JAnez
+
+Matev&#382; Jekovec wrote:
+&gt;<i> Great!
+</I>&gt;<i> 
+</I>&gt;<i> I've been thinking about this and I think the best way would be to
+</I>&gt;<i> create a single store named &quot;JimmyIM&quot;. We should store the data using
+</I>&gt;<i> the \n (newline) separator character. I wouldn't complicate things up
+</I>&gt;<i> with XML, but simply pre-define the series of data correctly and
+</I>&gt;<i> wouldn't use any variables and special syntax (like .ini files, XML,
+</I>&gt;<i> scripting languages etc.) in the store format besides the simple \n
+</I>&gt;<i> character for the next value.
+</I>&gt;<i> 
+</I>&gt;<i> I'd design the store buffer in the following order:
+</I>&gt;<i> 1) Program version
+</I>&gt;<i> 2) Program settings (like auto-connect/login etc.)
+</I>&gt;<i> 3) Account settings - directly stored Protocol classes:
+</I>&gt;<i> 3.1) Account type (as defined in Account.java, protocolType)
+</I>&gt;<i> 3.2) Account username
+</I>&gt;<i> 3.3) Account password
+</I>&gt;<i> 3.4) Account server (optional, leave \n if empty)
+</I>&gt;<i> 3.5) Server's port (optional, leave \n if set to default)
+</I>&gt;<i> 
+</I>&gt;<i> The config file parser would be very simplified this way in comparison
+</I>&gt;<i> to XML parser. Any other stuff I forgot?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Regards.
+</I>&gt;<i> - Matev&#382;
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Jimmyim-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">Jimmyim-devel at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="http://lists.berlios.de/mailman/listinfo/jimmyim-devel">http://lists.berlios.de/mailman/listinfo/jimmyim-devel</A>
+</I>&gt;<i> 
+</I>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000032.html">[Jimmyim-devel] public class RMS
+</A></li>
+	<LI>Next message: <A HREF="000034.html">[Jimmyim-devel] public class RMS
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#33">[ date ]</a>
+              <a href="thread.html#33">[ thread ]</a>
+              <a href="subject.html#33">[ subject ]</a>
+              <a href="author.html#33">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

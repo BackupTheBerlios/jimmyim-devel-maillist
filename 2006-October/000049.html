@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] setting up JimmyIM in Eclipse IDE
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-October/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20setting%20up%20JimmyIM%20in%20Eclipse%20IDE&In-Reply-To=%3CPine.LNX.4.64.0610221811330.16952%40mail.nilings.se%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000047.html">
+   <LINK REL="Next"  HREF="000048.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] setting up JimmyIM in Eclipse IDE</H1>
+    <B>Mathias Sundman</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20setting%20up%20JimmyIM%20in%20Eclipse%20IDE&In-Reply-To=%3CPine.LNX.4.64.0610221811330.16952%40mail.nilings.se%3E"
+       TITLE="[Jimmyim-devel] setting up JimmyIM in Eclipse IDE">mathias at nilings.se
+       </A><BR>
+    <I>Sun Oct 22 18:23:39 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000047.html">[Jimmyim-devel] setting up JimmyIM in Eclipse IDE
+</A></li>
+        <LI>Next message: <A HREF="000048.html">[Jimmyim-devel] JimmyIM conference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#49">[ date ]</a>
+              <a href="thread.html#49">[ thread ]</a>
+              <a href="subject.html#49">[ subject ]</a>
+              <a href="author.html#49">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>YEES!
+
+Thanks alot for talking the time to descibe this! I still got my 44 
+warnings following your guide, but that might have todo with diffrences in 
+how we have Eclipse configured, what to warn about, or that I'm using a 
+diffrent version of Java or the Wireless toolkit.
+
+However, I was now succefully able to launch the app in the emulator 
+without any errors about diffrent version.
+
+I think the problem was that when I pulled project from SVN I also got the 
+.eclipseme file from SVN which contained bad version information about the 
+wireless toolkit. But when I created a new project locally and copied the 
+sourcetree I left the .eclipseme file as it was created by Eclipse on my 
+machine and then it worked.
+
+Hopefully I will now also be able to export the project to a JAR file and 
+run it so I can make some changes and try them in my mobile phone... Time 
+to try!
+
+Thanx again!
+
+Cheers // Mathias
+
+On Sun, 22 Oct 2006, Zoran Mesec wrote:
+
+&gt;<i> Hello!
+</I>&gt;<i>
+</I>&gt;<i> This is how I setup JimmyIM in Eclipse:
+</I>&gt;<i> -after installing Eclipse &amp; eclipseME, I setup the J2ME configuration in
+</I>&gt;<i> Window-&gt;Preferences-&gt;J2ME:
+</I>&gt;<i> - First Set the WTK root(basically your folder where you installed Wirelles
+</I>&gt;<i> toolkit)
+</I>&gt;<i> - go to Device management and Import, then specify the directory(usually the
+</I>&gt;<i> same as WTK root) and click refresh - in my case, 4 devices were found, that
+</I>&gt;<i> is all you need. Click finish and then select e.q. DefaultColorPhone.
+</I>&gt;<i>
+</I>&gt;<i> Create new Project(J2ME projects - J2ME Midlet Suite) and called it JimmyIM.
+</I>&gt;<i> In the New J2ME Project dialog the Device-Group should be automatically
+</I>&gt;<i> selected(J2ME Wirelles toolkit 2.2 in my case and DefaultColorPhone for
+</I>&gt;<i> default device) if you have done first three steps. Do not mess with the
+</I>&gt;<i> Library tab and other tabs - it should work out of the box.
+</I>&gt;<i>
+</I>&gt;<i> Then just copy everything to your project folder. The project directory on
+</I>&gt;<i> your hard drive should look something like this(depends on the platform and
+</I>&gt;<i> the IDE version):
+</I>&gt;<i>
+</I>&gt;<i> .settings
+</I>&gt;<i> jimmy(with files Account.java, ChatSession.java, Jimmy.java,... and
+</I>&gt;<i> subfolders icq, jabber, media, ...)
+</I>&gt;<i> verified
+</I>&gt;<i> .claspath
+</I>&gt;<i> .eclipseme
+</I>&gt;<i> .project
+</I>&gt;<i> JimmyIM.jad
+</I>&gt;<i>
+</I>&gt;<i> Refresh the project and run it. A Run dialog opens up. Select Wireless
+</I>&gt;<i> tookit emulator and New_configuration(create one if it does not exists) with
+</I>&gt;<i> the Executable-&gt;Midlet jimmy.Jimmy (in my case, this were default settings).
+</I>&gt;<i> Run! The emulator should pop out.
+</I>&gt;<i>
+</I>&gt;<i> I did not get any warnings or errors. JimmyIM.jar and JimmyIM.jad are build
+</I>&gt;<i> automatically everytime you run&amp;build project in folder /deployed.
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i> Zoran Mesec
+</I>
+-- 
+A. Because people read from top to bottom.
+Q. Why should I not top-post?
+_________________________________________________________
+Mathias Sundman              (^)   ASCII Ribbon Campaign
+NILINGS AB                    X    NO HTML/RTF in e-mail
+Tel: +46-(0)8-666 32 28      / \   NO Word docs in e-mail
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000047.html">[Jimmyim-devel] setting up JimmyIM in Eclipse IDE
+</A></li>
+	<LI>Next message: <A HREF="000048.html">[Jimmyim-devel] JimmyIM conference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#49">[ date ]</a>
+              <a href="thread.html#49">[ thread ]</a>
+              <a href="subject.html#49">[ subject ]</a>
+              <a href="author.html#49">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

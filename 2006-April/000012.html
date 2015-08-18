@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] ServerHandler, metoda readLine()
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-April/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20ServerHandler%2C%20metoda%20readLine%28%29&In-Reply-To=%3C000001c6656b%24412704a0%24ef5cfea9%40hlev60c246b6a2%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000011.html">
+   <LINK REL="Next"  HREF="000013.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] ServerHandler, metoda readLine()</H1>
+    <B>Zoran Mesec</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20ServerHandler%2C%20metoda%20readLine%28%29&In-Reply-To=%3C000001c6656b%24412704a0%24ef5cfea9%40hlev60c246b6a2%3E"
+       TITLE="[Jimmyim-devel] ServerHandler, metoda readLine()">zoran.mesec at siol.net
+       </A><BR>
+    <I>Fri Apr 21 19:44:32 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000011.html">[Jimmyim-devel] Getting data from an input stream - big issue resolved
+</A></li>
+        <LI>Next message: <A HREF="000013.html">[Jimmyim-devel] ServerHandler, metoda readLine()
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#12">[ date ]</a>
+              <a href="thread.html#12">[ thread ]</a>
+              <a href="subject.html#12">[ subject ]</a>
+              <a href="author.html#12">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Yo!
+	
+	Re&#353;itev od Bombusa, ki potegne reply s serverja ni v redu!!! V
+primeru Jabberja verjetno dela, pri MSN pa ne bo. Zakaj? Glejte, mi smo
+nazaj dobili samo eno vrstico v odgovor. &#268;e pa presko&#269;imo nekaj korakov pri
+logiranju, ko moramo dobiti seznam kontaktov(skupine), bo pa prejeto
+sporo&#269;ilo izgledalo nekako takole:
+
+&lt;&lt;&lt; LSG 0 Other%20Contacts 0\r\n
+    LSG 1 Coworkers 0\r\n
+    LSG 2 Friends 0\r\n
+    LSG 3 Family 0\r\n
+
+In v tem primeru methoda read() blokira!!!
+
+Takole sem posku&#353;al izpisati vse vrstice:
+
+            while ((line= this.readLine())!=null) 
+            {
+                System.out.println(line);
+             }
+
+&#268;e mi ne verjamete, pa poskusite tole:
+line = this.readLine();
+line2 = this.readLine();
+
+Zgodi se natanko, kar se je zgodilo meni... nonBufferedRead
+Saj ta koda naredi isto kot moja, samo druga&#269;e je napisana. &#268;e dobimo nazaj
+eno vrstico je ok, ker bere do \n, &#269;e jih je pa ve&#269; je pa exception ...
+
+ No, zbiram predloge koliko bajtov naj dam v buffer ... :)
+			
+Lp, Zoran
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000011.html">[Jimmyim-devel] Getting data from an input stream - big issue resolved
+</A></li>
+	<LI>Next message: <A HREF="000013.html">[Jimmyim-devel] ServerHandler, metoda readLine()
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#12">[ date ]</a>
+              <a href="thread.html#12">[ thread ]</a>
+              <a href="subject.html#12">[ subject ]</a>
+              <a href="author.html#12">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

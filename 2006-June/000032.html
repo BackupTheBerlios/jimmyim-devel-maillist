@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] public class RMS
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-June/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20public%20class%20RMS&In-Reply-To=%3C4484AD58.1020004%40siol.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000030.html">
+   <LINK REL="Next"  HREF="000033.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] public class RMS</H1>
+    <B>JAnez Urevc</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20public%20class%20RMS&In-Reply-To=%3C4484AD58.1020004%40siol.net%3E"
+       TITLE="[Jimmyim-devel] public class RMS">janez.urevc at siol.net
+       </A><BR>
+    <I>Tue Jun  6 00:16:56 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000030.html">[Jimmyim-devel] public class RMS
+</A></li>
+        <LI>Next message: <A HREF="000033.html">[Jimmyim-devel] public class RMS
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#32">[ date ]</a>
+              <a href="thread.html#32">[ thread ]</a>
+              <a href="subject.html#32">[ subject ]</a>
+              <a href="author.html#32">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I agree with Matev&#382;.
+
+Reason:
+I tried to use RMS to save data entered in new account form and works
+quite fine. The only problem is that getAccounts() uses variable &quot;user&quot;
+to save whole string (<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">user at jabber.org</A> e.g.), but it should separate into
+user and server. I think it would be easiest if we separate data using
+newline character.
+
+JAnez
+
+Matev&#382; Jekovec wrote:
+&gt;<i> Great!
+</I>&gt;<i> 
+</I>&gt;<i> I've been thinking about this and I think the best way would be to
+</I>&gt;<i> create a single store named &quot;JimmyIM&quot;. We should store the data using
+</I>&gt;<i> the \n (newline) separator character. I wouldn't complicate things up
+</I>&gt;<i> with XML, but simply pre-define the series of data correctly and
+</I>&gt;<i> wouldn't use any variables and special syntax (like .ini files, XML,
+</I>&gt;<i> scripting languages etc.) in the store format besides the simple \n
+</I>&gt;<i> character for the next value.
+</I>&gt;<i> 
+</I>&gt;<i> I'd design the store buffer in the following order:
+</I>&gt;<i> 1) Program version
+</I>&gt;<i> 2) Program settings (like auto-connect/login etc.)
+</I>&gt;<i> 3) Account settings - directly stored Protocol classes:
+</I>&gt;<i> 3.1) Account type (as defined in Account.java, protocolType)
+</I>&gt;<i> 3.2) Account username
+</I>&gt;<i> 3.3) Account password
+</I>&gt;<i> 3.4) Account server (optional, leave \n if empty)
+</I>&gt;<i> 3.5) Server's port (optional, leave \n if set to default)
+</I>&gt;<i> 
+</I>&gt;<i> The config file parser would be very simplified this way in comparison
+</I>&gt;<i> to XML parser. Any other stuff I forgot?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Regards.
+</I>&gt;<i> - Matev&#382;
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Jimmyim-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">Jimmyim-devel at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="http://lists.berlios.de/mailman/listinfo/jimmyim-devel">http://lists.berlios.de/mailman/listinfo/jimmyim-devel</A>
+</I>&gt;<i> 
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000030.html">[Jimmyim-devel] public class RMS
+</A></li>
+	<LI>Next message: <A HREF="000033.html">[Jimmyim-devel] public class RMS
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#32">[ date ]</a>
+              <a href="thread.html#32">[ thread ]</a>
+              <a href="subject.html#32">[ subject ]</a>
+              <a href="author.html#32">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

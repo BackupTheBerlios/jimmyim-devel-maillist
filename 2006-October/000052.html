@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] ssl connection implemented
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-October/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20ssl%20connection%20implemented&In-Reply-To=%3C453DCE1C.6040302%40guest.arnes.si%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000051.html">
+   <LINK REL="Next"  HREF="000053.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] ssl connection implemented</H1>
+    <B>Matevz Jekovec</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20ssl%20connection%20implemented&In-Reply-To=%3C453DCE1C.6040302%40guest.arnes.si%3E"
+       TITLE="[Jimmyim-devel] ssl connection implemented">matevz.jekovec at guest.arnes.si
+       </A><BR>
+    <I>Tue Oct 24 10:26:04 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000051.html">[Jimmyim-devel] Bug report
+</A></li>
+        <LI>Next message: <A HREF="000053.html">[Jimmyim-devel] using jimmyIM in master thesis project,	developing a context aware mobile service?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#52">[ date ]</a>
+              <a href="thread.html#52">[ thread ]</a>
+              <a href="subject.html#52">[ subject ]</a>
+              <a href="author.html#52">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Greetings to all,
+
+In R425 I added SSL connection support to server handler. I also added
+useSSL attribute to Account and its getter/setter methods.
+
+Saving/Loading of the useSSL property is also done, so *please remove
+any old jimmy config files* or Jimmy will crash.
+
+Janez, could you add a &quot;Use SSL connection&quot; checkbox to Account settings
+widget? Currently, SSL is disabled by default in JimmyUI.
+
+Zoran, I removed the obsolete login(user, pass) method - it's now
+superseded by login(account). I cut&amp;paste the code from login(u,p) to
+login(account), so please check if everything is ok.
+
+The current implementation should work, I didn't manage to connect to
+GoogleTalk yet though - some issues with certificates which I don't
+really get it...
+
+
+Regards.
+- Matev&#382;
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 252 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20061024/8deed613/attachment.pgp">https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20061024/8deed613/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000051.html">[Jimmyim-devel] Bug report
+</A></li>
+	<LI>Next message: <A HREF="000053.html">[Jimmyim-devel] using jimmyIM in master thesis project,	developing a context aware mobile service?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#52">[ date ]</a>
+              <a href="thread.html#52">[ thread ]</a>
+              <a href="subject.html#52">[ subject ]</a>
+              <a href="author.html#52">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

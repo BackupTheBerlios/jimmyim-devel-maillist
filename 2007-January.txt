@@ -1,0 +1,441 @@
+From matevz.jekovec at gmail.com  Mon Jan  1 15:55:17 2007
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Mon, 01 Jan 2007 15:55:17 +0100
+Subject: [Jimmyim-devel] Kateri kreten ...
+In-Reply-To: <3568adfc0612312133r37dc2fc1l3c35a708ce868179@mail.gmail.com>
+References: <3568adfc0612310708k2b7cc0e4o9329642277ccac6b@mail.gmail.com>	
+	<45980138.4030306@gmail.com>
+	<3568adfc0612312133r37dc2fc1l3c35a708ce868179@mail.gmail.com>
+Message-ID: <459920D5.4070200@gmail.com>
+
+To?n ja, tega ni ve?.
+login() se lahko kli?e samo, ?e mu poda? ?e ustvarjen account. Ta s sabo
+prinese username, password, ssl itd. Tko bi mogl bit ?e od za?etka -
+stringa smo mel samo za test.
+
+Sj ni tko hudo, no :D
+
+
+lp
+-M
+
+Sahel pravi:
+> login(String, String)@Protocol.java
+> kje je to?
+> Arhivi te izdajajo.
+> lpisnl
+> Dejan
+>
+>
+> On 12/31/06, Matev? Jekovec <matevz.jekovec at gmail.com> wrote:
+>> Kaj konkretno je problem?
+>> Kode se nisem dotikal ?e od septembra. Zadnja stvar, ki sem jo delal iz
+>> moje strani je SSL povezava, ki je vse pripravljeno, samo ni je bilo
+>> mogo?e na lep na?in implementirati, zato so lastnosti ostale tam, ni pa
+>> ?e nobene logike zadej.
+>>
+>> Ne spomnim se, da bi kaj brisov.
+>>
+>>
+>> -M
+>>
+>> Sahel pravi:
+>> > je sel spreminjat API Protocol.java classa!?!?!?!?!?!?
+>> >
+>> > Pa koj kurac vam ni jasen!?!?!?
+>> >
+>> > APIja se ne spreminja, ko se cloveku sprdne!
+>> >
+>> > Pa ce je ze to potrebno (ampak ni bilo) se to sporoci na listo glede
+>> > na to, da je to Osnovni gradnik!
+>> >
+>> > To niste naredili prvic in zato sm popizdu!
+>> > APIja se ne tika! Metode se da pod deprecated ne pa da se jih brise!
+>> >
+>> > matr vam za novo leto
+>> > Dejan
+>> > _______________________________________________
+>> > Jimmyim-devel mailing list
+>> > Jimmyim-devel at lists.berlios.de
+>> > https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>> >
+>> >
+>>
+>>
+>>
+>> _______________________________________________
+>> Jimmyim-devel mailing list
+>> Jimmyim-devel at lists.berlios.de
+>> https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>>
+>>
+>>
+>>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 252 bytes
+Desc: OpenPGP digital signature
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070101/797c12b8/attachment.pgp>
+
+From sakdean at gmail.com  Mon Jan  1 16:22:51 2007
+From: sakdean at gmail.com (Sahel)
+Date: Mon, 1 Jan 2007 16:22:51 +0100
+Subject: [Jimmyim-devel] Kateri kreten ...
+In-Reply-To: <459920D5.4070200@gmail.com>
+References: <3568adfc0612310708k2b7cc0e4o9329642277ccac6b@mail.gmail.com>
+	<45980138.4030306@gmail.com>
+	<3568adfc0612312133r37dc2fc1l3c35a708ce868179@mail.gmail.com>
+	<459920D5.4070200@gmail.com>
+Message-ID: <3568adfc0701010722w67b3119ap2b46c2ae08aefbf8@mail.gmail.com>
+
+ja pa je, ker si s tem razbil delovanje vsega ostalega
+apija se ne spreminja, ce se za karkoli naredi, se to naredi v obliki
+deprecated metod
+in tega se moramo drzat, ce pa ze karkoli popravljamo, to naredim z
+refactoring-om ali
+sporocimo mantainerjem dolocenega kosa kode, da se je neki spremenilo
+in da je sedaj
+drugacna verzija apija
+
+porabil sem kar nekaj ur, da sem ugotovil, da je ta rec spremenjena.
+
+lp
+Dejan
+
+On 1/1/07, Matev? Jekovec <matevz.jekovec at gmail.com> wrote:
+> To?n ja, tega ni ve?.
+> login() se lahko kli?e samo, ?e mu poda? ?e ustvarjen account. Ta s sabo
+> prinese username, password, ssl itd. Tko bi mogl bit ?e od za?etka -
+> stringa smo mel samo za test.
+>
+> Sj ni tko hudo, no :D
+>
+>
+> lp
+> -M
+>
+> Sahel pravi:
+> > login(String, String)@Protocol.java
+> > kje je to?
+> > Arhivi te izdajajo.
+> > lpisnl
+> > Dejan
+> >
+> >
+> > On 12/31/06, Matev? Jekovec <matevz.jekovec at gmail.com> wrote:
+> >> Kaj konkretno je problem?
+> >> Kode se nisem dotikal ?e od septembra. Zadnja stvar, ki sem jo delal iz
+> >> moje strani je SSL povezava, ki je vse pripravljeno, samo ni je bilo
+> >> mogo?e na lep na?in implementirati, zato so lastnosti ostale tam, ni pa
+> >> ?e nobene logike zadej.
+> >>
+> >> Ne spomnim se, da bi kaj brisov.
+> >>
+> >>
+> >> -M
+> >>
+> >> Sahel pravi:
+> >> > je sel spreminjat API Protocol.java classa!?!?!?!?!?!?
+> >> >
+> >> > Pa koj kurac vam ni jasen!?!?!?
+> >> >
+> >> > APIja se ne spreminja, ko se cloveku sprdne!
+> >> >
+> >> > Pa ce je ze to potrebno (ampak ni bilo) se to sporoci na listo glede
+> >> > na to, da je to Osnovni gradnik!
+> >> >
+> >> > To niste naredili prvic in zato sm popizdu!
+> >> > APIja se ne tika! Metode se da pod deprecated ne pa da se jih brise!
+> >> >
+> >> > matr vam za novo leto
+> >> > Dejan
+> >> > _______________________________________________
+> >> > Jimmyim-devel mailing list
+> >> > Jimmyim-devel at lists.berlios.de
+> >> > https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+> >> >
+> >> >
+> >>
+> >>
+> >>
+> >> _______________________________________________
+> >> Jimmyim-devel mailing list
+> >> Jimmyim-devel at lists.berlios.de
+> >> https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+> >>
+> >>
+> >>
+> >>
+>
+>
+>
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+>
+>
+>
+
+From zoran.mesec at gmail.com  Mon Jan  1 18:59:28 2007
+From: zoran.mesec at gmail.com (Zoran Mesec)
+Date: Mon, 1 Jan 2007 18:59:28 +0100
+Subject: [Jimmyim-devel] Kateri kreten ...
+In-Reply-To: <45980138.4030306@gmail.com>
+Message-ID: <002e01c72dce$95ae4ed0$0200a8c0@HlevZoran60c246b6a2>
+
+Hahaha...po?teno sem se nasmejal, ko sem tole bral!
+Jekovc ti si vrgu ven metodo login(username, password) 24.oktobra...po?teno
+se ti sprdnilo...:)
+
+Matr vsem za novo leto 2007 in za euro.
+
+Lp, Zoran
+
+-----Original Message-----
+From: Matev? Jekovec [mailto:matevz.jekovec at gmail.com] 
+Sent: Sunday, December 31, 2006 7:28 PM
+Cc: jimmyim-devel at lists.berlios.de
+Subject: Re: [Jimmyim-devel] Kateri kreten ...
+
+Kaj konkretno je problem?
+Kode se nisem dotikal ?e od septembra. Zadnja stvar, ki sem jo delal iz
+moje strani je SSL povezava, ki je vse pripravljeno, samo ni je bilo
+mogo?e na lep na?in implementirati, zato so lastnosti ostale tam, ni pa
+?e nobene logike zadej.
+
+Ne spomnim se, da bi kaj brisov.
+
+
+-M
+
+Sahel pravi:
+> je sel spreminjat API Protocol.java classa!?!?!?!?!?!?
+>
+> Pa koj kurac vam ni jasen!?!?!?
+>
+> APIja se ne spreminja, ko se cloveku sprdne!
+>
+> Pa ce je ze to potrebno (ampak ni bilo) se to sporoci na listo glede
+> na to, da je to Osnovni gradnik!
+>
+> To niste naredili prvic in zato sm popizdu!
+> APIja se ne tika! Metode se da pod deprecated ne pa da se jih brise!
+>
+> matr vam za novo leto
+> Dejan
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+>   
+
+
+
+
+From matevz.jekovec at gmail.com  Tue Jan  2 01:14:21 2007
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Tue, 02 Jan 2007 01:14:21 +0100
+Subject: [Jimmyim-devel] Kateri kreten ...
+In-Reply-To: <3568adfc0701010722w67b3119ap2b46c2ae08aefbf8@mail.gmail.com>
+References: <3568adfc0612310708k2b7cc0e4o9329642277ccac6b@mail.gmail.com>	<45980138.4030306@gmail.com>	<3568adfc0612312133r37dc2fc1l3c35a708ce868179@mail.gmail.com>	<459920D5.4070200@gmail.com>
+	<3568adfc0701010722w67b3119ap2b46c2ae08aefbf8@mail.gmail.com>
+Message-ID: <4599A3DD.7080009@gmail.com>
+
+No fantje, mal se pomirmo, da ne bo preve? vro?e krvi.
+
+https://lists.berlios.de/pipermail/jimmyim-devel/2006-October/000052.html
+
+Da, 24. oktobra sem implementiral SSL povezavo in odstranil login(u,p)
+metodo. ?e enkrat, login(u,p) je bila tukaj samo za vsak slu?aj -
+refactoring je bil kmalu potreben, ko login() ni ve? potreboval samo
+username in password ampak tudi ostale podatke o povezavi (SSL je
+spro?il to).
+
+Edina koda, ki je uporabljala login(u,p) takrat, je bil MSN modul. In to
+kodo sem tudi popravil in omenil Zoranu (zato tudi za?etek odstavka v
+mailu z Zoran), naj poskusi, ?e deluje vse ok (v kolikor sem jaz
+testiral, je delovalo bp). Celoten Jimmy se je v tistem trenutku
+prevedel brez problema, zato sem stvar tudi commital v mainstream.
+
+Glede APIja ne bit tko strikten - ?e se osredoto?imo na teh nekaj
+razredov, ki jih imamo (?e temu re?emo API), je to ~1000 vrstic kode
+(ostalo so moduli, GUI, kontrole al pa zunanja dokumentacija), ki bi jo
+s prve moral vsak programer pribli?no preleteti in brez te?av razumeti.
+Ne more? porabiti "ve? ur" za to, da ugotovi?, da login(u,p) v bistvu ne
+obstaja ve? in ti klikniti, da jo je mogo?e login(account) nadomestila,
+kar je dost straightforward razvidno no.
+
+
+btw. Vse naj naj v 2007, sploh kar se izpitov ti?e! Upam, da se vidimo kaj!
+-M
+
+Sahel pravi:
+> ja pa je, ker si s tem razbil delovanje vsega ostalega
+> apija se ne spreminja, ce se za karkoli naredi, se to naredi v obliki
+> deprecated metod
+> in tega se moramo drzat, ce pa ze karkoli popravljamo, to naredim z
+> refactoring-om ali
+> sporocimo mantainerjem dolocenega kosa kode, da se je neki spremenilo
+> in da je sedaj
+> drugacna verzija apija
+>
+> porabil sem kar nekaj ur, da sem ugotovil, da je ta rec spremenjena.
+>
+> lp
+> Dejan
+>   
+>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 252 bytes
+Desc: OpenPGP digital signature
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070102/a3e10536/attachment.pgp>
+
+From sakdean at gmail.com  Tue Jan  2 15:11:37 2007
+From: sakdean at gmail.com (Sahel)
+Date: Tue, 2 Jan 2007 15:11:37 +0100
+Subject: [Jimmyim-devel] Kateri kreten ...
+In-Reply-To: <4599A3DD.7080009@gmail.com>
+References: <3568adfc0612310708k2b7cc0e4o9329642277ccac6b@mail.gmail.com>
+	<45980138.4030306@gmail.com>
+	<3568adfc0612312133r37dc2fc1l3c35a708ce868179@mail.gmail.com>
+	<459920D5.4070200@gmail.com>
+	<3568adfc0701010722w67b3119ap2b46c2ae08aefbf8@mail.gmail.com>
+	<4599A3DD.7080009@gmail.com>
+Message-ID: <3568adfc0701020611v6817b5b0ibb9e65afa1a19dc9@mail.gmail.com>
+
+ICQ tudi uporablja to metodo in po novem nic ne dela.
+
+Jaz bi raje razvoj baziral na tem, da popravimo hibe.
+Urediti je potrebno exception hadnlig, ker je razvoj aplikacij, ki
+catch-ajo samo Exception totalno nemogoc.
+
+V glavnem, sklepam, da v tem trenutku ICQ ne dela, zaradi sprememb, ki
+so nastale v kodi zaradi implementacije SSL-a.
+
+Zelo bi rad vedel, zakaj ze v osnovi se mi sploh noce povezat vec.
+Kaj si se spreminjal?
+
+lp
+Dejan
+
+On 1/2/07, Matev? Jekovec <matevz.jekovec at gmail.com> wrote:
+> No fantje, mal se pomirmo, da ne bo preve? vro?e krvi.
+>
+> https://lists.berlios.de/pipermail/jimmyim-devel/2006-October/000052.html
+>
+> Da, 24. oktobra sem implementiral SSL povezavo in odstranil login(u,p)
+> metodo. ?e enkrat, login(u,p) je bila tukaj samo za vsak slu?aj -
+> refactoring je bil kmalu potreben, ko login() ni ve? potreboval samo
+> username in password ampak tudi ostale podatke o povezavi (SSL je
+> spro?il to).
+>
+> Edina koda, ki je uporabljala login(u,p) takrat, je bil MSN modul. In to
+> kodo sem tudi popravil in omenil Zoranu (zato tudi za?etek odstavka v
+> mailu z Zoran), naj poskusi, ?e deluje vse ok (v kolikor sem jaz
+> testiral, je delovalo bp). Celoten Jimmy se je v tistem trenutku
+> prevedel brez problema, zato sem stvar tudi commital v mainstream.
+>
+> Glede APIja ne bit tko strikten - ?e se osredoto?imo na teh nekaj
+> razredov, ki jih imamo (?e temu re?emo API), je to ~1000 vrstic kode
+> (ostalo so moduli, GUI, kontrole al pa zunanja dokumentacija), ki bi jo
+> s prve moral vsak programer pribli?no preleteti in brez te?av razumeti.
+> Ne more? porabiti "ve? ur" za to, da ugotovi?, da login(u,p) v bistvu ne
+> obstaja ve? in ti klikniti, da jo je mogo?e login(account) nadomestila,
+> kar je dost straightforward razvidno no.
+>
+>
+> btw. Vse naj naj v 2007, sploh kar se izpitov ti?e! Upam, da se vidimo kaj!
+> -M
+>
+> Sahel pravi:
+> > ja pa je, ker si s tem razbil delovanje vsega ostalega
+> > apija se ne spreminja, ce se za karkoli naredi, se to naredi v obliki
+> > deprecated metod
+> > in tega se moramo drzat, ce pa ze karkoli popravljamo, to naredim z
+> > refactoring-om ali
+> > sporocimo mantainerjem dolocenega kosa kode, da se je neki spremenilo
+> > in da je sedaj
+> > drugacna verzija apija
+> >
+> > porabil sem kar nekaj ur, da sem ugotovil, da je ta rec spremenjena.
+> >
+> > lp
+> > Dejan
+> >
+> >
+>
+>
+>
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+>
+>
+>
+
+From matevz.jekovec at gmail.com  Tue Jan  2 15:55:26 2007
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Tue, 02 Jan 2007 15:55:26 +0100
+Subject: [Jimmyim-devel] Kateri kreten ...
+In-Reply-To: <3568adfc0701020611v6817b5b0ibb9e65afa1a19dc9@mail.gmail.com>
+References: <3568adfc0612310708k2b7cc0e4o9329642277ccac6b@mail.gmail.com>	<45980138.4030306@gmail.com>	<3568adfc0612312133r37dc2fc1l3c35a708ce868179@mail.gmail.com>	<459920D5.4070200@gmail.com>	<3568adfc0701010722w67b3119ap2b46c2ae08aefbf8@mail.gmail.com>	<4599A3DD.7080009@gmail.com>
+	<3568adfc0701020611v6817b5b0ibb9e65afa1a19dc9@mail.gmail.com>
+Message-ID: <459A725E.8020408@gmail.com>
+
+Sahel pravi:
+> ICQ tudi uporablja to metodo in po novem nic ne dela.
+>
+> Jaz bi raje razvoj baziral na tem, da popravimo hibe.
+> Urediti je potrebno exception hadnlig, ker je razvoj aplikacij, ki
+> catch-ajo samo Exception totalno nemogoc.
+>   
+Se strinjam.
+
+Druga?e pa, odkar imam 10/10 v indeksu za RKO (lol) brez te?av lahko
+prevzame projekt kdo drug, ?e ?eli kaj narediti iz njega.
+
+> V glavnem, sklepam, da v tem trenutku ICQ ne dela, zaradi sprememb, ki
+> so nastale v kodi zaradi implementacije SSL-a.
+>
+> Zelo bi rad vedel, zakaj ze v osnovi se mi sploh noce povezat vec.
+> Kaj si se spreminjal?
+>   
+A si zbrisal star config fajl (SSL je dodatna true/false nastavitev v
+vsakem accountu, ki se tudi shrani).
+Druga?e je povezovanje ostali identi?no, ?e je SSL izklopljen. ?e je pa
+vklopljen, pa uporabi namesto socket:// ssl:// protokol, kar pa ne
+deluje zaradi certifikatov. To je vse, kar se mojega dela ti?e.
+
+
+lp
+-M
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 252 bytes
+Desc: OpenPGP digital signature
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070102/6ccbf9c9/attachment.pgp>
+
+From jimmyim-user at bat.berlios.de  Tue Jan 30 12:08:23 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Tue, 30 Jan 2007 12:08:23 +0100 (CET)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070130120822.5883.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070130/5aec5edd/attachment.html>
+

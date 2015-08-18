@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] Protocol -&gt; Jimmy interaction
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-June/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Protocol%20-%3E%20Jimmy%20interaction&In-Reply-To=%3C3568adfc0606181234u7cc4b697qa783a96f0208f896%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000038.html">
+   <LINK REL="Next"  HREF="000040.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] Protocol -&gt; Jimmy interaction</H1>
+    <B>Sahel</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Protocol%20-%3E%20Jimmy%20interaction&In-Reply-To=%3C3568adfc0606181234u7cc4b697qa783a96f0208f896%40mail.gmail.com%3E"
+       TITLE="[Jimmyim-devel] Protocol -&gt; Jimmy interaction">sakdean at gmail.com
+       </A><BR>
+    <I>Sun Jun 18 21:34:05 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000038.html">[Jimmyim-devel] Protocol -&gt; Jimmy interaction
+</A></li>
+        <LI>Next message: <A HREF="000040.html">[Jimmyim-devel] Protocol -&gt; Jimmy interaction
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#39">[ date ]</a>
+              <a href="thread.html#39">[ thread ]</a>
+              <a href="subject.html#39">[ subject ]</a>
+              <a href="author.html#39">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>You know. A protocol can have a true or false &quot;connected_&quot; value.
+By default it should have false.
+When an error occurs during login (for example - wrong username or
+password) the login sequence can't continue and the protocol &quot;dies&quot;,
+because of the limitations of the architecture we made, every
+connection (if you have many accounts for one protocol) must be in his
+own Protocol object. If in the protocol occured an irrecoverable error
+the object is dead. So we have to clear the memory from the junk that
+remained. Then we alter the account settings and restart the
+connection from a new instance of the protocol. When a protocol dies
+jimmy can't know what happend, so the protocol itself cleans the
+memory by calling the stopProtocol() method in Jimmy.
+The &quot;connected_&quot; atribute from itsel doesn't tell anything to Jimmy
+about errors.
+So we shoul use the interface as an error bus for displaying error
+pop-ups and so on. Check the source.
+bye
+Dejan
+
+On 6/18/06, Matev&#382; Jekovec &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">matevz.jekovec at gmail.com</A>&gt; wrote:
+&gt;<i> Sahel pravi:
+</I>&gt;<i> &gt; I discovered, that if a Protocol dies, Jimmy won't really know when it
+</I>&gt;<i> &gt; happens and won'd delete the protocol from the list. So I've added an
+</I>&gt;<i> &gt; Interface (ProtocolInterface), that allows to communicate with the
+</I>&gt;<i> &gt; main Jimmy instance and execute some methods.
+</I>&gt;<i> What do you mean by Protocol dies? We have isConnected() method that
+</I>&gt;<i> returns if the protocol is connected (active) or not. If you're
+</I>&gt;<i> referring to the garbage collector, every protocol should be deleted
+</I>&gt;<i> from the memory automatically, when we have no references to them in
+</I>&gt;<i> Jimmy class. Or not?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Regards.
+</I>&gt;<i> - Matev&#382;
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Jimmyim-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">Jimmyim-devel at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="http://lists.berlios.de/mailman/listinfo/jimmyim-devel">http://lists.berlios.de/mailman/listinfo/jimmyim-devel</A>
+</I>&gt;<i>
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000038.html">[Jimmyim-devel] Protocol -&gt; Jimmy interaction
+</A></li>
+	<LI>Next message: <A HREF="000040.html">[Jimmyim-devel] Protocol -&gt; Jimmy interaction
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#39">[ date ]</a>
+              <a href="thread.html#39">[ thread ]</a>
+              <a href="subject.html#39">[ subject ]</a>
+              <a href="author.html#39">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

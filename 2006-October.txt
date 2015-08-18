@@ -1,0 +1,494 @@
+From jimmyim-user at bat.berlios.de  Wed Oct  4 17:50:53 2006
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Wed, 4 Oct 2006 17:50:53 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20061004175053.6010.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20061004/4a17842c/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Mon Oct 16 23:43:29 2006
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Mon, 16 Oct 2006 23:43:29 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20061016234329.2108.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20061016/ecfde8a5/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Tue Oct 17 20:50:55 2006
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Tue, 17 Oct 2006 20:50:55 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20061017205054.9798.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20061017/5f0f9399/attachment.html>
+
+From zoran.mesec at gmail.com  Sun Oct 22 11:49:39 2006
+From: zoran.mesec at gmail.com (Zoran Mesec)
+Date: Sun, 22 Oct 2006 11:49:39 +0200
+Subject: [Jimmyim-devel] setting up JimmyIM in Eclipse IDE
+In-Reply-To: <Pine.LNX.4.64.0610212134250.16952@mail.nilings.se>
+Message-ID: <000301c6f5bf$6636bda0$0200a8c0@HlevZoran60c246b6a2>
+
+Hello!
+
+This is how I setup JimmyIM in Eclipse:
+-after installing Eclipse & eclipseME, I setup the J2ME configuration in
+Window->Preferences->J2ME:
+- First Set the WTK root(basically your folder where you installed Wirelles
+toolkit)
+- go to Device management and Import, then specify the directory(usually the
+same as WTK root) and click refresh - in my case, 4 devices were found, that
+is all you need. Click finish and then select e.q. DefaultColorPhone.
+
+Create new Project(J2ME projects - J2ME Midlet Suite) and called it JimmyIM.
+In the New J2ME Project dialog the Device-Group should be automatically
+selected(J2ME Wirelles toolkit 2.2 in my case and DefaultColorPhone for
+default device) if you have done first three steps. Do not mess with the
+Library tab and other tabs - it should work out of the box.
+
+Then just copy everything to your project folder. The project directory on
+your hard drive should look something like this(depends on the platform and
+the IDE version):
+
+.settings
+jimmy(with files Account.java, ChatSession.java, Jimmy.java,... and
+subfolders icq, jabber, media, ...)
+verified
+.claspath
+.eclipseme
+.project
+JimmyIM.jad
+
+Refresh the project and run it. A Run dialog opens up. Select Wireless
+tookit emulator and New_configuration(create one if it does not exists) with
+the Executable->Midlet jimmy.Jimmy (in my case, this were default settings).
+Run! The emulator should pop out.
+
+I did not get any warnings or errors. JimmyIM.jar and JimmyIM.jad are build
+automatically everytime you run&build project in folder /deployed.
+
+Regards, 
+Zoran Mesec
+
+
+-----Original Message-----
+From: jimmyim-user-bounces at lists.berlios.de
+[mailto:jimmyim-user-bounces at lists.berlios.de] On Behalf Of Mathias Sundman
+Sent: Saturday, October 21, 2006 9:53 PM
+To: Matev? Jekovec
+Cc: JimmyIM-Users
+Subject: Re: [Jimmyim-user] Problem connecting to MSN network
+
+On Sat, 21 Oct 2006, Matev Jekovec wrote:
+
+> Mathias Sundman pravi:
+>> Hmm, that's kinda where I'm stuck right now. I'm trying to launch the
+>> app from inside Eclipse using the wireless toolkit emulator. However
+>> it just halts with the following error:
+>>
+>> ALERT: java/lang/ClassFormatError: Bad version information.
+>>
+>> If I download the .jar/.jad file you provide on your site I can
+>> successfully run in it the emulator though.
+> 
+> Did you try running the jad manually with emulator? (emulator.exe should
+> be located in your j2me wireless toolkit I think or even in java dir -
+> under Linux).
+
+I'm trying two diffrent tracks right now and I'm kinda stuck on both :-)
+
+1) Running it from within Eclipse using the emulator.
+2) Exporting to a JAR file and run manually in the emulator.
+
+
+Problem #1 is still stuck as above on the error "Bad version information". 
+Is there any reference in the source or some desc file that refers to the 
+version of Java or the wireless toolkit you used that I might need to 
+change to match the versions I'm using?
+
+
+Problem #2, I'm not really confident with how to create the .jar and .jad 
+file properly. I rightclick the project and select Export and then 
+Java->JAR file.
+
+I'm seeing a number of problems.
+
+a) At the end of the export wizard I'm asked to enter "Select the class of 
+the application entry point", but when I click Browse the window is empty 
+and even if I manually writes "jimmy" there it complains about that the 
+class is not selected for export or has no main method.
+
+b) If I extract the created jar file and looks in the MANIFEST.MF file it 
+only contains
+
+Manifest-Version: 1.0
+
+while the MANIFEST.MF file in your jar file contains alot more info. This 
+causes the emulator to halt when I try to run my jar file with the 
+following error:
+
+com.sun.kvem.midletsuite.InvalidJadException: Reason = 13
+The file Manifest is missing the required attribute: MIDlet-Name
+
+So, the question is how do I make Eclipse include the project details in 
+the exported manifest file?
+
+c) How do I create the .jad file. I'm currently using your .jad file and 
+simply modiles the size attribute to match my jar file.
+
+
+d) I can see in the source zip file there is a build.xml file that seems 
+to hold the attributes I need to put in the manifest file. How do I use 
+that xml file to build the .jar/.jad file?
+
+
+Sorry for all these qustions, but right now I just feel like a big 
+question mark and am not sure really where to dig for more info about 
+these problems..
+
+Cheers / Mathias
+_______________________________________________
+Jimmyim-user mailing list
+Jimmyim-user at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/jimmyim-user
+
+
+
+From zoran.mesec at gmail.com  Sun Oct 22 17:04:05 2006
+From: zoran.mesec at gmail.com (Zoran Mesec)
+Date: Sun, 22 Oct 2006 17:04:05 +0200
+Subject: [Jimmyim-devel] JimmyIM conference
+In-Reply-To: <8506C3905ED0764F889ADEB33E3A9E8077E175@MAIA.scopus.net>
+Message-ID: <000001c6f5eb$52312530$0200a8c0@HlevZoran60c246b6a2>
+
+JimmyIM conference
+
+We kindly invite everyone to join us at our developers corner to discuss the
+future of JimmyIM. The conference will take place at public Jabber server,
+the conference room is jimmyim at conference.jabber.org on Sunday, 22nd of
+October 2006 at 9pm (GMT+01:00). You can login to this room with your Jabber
+or Google account.
+
+Join in and bring out your best ideas, discuss our plans about development
+and planning. If you missed out the conference, do not worry, there will be
+more to follow.
+
+Regards, 
+JimmyIM development team
+
+
+-----Original Message-----
+From: jimmyim-user-bounces at lists.berlios.de
+[mailto:jimmyim-user-bounces at lists.berlios.de] On Behalf Of Arik Salomon
+Sent: Sunday, October 22, 2006 12:28 PM
+To: Matev? Jekovec; Mathias Sundman
+Cc: JimmyIM-Users
+Subject: Re: [Jimmyim-user] Problem connecting to MSN network
+
+ 
+Hello,
+Sorry for the lame question, but why Eclipse needs at all ?
+I mean that I complied and run emulator  with Sun tools
+(SDK and wireless tools kit) and that all, beside my personal problem with
+CLDC-1.0, 
+When I choosing CLDC-1.1 , everything ok...
+    ariX
+
+
+-----Original Message-----
+From: jimmyim-user-bounces at lists.berlios.de
+[mailto:jimmyim-user-bounces at lists.berlios.de] On Behalf Of Matev? Jekovec
+Sent: Saturday, October 21, 2006 9:39 PM
+To: Mathias Sundman
+Cc: JimmyIM-Users
+Subject: Re: [Jimmyim-user] Problem connecting to MSN network
+
+Mathias Sundman pravi:
+> On Sat, 21 Oct 2006, Matev Jekovec wrote:
+>
+>> I'm glad you made Eclipse and Jimmy running. As far as I tested,
+>> Eclipse+EclipseMe should work fine on both Linux and Windows.  You
+>> need to have j2sdk and sun wireless toolkit preinstalled of course.
+>> The only trouble I had with eclipseMe was debuging - my phone 
+>> emulator froze on startup for a few minutes, so debuging was useless.
+>
+> Hmm, that's kinda where I'm stuck right now. I'm trying to launch the 
+> app from inside Eclipse using the wireless toolkit emulator. However 
+> it just halts with the following error:
+>
+> ALERT: java/lang/ClassFormatError: Bad version information.
+>
+> If I download the .jar/.jad file you provide on your site I can 
+> successfully run in it the emulator though.
+>
+> What development environment would you recommend if you say you were 
+> having problems with EclipseMe for debugging?
+An alternative is NetBeans with mobility pack. However, problems with
+debuging were present on my computer only. Others using Eclipse were
+debuging fine. If I were launching the application with the play button (not
+the bug button), it worked though.
+
+Did you try running the jad manually with emulator? (emulator.exe should be
+located in your j2me wireless toolkit I think or even in java dir - under
+Linux).
+
+
+Regards.
+- Matev?
+
+_______________________________________________
+Jimmyim-user mailing list
+Jimmyim-user at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/jimmyim-user
+_______________________________________________
+Jimmyim-user mailing list
+Jimmyim-user at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/jimmyim-user
+
+
+
+From mathias at nilings.se  Sun Oct 22 18:23:39 2006
+From: mathias at nilings.se (Mathias Sundman)
+Date: Sun, 22 Oct 2006 18:23:39 +0200 (CEST)
+Subject: [Jimmyim-devel] setting up JimmyIM in Eclipse IDE
+In-Reply-To: <000301c6f5bf$6636bda0$0200a8c0@HlevZoran60c246b6a2>
+References: <000301c6f5bf$6636bda0$0200a8c0@HlevZoran60c246b6a2>
+Message-ID: <Pine.LNX.4.64.0610221811330.16952@mail.nilings.se>
+
+YEES!
+
+Thanks alot for talking the time to descibe this! I still got my 44 
+warnings following your guide, but that might have todo with diffrences in 
+how we have Eclipse configured, what to warn about, or that I'm using a 
+diffrent version of Java or the Wireless toolkit.
+
+However, I was now succefully able to launch the app in the emulator 
+without any errors about diffrent version.
+
+I think the problem was that when I pulled project from SVN I also got the 
+.eclipseme file from SVN which contained bad version information about the 
+wireless toolkit. But when I created a new project locally and copied the 
+sourcetree I left the .eclipseme file as it was created by Eclipse on my 
+machine and then it worked.
+
+Hopefully I will now also be able to export the project to a JAR file and 
+run it so I can make some changes and try them in my mobile phone... Time 
+to try!
+
+Thanx again!
+
+Cheers // Mathias
+
+On Sun, 22 Oct 2006, Zoran Mesec wrote:
+
+> Hello!
+>
+> This is how I setup JimmyIM in Eclipse:
+> -after installing Eclipse & eclipseME, I setup the J2ME configuration in
+> Window->Preferences->J2ME:
+> - First Set the WTK root(basically your folder where you installed Wirelles
+> toolkit)
+> - go to Device management and Import, then specify the directory(usually the
+> same as WTK root) and click refresh - in my case, 4 devices were found, that
+> is all you need. Click finish and then select e.q. DefaultColorPhone.
+>
+> Create new Project(J2ME projects - J2ME Midlet Suite) and called it JimmyIM.
+> In the New J2ME Project dialog the Device-Group should be automatically
+> selected(J2ME Wirelles toolkit 2.2 in my case and DefaultColorPhone for
+> default device) if you have done first three steps. Do not mess with the
+> Library tab and other tabs - it should work out of the box.
+>
+> Then just copy everything to your project folder. The project directory on
+> your hard drive should look something like this(depends on the platform and
+> the IDE version):
+>
+> .settings
+> jimmy(with files Account.java, ChatSession.java, Jimmy.java,... and
+> subfolders icq, jabber, media, ...)
+> verified
+> .claspath
+> .eclipseme
+> .project
+> JimmyIM.jad
+>
+> Refresh the project and run it. A Run dialog opens up. Select Wireless
+> tookit emulator and New_configuration(create one if it does not exists) with
+> the Executable->Midlet jimmy.Jimmy (in my case, this were default settings).
+> Run! The emulator should pop out.
+>
+> I did not get any warnings or errors. JimmyIM.jar and JimmyIM.jad are build
+> automatically everytime you run&build project in folder /deployed.
+>
+> Regards,
+> Zoran Mesec
+
+-- 
+A. Because people read from top to bottom.
+Q. Why should I not top-post?
+_________________________________________________________
+Mathias Sundman              (^)   ASCII Ribbon Campaign
+NILINGS AB                    X    NO HTML/RTF in e-mail
+Tel: +46-(0)8-666 32 28      / \   NO Word docs in e-mail
+
+
+From zoran.mesec at gmail.com  Sun Oct 22 23:32:50 2006
+From: zoran.mesec at gmail.com (Zoran Mesec)
+Date: Sun, 22 Oct 2006 23:32:50 +0200
+Subject: [Jimmyim-devel] Conference overview & TODOs
+Message-ID: <000001c6f621$a0c2ea40$0200a8c0@HlevZoran60c246b6a2>
+
+Here are the results of the JimmyIM conference on
+Jabber.org(jimmyim at conference.jabber.org) held on 22.10.2006 around 9pm:
+
+a)TODOs before version 1.0(developers for the tasks are listed after
+comments //):
+- the debugging of ICQ :) (help yourself with jimm)	//sahel
+- debugging of MSN on Sony E. & Nokia devices and fixing the SSL certificate
+bug	//stereo_sl
+- CLDC 1.0. support - only Splash.java needs to be modified	//slashrsm
+and whiteangel
+- finishing localization	//all developers 
+- GoogleTalk fix(currently not working)	//whiteangel
+- do not display offline contacts(seems like a rational decision if you have
+100 contacts and only ten are online) or add a setting for showing offline
+contact(show offline contacts/do not show offline contacts)	//slashrsm
+- improve the design of the website		//stereo_sl
+
+TODOs after v1.0.(only experimental suggestions):
+- contact sorting
+- fancy UI with the J2ME Polish API(http://www.j2mepolish.org/index.html)
+- obviously Yahoo(I have just noticed new documentation here:
+http://en.wikipedia.org/wiki/Yahoo!_Messenger_Protocol and here
+http://www.venkydude.com/articles/yahoo.htm )
+
+
+b)MSN bug:
+The reason why MSN did not work on many devices is unknown SSL certificate.
+
+c)Sorting contacts:
+An idea of Mathias Sundman that suggests a setting to indicate how contacts
+are sorted in the list:
+- none
+- by username
+- by screename
+
+After everyone agree with the TODOs list, I will put it on the website so
+that users can see what we are doing.
+
+Best regards, 
+Zoran Mesec
+JimmyIM development team
+jimmyim.berlios.de
+
+
+
+
+
+From jimmyim-user at bat.berlios.de  Mon Oct 23 11:31:23 2006
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Mon, 23 Oct 2006 11:31:23 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20061023113123.7729.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20061023/8cefb3ab/attachment.html>
+
+From matevz.jekovec at guest.arnes.si  Tue Oct 24 10:26:04 2006
+From: matevz.jekovec at guest.arnes.si (Matevz Jekovec)
+Date: Tue, 24 Oct 2006 10:26:04 +0200
+Subject: [Jimmyim-devel] ssl connection implemented
+Message-ID: <453DCE1C.6040302@guest.arnes.si>
+
+Greetings to all,
+
+In R425 I added SSL connection support to server handler. I also added
+useSSL attribute to Account and its getter/setter methods.
+
+Saving/Loading of the useSSL property is also done, so *please remove
+any old jimmy config files* or Jimmy will crash.
+
+Janez, could you add a "Use SSL connection" checkbox to Account settings
+widget? Currently, SSL is disabled by default in JimmyUI.
+
+Zoran, I removed the obsolete login(user, pass) method - it's now
+superseded by login(account). I cut&paste the code from login(u,p) to
+login(account), so please check if everything is ok.
+
+The current implementation should work, I didn't manage to connect to
+GoogleTalk yet though - some issues with certificates which I don't
+really get it...
+
+
+Regards.
+- Matev?
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 252 bytes
+Desc: OpenPGP digital signature
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20061024/8deed613/attachment.pgp>
+
+From gabriel.klappenbach at gmail.com  Tue Oct 31 16:56:26 2006
+From: gabriel.klappenbach at gmail.com (Gabriel)
+Date: Tue, 31 Oct 2006 16:56:26 +0100
+Subject: [Jimmyim-devel] using jimmyIM in master thesis project,
+	developing a context aware mobile service?
+Message-ID: <45477227.52051324.7d3d.ffffe8e4@mx.google.com>
+
+Hi guys.
+As a master thesis project I will be developing a context aware mobile
+service.
+Basically it will be a simple chat client (on phone or PDA), that alerts you
+if a friend is near you. The application will use an existing WLAN network
+that has multiple access points, providing a positioning service in a large
+shopping galleria in Sweden.
+The chat part is not the most important part, but you will have a list of
+friends, and be able to see which of them are in the same galleria. You will
+be able to locate them on a map and see them move. You will also be alerted
+with a sound if a friend enters the galleria, thus making a spontaneous
+meeting possible.
+It should also be possible for a third parties to add contacts to a users
+list (with his permission of course). For instance, communities like
+LinkedIn, openBC and Friendster should be able to add contacts to this
+proximity aware application.
+
+So I have been looking into open source projects about J2ME chat clients,
+and I think jimmyIM might be a good choice. I would like all major chat
+networks to be "proximity enabled", not just ONE of them. So regardless if
+you use MSN or ICQ, you should be able to log on and see who is in the same
+area (in this case the galleria only of course).
+
+I have an idea of how I could solve the third party adding of contacts. I'm
+still just in system design phase...
+
+So do you guys think this is a good idea? I'm very excited to get this
+working!
+Especially since when I started out I thought I would have to have my own IM
+server... but what users really want is use what they already have and just
+have it work in this new client! It would be so cool! :)
+
+I have many devices I can use here, PDAs and phones.
+I installed jimmyIM on a sony ericsson M600i, but there seems to be some
+problem connection to my icq and MSN accounts. :/
+At least with ICQ, I was that it actually logged in, because I was logged
+out on my laptop when I logged in with the phone. But nothing else worked,
+it got stuck connecting.
+
+Hope I can count on some help from you guys in this project, it would be
+awesome.
+Oh btw, I'm doing this master thesis at a company: www.appearnetworks.com,
+on their application platform (it runs in the galleria, on using the "cisco
+location appliance" as a positioning system).
+
+
+Cheers,
+Gabriel Klappenbach
+Stockholm, Sweden
+
+
+

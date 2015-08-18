@@ -1,0 +1,528 @@
+From usajusaj at gmail.com  Thu Oct 18 09:33:43 2007
+From: usajusaj at gmail.com (Matej Usaj)
+Date: Thu, 18 Oct 2007 09:33:43 +0200
+Subject: [Jimmyim-devel] Jabber protocol fix
+Message-ID: <698b8f7f0710180033x7b48b237yc25629d23085006@mail.gmail.com>
+
+Hi,
+
+I just merged my branch with trunk.
+
+Updates are:
+- Rewritten jabber protocol (jimmy.jabber.*)
+- Very tiny xml parser (jimmy.util.XmlNode)
+- Fixed timestamps in ChatWindow (jimmy.ui.ChatWindow)
+
+Jabber protocol now supports DIGEST-MD5, X-GOOGLE-TOKEN and PLAIN
+authentication, so most of the jabber servers are now supported (including
+GTalk).
+Functional add, delete and update contact methods.
+Automatically accepts buddy requests (There could maybe be a check box for
+this).
+
+TODO:
+- zlib connection compression (implemented in bombus project)
+- some special features for gtalk
+- bug check and testing on cuple of more jabber servers
+
+Comments/ideas/requests?
+
+Cheers!
+
+Matej U?aj
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071018/564cc908/attachment.html>
+
+From zoran.mesec at gmail.com  Thu Oct 18 23:10:22 2007
+From: zoran.mesec at gmail.com (Zoran Mesec)
+Date: Thu, 18 Oct 2007 23:10:22 +0200
+Subject: [Jimmyim-devel] Jimmyim-devel Digest, Vol 9, Issue 1
+In-Reply-To: <mailman.98.1192701717.3110.jimmyim-devel@lists.berlios.de>
+References: <mailman.98.1192701717.3110.jimmyim-devel@lists.berlios.de>
+Message-ID: <8cf12d460710181410g4f210f6en7375204ee0e2c992@mail.gmail.com>
+
+Hi all!
+
+Great work. I've tried it and it works, exept gTalk does not work - probably
+I used false settings. Username, server? In pidgin I have:
+username: zoran.mesec
+server: gmail.com
+
+Also some exception occured after some time chatting in jabber:
+[DEBUG] Found Contact to start chat with: sahel at gristle.org
+[REC]:<stream:error><xml-not-well-formed
+xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
+
+java.io.IOException: error 0 during TCP write
+at com.sun.midp.io.j2me.socket.Protocol.writeBytes(Protocol.java:360)
+at com.sun.midp.io.BaseOutputStream.write(ConnectionBaseAdapter.java:830)
+
+People, do me a favor. Put this
+line somewhere in JimmyIM and send me the output.
+System.out.println(System.getProperty("microedition.encoding"));
+Thank you very much and please write also your OS, default charset...
+
+regards,
+Zoran Mesec
+
+2007/10/18, jimmyim-devel-request at lists.berlios.de
+<jimmyim-devel-request at lists.berlios.de
+>:
+>
+> Send Jimmyim-devel mailing list submissions to
+>        jimmyim-devel at lists.berlios.de
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>        https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+> or, via email, send a message with subject or body 'help' to
+>        jimmyim-devel-request at lists.berlios.de
+>
+> You can reach the person managing the list at
+>        jimmyim-devel-owner at lists.berlios.de
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of Jimmyim-devel digest..."
+>
+> Today's Topics:
+>
+>   1. Jabber protocol fix (Matej Usaj)
+>
+>
+> -------------- Posredovano sporo?ilo --------------
+> From: "Matej Usaj" <usajusaj at gmail.com>
+> To:  jimmyim-devel at lists.berlios.de
+> Date: Thu, 18 Oct 2007 09:33:43 +0200
+> Subject: [Jimmyim-devel] Jabber protocol fix
+> Hi,
+>
+> I just merged my branch with trunk.
+>
+> Updates are:
+> - Rewritten jabber protocol (jimmy.jabber.*)
+> - Very tiny xml parser (jimmy.util.XmlNode)
+> - Fixed timestamps in ChatWindow (jimmy.ui.ChatWindow)
+>
+> Jabber protocol now supports DIGEST-MD5, X-GOOGLE-TOKEN and PLAIN
+> authentication, so most of the jabber servers are now supported (including
+> GTalk).
+> Functional add, delete and update contact methods.
+> Automatically accepts buddy requests (There could maybe be a check box for
+> this).
+>
+> TODO:
+> - zlib connection compression (implemented in bombus project)
+> - some special features for gtalk
+> - bug check and testing on cuple of more jabber servers
+>
+> Comments/ideas/requests?
+>
+> Cheers!
+>
+> Matej U?aj
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071018/7e7202a0/attachment.html>
+
+From sakdean at gmail.com  Thu Oct 18 23:13:43 2007
+From: sakdean at gmail.com (Dejan Sakelsak)
+Date: Thu, 18 Oct 2007 23:13:43 +0200
+Subject: [Jimmyim-devel] Jimmyim-devel Digest, Vol 9, Issue 1
+In-Reply-To: <8cf12d460710181410g4f210f6en7375204ee0e2c992@mail.gmail.com>
+References: <mailman.98.1192701717.3110.jimmyim-devel@lists.berlios.de>
+	<8cf12d460710181410g4f210f6en7375204ee0e2c992@mail.gmail.com>
+Message-ID: <3568adfc0710181413r1cb57dd9n8d243b8b3b8b55b7@mail.gmail.com>
+
+On 10/18/07, Zoran Mesec <zoran.mesec at gmail.com> wrote:
+> Hi all!
+>
+> Great work. I've tried it and it works, exept gTalk does not work - probably
+> I used false settings. Username, server? In pidgin I have:
+> username: zoran.mesec
+> server: gmail.com
+
+try talk.google.com
+
+> Also some exception occured after some time chatting in jabber:
+> [DEBUG] Found Contact to start chat with: sahel at gristle.org
+> [REC]:<stream:error><xml-not-well-formed
+> xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
+> java.io.IOException: error 0 during TCP write
+>  at
+> com.sun.midp.io.j2me.socket.Protocol.writeBytes(Protocol.java:360)
+>  at
+> com.sun.midp.io.BaseOutputStream.write(ConnectionBaseAdapter.java:830)
+>
+> People, do me a favor. Put this line somewhere in JimmyIM
+> and send me the output.
+> System.out.println(System.getProperty("microedition.encoding"));
+> Thank you very much and please write also your OS, default charset...
+
+It seems like there was an error in the connection.
+
+regards
+Dejan
+
+
+From sakdean at gmail.com  Wed Oct 24 18:14:03 2007
+From: sakdean at gmail.com (Dejan Sakelsak)
+Date: Wed, 24 Oct 2007 18:14:03 +0200
+Subject: [Jimmyim-devel] JimmyIM support
+In-Reply-To: <471F59E5.1060908@gmail.com>
+References: <471F59E5.1060908@gmail.com>
+Message-ID: <3568adfc0710240914lee72360r1c6801aca41b0147@mail.gmail.com>
+
+Hi,
+
+Which device and which .jar do you use?
+
+Jimmy is stil in developement stage. It is being ported to some series
+of devices and would really appreciate if you could help us port it.
+
+regards
+Dejan
+
+On 10/24/07, Javi <mjavier99 at gmail.com> wrote:
+> Hi Dejan, I?m  Javier from Ecuador.
+>
+> I am using you J2ME-IM project  in order to test on my phone, but I have
+> not been able to do a right test.
+>
+> It works in my emulator I am using Eclipse 3.2 with WTK22 and WTK25
+> emulators and your sources and the connection to MSN and my own Jabber
+> server run correctly. But the jar over the phone only shows Conneccion
+> Screen and freezes while tries to connect.
+>
+> Are the any special configurations which are neccesary to change in
+> order to test on the phone?
+>
+> Regards and thanks for your help.
+>
+> --
+> Atentamente,
+>
+>
+> Javier Valencia
+> Teamsourcing Cia.Ltda.
+> Oficina: (593) 2255001 ext: 2027
+> Celular: 098037568
+>
+>
+
+
+From mjavier99 at gmail.com  Wed Oct 24 18:51:13 2007
+From: mjavier99 at gmail.com (Javi)
+Date: Wed, 24 Oct 2007 11:51:13 -0500
+Subject: [Jimmyim-devel] JimmyIM support
+In-Reply-To: <3568adfc0710240914lee72360r1c6801aca41b0147@mail.gmail.com>
+References: <471F59E5.1060908@gmail.com>
+	<3568adfc0710240914lee72360r1c6801aca41b0147@mail.gmail.com>
+Message-ID: <471F7801.5020705@gmail.com>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071024/1244245e/attachment.html>
+
+From mjavier99 at gmail.com  Wed Oct 24 19:53:31 2007
+From: mjavier99 at gmail.com (Javi)
+Date: Wed, 24 Oct 2007 12:53:31 -0500
+Subject: [Jimmyim-devel] JimmyIM support
+In-Reply-To: <3568adfc0710240914lee72360r1c6801aca41b0147@mail.gmail.com>
+References: <471F59E5.1060908@gmail.com>
+	<3568adfc0710240914lee72360r1c6801aca41b0147@mail.gmail.com>
+Message-ID: <471F869B.3090701@gmail.com>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071024/8c6b3014/attachment.html>
+
+From sakdean at gmail.com  Wed Oct 24 21:29:39 2007
+From: sakdean at gmail.com (Dejan Sakelsak)
+Date: Wed, 24 Oct 2007 21:29:39 +0200
+Subject: [Jimmyim-devel] JimmyIM support
+In-Reply-To: <471F869B.3090701@gmail.com>
+References: <471F59E5.1060908@gmail.com>
+	<3568adfc0710240914lee72360r1c6801aca41b0147@mail.gmail.com>
+	<471F869B.3090701@gmail.com>
+Message-ID: <3568adfc0710241229r305f6e4r29e11f02eb405bd1@mail.gmail.com>
+
+Hi,
+
+Nokia N73 for example, but on 6XXX i think it doesn't work.
+
+Join the jimmyim-devel list.
+I'm on GTalk.
+
+regards
+Dejan
+
+
+On 10/24/07, Javi <mjavier99 at gmail.com> wrote:
+>
+>  Hi,
+>
+>  I also would apprecciate to help us, do you have some mail to contact you
+> by IM messeger or IM Yahoo clients ?
+>
+>  Regards,
+>
+>  Dejan Sakelsak escribi?:
+>  Hi,
+>
+> Which device and which .jar do you use?
+>
+> Jimmy is stil in developement stage. It is being ported to some series
+> of devices and would really appreciate if you could help us port it.
+>
+> regards
+> Dejan
+>
+> On 10/24/07, Javi <mjavier99 at gmail.com> wrote:
+>
+>
+>  Hi Dejan, I?m Javier from Ecuador.
+>
+> I am using you J2ME-IM project in order to test on my phone, but I have
+> not been able to do a right test.
+>
+> It works in my emulator I am using Eclipse 3.2 with WTK22 and WTK25
+> emulators and your sources and the connection to MSN and my own Jabber
+> server run correctly. But the jar over the phone only shows Conneccion
+> Screen and freezes while tries to connect.
+>
+> Are the any special configurations which are neccesary to change in
+> order to test on the phone?
+>
+> Regards and thanks for your help.
+>
+> --
+> Atentamente,
+>
+>
+> Javier Valencia
+> Teamsourcing Cia.Ltda.
+> Oficina: (593) 2255001 ext: 2027
+> Celular: 098037568
+>
+>
+>
+>
+>
+>
+>  --
+> Atentamente,
+>
+>
+> Javier Valencia
+> Teamsourcing Cia.Ltda.
+> Oficina: (593) 2255001 ext: 2027
+> Celular: 098037568
+>
+
+
+From zoran.mesec at gmail.com  Thu Oct 25 20:51:16 2007
+From: zoran.mesec at gmail.com (Zoran Mesec)
+Date: Thu, 25 Oct 2007 20:51:16 +0200
+Subject: [Jimmyim-devel] Jimmyim-devel Digest, Vol 9, Issue 3
+In-Reply-To: <mailman.92.1193306507.32043.jimmyim-devel@lists.berlios.de>
+References: <mailman.92.1193306507.32043.jimmyim-devel@lists.berlios.de>
+Message-ID: <8cf12d460710251151y469e9b27v6714be83beff3e78@mail.gmail.com>
+
+Hi Javier!
+
+First of all, thank you for your feedback and effort.
+It is great to see that people from Latin America are also gaining
+interest in JimmyIM.
+
+
+After testing, I have recently found out that JimmyIM does not work on Nokia
+devices, because this devices handle inputStream somehow differently than
+other mobile devices. You can also download Nokia SKDs with Nokia emulators
+and you will found out that JimmyIM also freezes on Nokia emulators.
+
+I have also found out how to solve this problem, but I did not yet have time
+to commit/merge my code for Nokia problems. I expect to have this done
+in the next two weeks.
+
+All bugs concerning operation on specific devices(like Nokia) should be
+fixed by first release which is scheduled around new year, but looks like
+we will have to branch our releases&build for Nokia devices.
+
+regards,
+Zoran Mesec
+JimmyIM development team
+<http://jimmyim.berlios.de>
+
+
+>
+> -------------- Posredovano sporo?ilo --------------
+> From: "Dejan Sakelsak" <sakdean at gmail.com>
+> To: mjavier99 at gmail.com, jimmyim-devel at lists.berlios.de
+> Date: Wed, 24 Oct 2007 18:14:03 +0200
+> Subject: Re: [Jimmyim-devel] JimmyIM support
+> Hi,
+>
+> Which device and which .jar do you use?
+>
+> Jimmy is stil in developement stage. It is being ported to some series
+> of devices and would really appreciate if you could help us port it.
+>
+> regards
+> Dejan
+>
+> On 10/24/07, Javi <mjavier99 at gmail.com> wrote:
+> > Hi Dejan, I?m  Javier from Ecuador.
+> >
+> > I am using you J2ME-IM project  in order to test on my phone, but I have
+> > not been able to do a right test.
+> >
+> > It works in my emulator I am using Eclipse 3.2 with WTK22 and WTK25
+> > emulators and your sources and the connection to MSN and my own Jabber
+> > server run correctly. But the jar over the phone only shows Conneccion
+> > Screen and freezes while tries to connect.
+> >
+> > Are the any special configurations which are neccesary to change in
+> > order to test on the phone?
+> >
+> > Regards and thanks for your help.
+> >
+> > --
+> > Atentamente,
+> >
+> >
+> > Javier Valencia
+> > Teamsourcing Cia.Ltda.
+> > Oficina: (593) 2255001 ext: 2027
+> > Celular: 098037568
+> >
+> >
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071025/22786d0a/attachment.html>
+
+From zoran.mesec at gmail.com  Thu Oct 25 21:06:54 2007
+From: zoran.mesec at gmail.com (Zoran Mesec)
+Date: Thu, 25 Oct 2007 21:06:54 +0200
+Subject: [Jimmyim-devel] weekly report
+Message-ID: <8cf12d460710251206i4c9413dbv63b764c3c91e9977@mail.gmail.com>
+
+Hi all!
+
+Since this week has been one of the most exciting weeks in
+the JimmyIM lifetime, it deserves to have a special summary. JimmyIM is back
+alive and kicking! To gain some more enthusiasm from all of you, here is a
+list of past week's changes:
+
+Matej has:
+- improved Jabber protocol(fixed bugs in XML parser, added realtime stamps,
+fixed sasl auth,...)
+- implemented GoogleTalk!
+
+Zoran:
+- fixed MSN bug for authentication
+- rewritten localization to support utf-8 encoding
+- tested Jimmy on Nokia emulators and found out why JimmyIM does not work on
+Nokia devices
+- refreshed website with new content
+
+The website has improved on:
+- short instructions 'how to set up the environment' for new developers,  :
+http://jimmyim.berlios.de/wordpress/?page_id=24
+- mobile device database: a list of all devices JimmyIM has been tested&used
+on(which includes status of operation, KIs,..)
+- appearence in IE(who uses IE, anyway :)
+- roadmap(under construction):
+http://jimmyim.berlios.de/wordpress/index.php?page_id=25
+
+regards,
+Zoran Mesec
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071025/d3395da7/attachment.html>
+
+From usajusaj at gmail.com  Fri Oct 26 01:14:41 2007
+From: usajusaj at gmail.com (Matej Usaj)
+Date: Fri, 26 Oct 2007 01:14:41 +0200
+Subject: [Jimmyim-devel] Yahoo implementation
+Message-ID: <698b8f7f0710251614p4e359c27nc908b3f6e8b87bd1@mail.gmail.com>
+
+Hi!
+
+I did some research about yahoo protocol. I managed to implement first few
+steps of authentication, but then I stumbled upon a serious problem.
+The authentication needs a 29kB binary file for generating a response to
+servers challenge string.
+
+Could this be acceptable for limited amount of memory the devices have?
+
+Lep pozdrav
+
+Matej U?aj
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071026/65fc4f41/attachment.html>
+
+From zoran.mesec at gmail.com  Sun Oct 28 20:47:23 2007
+From: zoran.mesec at gmail.com (Zoran Mesec)
+Date: Sun, 28 Oct 2007 20:47:23 +0100
+Subject: [Jimmyim-devel] Jimmyim-devel Digest, Vol 9, Issue 4
+In-Reply-To: <mailman.93.1193392923.11802.jimmyim-devel@lists.berlios.de>
+References: <mailman.93.1193392923.11802.jimmyim-devel@lists.berlios.de>
+Message-ID: <8cf12d460710281247y1088ccd9nd899872cf0fad2e5@mail.gmail.com>
+
+Hi!
+
+Some older phone imply a limitation on jar size, therefore it could be a
+problem on older devices. But because JimmyIM is is mainly intended for
+newer devices, 180kB(currently 150kB) jar file will not be a problem. For
+jar size limitation look
+http://dictionarymid.sourceforge.net/suppported.html.
+
+Concerning
+memory, I think that it should not be a problem also, as long as you
+do not keep whole file in the memory at the same time(
+usually heap memory size is 2mb).
+Nokia emulator shows memory usage, so we can do some tests, if neccessary.
+
+regards,
+Zoran
+
+
+> 2007/10/26, jimmyim-devel-request at lists.berlios.de <
+> jimmyim-devel-request at lists.berlios.de>:
+>
+>
+> -------------- Posredovano sporo?ilo --------------
+> From: "Matej Usaj" <usajusaj at gmail.com>
+> To: jimmyim-devel at lists.berlios.de
+> Date: Fri, 26 Oct 2007 01:14:41 +0200
+> Subject: [Jimmyim-devel] Yahoo implementation
+> Hi!
+>
+> I did some research about yahoo protocol. I managed to implement first few
+> steps of authentication, but then I stumbled upon a serious problem.
+> The authentication needs a 29kB binary file for generating a response to
+> servers challenge string.
+>
+> Could this be acceptable for limited amount of memory the devices have?
+>
+> Lep pozdrav
+>
+> Matej U?aj
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071028/65a36b10/attachment.html>
+

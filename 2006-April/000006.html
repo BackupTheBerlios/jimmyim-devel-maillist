@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] class ServerConnection (ignore first message with this subject)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-April/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20class%20ServerConnection%20%28ignore%20first%20message%20with%20this%20subject%29&In-Reply-To=%3C002b01c6609c%24be31feb0%24ef5cfea9%40hlev60c246b6a2%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000005.html">
+   <LINK REL="Next"  HREF="000007.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] class ServerConnection (ignore first message with this subject)</H1>
+    <B>Zoran Mesec</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20class%20ServerConnection%20%28ignore%20first%20message%20with%20this%20subject%29&In-Reply-To=%3C002b01c6609c%24be31feb0%24ef5cfea9%40hlev60c246b6a2%3E"
+       TITLE="[Jimmyim-devel] class ServerConnection (ignore first message with this subject)">zoran.mesec at siol.net
+       </A><BR>
+    <I>Sat Apr 15 16:56:12 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000005.html">[Jimmyim-devel] class ServerCommunication
+</A></li>
+        <LI>Next message: <A HREF="000007.html">[Jimmyim-devel] new class MSNTransaction
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello!
+
+I have uploaded a new class ServerCommunication into the main folder of
+jimmy. This class handles communication with some server. It uses socket
+connection.
+
+Future tasks:
+-class Message with methods: 
+ ~ void addArgument(&quot;some string&quot;);
+ ~ String toString();
+This class should assemble arguments and then returns the String to use in
+the ServerCommunication.sendMsg call.
+Something like:
+
+We want this:  String message = &quot;VER 0 MSNP8 CVR0\r\n&quot;;
+Message M1=new Message();
+M1.addArgument(&quot;VER&quot;);
+M1.addArgument(&quot;0&quot;);
+M1.addArgument(&quot;MSNP8&quot;);
+M1.addArgument(&quot;CVR0&quot;);
+M1.addEnding();
+M1.toString();		//returns &quot;VER 0 MSNP8 CVR0\r\n&quot;
+
+SOMEBODY SHOULD WRITE THIS CLASS ASP!!!
+(and the so called Project leader should decide who is the person
+responsible for this task) 
+
+
+
+USAGE OF CLASS ServerCommunication:
+
+      ServerCommunication sc = new ServerCommunication(server,port);
+	ServerCommunication sc = new ServerCommunication(server);   //if
+port is not used
+void	sc.connect();	//initialize connection and streams
+void	sc.sendMsg(&quot;some string&quot;);
+String	sc.getReply();	//gets reply from the previous sendMsg call
+Void sc.disconnect();	//closes streams and disconnects the Connection
+
+Usage EXAMPLE(this example is in /branches/Zoran/Main.java)
+
+        ServerCommunication sc = new
+ServerCommunication(&quot;messenger.hotmail.com&quot;,1863);
+        sc.connect();
+
+        String message = &quot;VER 0 MSNP8 CVR0\r\n&quot;;
+        sc.sendMsg(message);
+        System.out.print(message);
+        System.out.println(sc.getReply());
+        System.out.println(&quot;*************************************&quot;);
+        message = &quot;CVR 2 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">avgustin.ocepek at yahoo.com.au</A>\r\n&quot;;
+        sc.sendMsg(message);
+        
+        System.out.println(message);
+        System.out.println(sc.getReply());
+        System.out.println(&quot;*************************************&quot;);        
+        message=&quot;USR 3 TWN I <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">avgustin.ocepek at yahoo.com.au</A>\r\n&quot;;
+        sc.sendMsg(message);
+        System.out.println(message);
+        System.out.println(sc.getReply());
+        System.out.println(&quot;*************************************&quot;);        
+        sc.disconnect();
+        
+        
+        ServerCommunication sc2 = new
+ServerCommunication(&quot;baym-cs118.msgr.hotmail.com&quot;,1863);
+        sc2.connect();
+        message=&quot;VER 4 MSNP8 CVR0\r\n&quot;;
+        sc2.sendMsg(message);
+        System.out.println(message);
+        System.out.println(sc2.getReply());
+        System.out.println(&quot;*************************************&quot;);   
+        
+        
+        message = &quot;CVR 5 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">avgustin.ocepek at yahoo.com.au</A>\r\n&quot;;
+        sc2.sendMsg(message);
+        System.out.println(message);
+        System.out.println(sc2.getReply());      
+        System.out.println(&quot;*************************************&quot;); 
+        message = &quot;USR 6 TWN I <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">avgustin.ocepek at yahoo.com.au</A>\r\n&quot;;
+        System.out.println(message);
+        sc2.sendMsg(message);
+        System.out.println(sc2.getReply());  
+        ...and so on.
+
+
+        sc2.disconnect();   
+
+
+
+Prints this:
+
+VER 0 MSNP8 CVR0
+
+VER 0 MSNP8 CVR0
+
+
+*************************************
+
+CVR 2 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">avgustin.ocepek at yahoo.com.au</A>
+
+
+CVR 2 7.0.0816 7.0.0816 6.2.0205
+<A HREF="http://msgr.dlservice.microsoft.com/download/4/b/c/4bc83bb2-18dd-486f-943f-3">http://msgr.dlservice.microsoft.com/download/4/b/c/4bc83bb2-18dd-486f-943f-3</A>
+32a9b3e01dc/Install_MSN_Messenger_DL.exe <A HREF="http://messenger.msn.com">http://messenger.msn.com</A>
+
+*************************************
+
+USR 3 TWN I <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">avgustin.ocepek at yahoo.com.au</A>
+
+XFR 3 NS 207.46.114.23:1863 0 65.54.239.210:1863
+
+*************************************
+
+VER 4 MSNP8 CVR0
+
+VER 4 MSNP8 CVR0
+
+*************************************
+
+CVR 5 0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS
+<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">avgustin.ocepek at yahoo.com.au</A>
+
+
+CVR 5 7.0.0816 7.0.0816 6.2.0205
+<A HREF="http://msgr.dlservice.microsoft.com/download/4/b/c/4bc83bb2-18dd-486f-943f-3">http://msgr.dlservice.microsoft.com/download/4/b/c/4bc83bb2-18dd-486f-943f-3</A>
+32a9b3e01dc/Install_MSN_Messenger_DL.exe <A HREF="http://messenger.msn.com">http://messenger.msn.com</A>
+
+*************************************
+
+USR 6 TWN I <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">avgustin.ocepek at yahoo.com.au</A>
+
+USR 6 TWN S
+lc=1033,id=507,tw=40,fs=1,ru=http%3A%2F%2Fmessenger%2Emsn%2Ecom,ct=114511176
+7,kpp=1,kv=7,ver=2.1.6000.1,rn=tkhsEJ!C,tpf=977bdb7fd6d74a15cea78348b589f600
+
+
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000005.html">[Jimmyim-devel] class ServerCommunication
+</A></li>
+	<LI>Next message: <A HREF="000007.html">[Jimmyim-devel] new class MSNTransaction
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

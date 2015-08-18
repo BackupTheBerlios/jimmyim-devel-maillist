@@ -1,0 +1,9 @@
+From jimmyim-user at bat.berlios.de  Fri Mar 16 10:11:38 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Fri, 16 Mar 2007 10:11:38 +0100 (CET)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070316101138.7476.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070316/421c2c15/attachment.html>
+

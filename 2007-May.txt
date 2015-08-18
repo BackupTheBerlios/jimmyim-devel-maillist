@@ -1,0 +1,126 @@
+From jimmyim-user at bat.berlios.de  Thu May  3 16:06:38 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Thu, 3 May 2007 16:06:38 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070503160637.9371.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070503/4b7c1088/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Thu May  3 19:07:47 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Thu, 3 May 2007 19:07:47 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070503190747.9094.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070503/5ab46628/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Fri May  4 03:02:15 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Fri, 4 May 2007 03:02:15 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070504030215.0236.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070504/89895773/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Fri May  4 03:02:27 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Fri, 4 May 2007 03:02:27 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070504030227.0726.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070504/db0a7b54/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Sat May  5 00:14:08 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Sat, 5 May 2007 00:14:08 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070505001408.3138.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070505/259b06c0/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Sat May  5 14:21:39 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Sat, 5 May 2007 14:21:39 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070505142139.2460.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070505/9022463a/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Sat May  5 14:21:58 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Sat, 5 May 2007 14:21:58 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070505142157.8564.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070505/09d5b02c/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Mon May  7 00:46:41 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Mon, 7 May 2007 00:46:41 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070507004640.8875.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070507/97bd681f/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Tue May  8 22:30:54 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Tue, 8 May 2007 22:30:54 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070508223054.0380.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070508/01e9bd5a/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Wed May  9 10:12:58 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Wed, 9 May 2007 10:12:58 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070509101258.0728.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070509/b6caf13a/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Wed May  9 10:20:26 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Wed, 9 May 2007 10:20:26 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070509102024.3767.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070509/62318edb/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Thu May 10 23:25:24 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Thu, 10 May 2007 23:25:24 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070510232524.0668.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070510/01ff59a8/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Fri May 11 11:36:51 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Fri, 11 May 2007 11:36:51 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070511113651.0840.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070511/eab6150e/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Fri May 11 13:03:05 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Fri, 11 May 2007 13:03:05 +0200 (CEST)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070511130305.2747.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070511/b2bb5ec3/attachment.html>
+

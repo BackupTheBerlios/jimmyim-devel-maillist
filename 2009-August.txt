@@ -1,0 +1,31 @@
+From michaelshemjoshua at yahoo.com  Mon Aug 17 03:01:00 2009
+From: michaelshemjoshua at yahoo.com (michael labor)
+Date: Mon, 17 Aug 2009 09:01:00 +0800 (SGT)
+Subject: [Jimmyim-devel] My e-mail; Concern
+Message-ID: <616658.6430.qm@web76902.mail.sg1.yahoo.com>
+
+michaelshemjoshua at yahoo.com
+
+Hi
+
+we are trying to develop your open source application and we have encountered some? problems in compiling it to our selected IDE which is Netbeans 6.7.1. We are receiving error messages all indicating about "duplicate class" concerns and we are confused on how to fix this problem. Here is a sample error message:
+
+C:\Documents and Settings\cHIm\My Documents\JimmyIM-src\trunk\jimmy\Account.java:31: duplicate class: jimmy.Account
+public class Account {
+
+I hope that you could help us in this matter.
+
+sHEm
+
+
+
+
+
+
+
+
+      
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20090817/5afea806/attachment.html>
+

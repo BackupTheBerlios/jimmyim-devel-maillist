@@ -1,0 +1,31 @@
+From jimmyim-user at bat.berlios.de  Mon Feb  5 05:04:46 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Mon, 5 Feb 2007 05:04:46 +0100 (CET)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070205050446.7974.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070205/b1cc5a83/attachment.html>
+
+From jimmyim-user at bat.berlios.de  Tue Feb 20 02:22:03 2007
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Tue, 20 Feb 2007 02:22:03 +0100 (CET)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20070220022203.0285.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20070220/dfaf847e/attachment.html>
+
+From sakdean at gmail.com  Thu Feb 22 15:22:10 2007
+From: sakdean at gmail.com (Dejan Sakelsak)
+Date: Thu, 22 Feb 2007 15:22:10 +0100
+Subject: [Jimmyim-devel] Further developement
+Message-ID: <3568adfc0702220622v216d16c8x1db2eb1ac2a96de2@mail.gmail.com>
+
+So,
+are we going to make some further debugging/developement or not? :)
+
+bye
+Dejan
+
+

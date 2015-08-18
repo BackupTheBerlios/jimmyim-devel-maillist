@@ -1,0 +1,28 @@
+From khaiser.jk at gmail.com  Fri Jan  2 14:42:11 2009
+From: khaiser.jk at gmail.com (sameer hhz)
+Date: Fri, 2 Jan 2009 19:12:11 +0530
+Subject: [Jimmyim-devel] Regarding IM
+Message-ID: <4b9175050901020542y20142195rde6d64ec1591dcdd@mail.gmail.com>
+
+Hello Jimmy
+
+This is Khaiser from Bangalore (India). I have planed to develop a J2me
+application for S60 mobile phones (N-95) that chats with different
+IM's(yahoo, ICQ, MSN, AIM). so your open source helped me a lot.But i am
+having some issues when i am working with it.
+
+
+   1. when Trying to login with yahoo ID its giving me some exception...
+   2. when chatting with MSN messages from PC are delivered to Mobile client
+   but very late (with delay)
+   3. If i have to include other IM's say for argument like AIM or gTalk
+   what will be the procedure.
+
+Hope to get a response from your end.
+
+Thanks
+Khaiser Ahmed j
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20090102/934f9d71/attachment.html>
+

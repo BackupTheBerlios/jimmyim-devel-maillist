@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] server challenge
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-May/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20server%20challenge&In-Reply-To=%3C000301c67542%24b654cd20%24ef5cfea9%40hlev60c246b6a2%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000020.html">
+   <LINK REL="Next"  HREF="000022.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] server challenge</H1>
+    <B>Zoran Mesec</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20server%20challenge&In-Reply-To=%3C000301c67542%24b654cd20%24ef5cfea9%40hlev60c246b6a2%3E"
+       TITLE="[Jimmyim-devel] server challenge">zoran.mesec at siol.net
+       </A><BR>
+    <I>Thu May 11 23:34:39 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000020.html">[Jimmyim-devel] Delovni vikend
+</A></li>
+        <LI>Next message: <A HREF="000022.html">[Jimmyim-devel] MSNProtocol progress
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#21">[ date ]</a>
+              <a href="thread.html#21">[ thread ]</a>
+              <a href="subject.html#21">[ subject ]</a>
+              <a href="author.html#21">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Tukajle se mi zatakne. MSN server kmalu po prijavi po&#353;lje en t.i. challenge.
+Ta challenge je treba najprej zakodirati z MD5 - to sem naredil. Sedaj imam
+String hash, na njem moram izvajati naslednje operacije:
+
+After you have generated this hash you should store it in an array, with
+each element having a size of 8 bytes. Because the size of the MD5 hash is
+32 bytes, you will get 4 elements. Then you can treat each element as a
+regular hexidecimal number (0xec4917aa, 0x5b301715, 0x9e3947f8, 0xff981604).
+
+
+These hexadecimal numbers should be written in Little Endian order, this
+means that you should swap the bytes around in a number of languages (for
+example PHP and C#, but not Perl and Visual Basic) in order to have access
+to the values of these integers. You should also take in account the default
+Endian Order of the system you are working on (for example, Intel machines
+are LE, while Apple machines are typically using BE). 
+
+Once you have stored them in the array, and have converted each of the
+elements to regular numbers (32 bit unsigned) you should logically AND them
+with 0x7FFFFFFF. If you want to test if your code correctly swaps the bytes
+around (if needed) and if the MD5 hash is getting divided correctly, then
+you could compare them with these values:
+
+
+1: 0x2a1749ec = 706169324
+2: 0x1517305b = 353841243
+3: 0x7847399e = 2017933726
+4: 0x041698ff = 68589823
+
+
+After this, the first step is complete and you can proceed to the next step.
+
+
+
+Problem je, ker v j2me ni paketa java.nio , ki s takimi zadevami opravi
+hitro.
+
+Gremo po vrsti:
+- kako naj rezerviram tabelo, da bo vsak element imel 8 bajtov (ena mo&#382;nost
+je, da naredim tabelo stringov in dam notr po 8 znakov hkrati)?
+- ok, v hexa ne bo te&#382;ko spremenit, mam &#382;e funkcijo, ki to naredi
+- LE ok (a so mobilni telefoni Little Endian ali Big Endian?)
+- ne razumem pa tega odstavka Once you have stored...   najprej naj
+spremenim &#353;tevila v 32 bit unsigned(deseti&#353;ka pomojem), potem naj pa dam
+DESETI&#352;KA AND 0x7FFFFFFF al kaj?
+Tole je Javanska koda, ki to naredi(iz MSN Messenger knji&#382;nice):
+private int[] getMd5Ints(byte[] md5) 
+{
+        ByteBuffer buffer =
+ByteBuffer.wrap(md5).order(ByteOrder.LITTLE_ENDIAN);
+        int[] md5ints = new int[4];
+        for (int i = 0; i &lt; md5ints.length; i++) {
+            md5ints[i] = buffer.getInt() &amp; 0x7fffffff;	// to o&#269;itno kar
+dela!!!
+        }
+        return md5ints;
+    } 
+V bistvu bi blo treba samo tale ByteBuffer implementirat.
+
+Uf, bo &#353;e kar dost dela...
+
+Saj smo zmenjeni, da bo ta vikend delavni, ane?
+
+Lp, Zoran
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000020.html">[Jimmyim-devel] Delovni vikend
+</A></li>
+	<LI>Next message: <A HREF="000022.html">[Jimmyim-devel] MSNProtocol progress
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#21">[ date ]</a>
+              <a href="thread.html#21">[ thread ]</a>
+              <a href="subject.html#21">[ subject ]</a>
+              <a href="author.html#21">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

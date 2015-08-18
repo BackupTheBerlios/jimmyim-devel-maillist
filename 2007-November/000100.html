@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] Jimmyim-devel Digest, Vol 10, Issue 1
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2007-November/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Jimmyim-devel%20Digest%2C%20Vol%2010%2C%20Issue%201&In-Reply-To=%3Cca54e7f60711170617g12bdd175wa6ce5d17432b1849%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000099.html">
+   <LINK REL="Next"  HREF="000101.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] Jimmyim-devel Digest, Vol 10, Issue 1</H1>
+    <B>Matej Usaj</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20Jimmyim-devel%20Digest%2C%20Vol%2010%2C%20Issue%201&In-Reply-To=%3Cca54e7f60711170617g12bdd175wa6ce5d17432b1849%40mail.gmail.com%3E"
+       TITLE="[Jimmyim-devel] Jimmyim-devel Digest, Vol 10, Issue 1">usajusaj at usajusaj.org
+       </A><BR>
+    <I>Sat Nov 17 15:17:17 CET 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000099.html">[Jimmyim-devel] Jimmyim-devel Digest, Vol 10, Issue 1
+</A></li>
+        <LI>Next message: <A HREF="000101.html">[Jimmyim-devel] Jimmyim-devel Digest, Vol 10, Issue 1
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#100">[ date ]</a>
+              <a href="thread.html#100">[ thread ]</a>
+              <a href="subject.html#100">[ subject ]</a>
+              <a href="author.html#100">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi
+
+On 11/17/07, Zoran Mesec &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">zoran.mesec at gmail.com</A>&gt; wrote:
+&gt;<i>
+</I>&gt;<i>  Hi!
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Today's Topics:
+</I>&gt;<i>
+</I>&gt;<i>    1. Merged usajusaj-jabber with trunk (Matej Usaj)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i>   Zadeva:
+</I>&gt;<i> [Jimmyim-devel] Merged usajusaj-jabber with trunk  Od:
+</I>&gt;<i> &quot;Matej Usaj&quot; &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">usajusaj at gmail.com</A>&gt; &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">usajusaj at gmail.com</A>&gt;  Datum:
+</I>&gt;<i> Fri, 16 Nov 2007 20:11:28 +0100  Za:
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-devel at lists.berlios.de</A>    Za:
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-devel at lists.berlios.de</A>
+</I>&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> Just merged my version with trunk.
+</I>&gt;<i> Here is svn merge log:
+</I>&gt;<i> - Merge with usajusaj-jabber
+</I>&gt;<i> - Implemented Yahoo protocol (Some code and challenge binary data file
+</I>&gt;<i> borrowed from jYMSG project)
+</I>&gt;<i> - Jabber optimizations and minor bug fixes
+</I>&gt;<i> - ServerHandler code optimisations (getReply(...) methods were implemented
+</I>&gt;<i> 3 times allmost identicaly)
+</I>&gt;<i> - Added contact sorting. Primary sort is by status, secondary by name
+</I>&gt;<i> - Added Yahoo protocol to new account wizzard
+</I>&gt;<i> - Optimizations in Utils (too much type casting)
+</I>&gt;<i> - XmlNode toString() method implemented
+</I>&gt;<i>
+</I>&gt;<i> Please test it and report any bugs.
+</I>&gt;<i>
+</I>&gt;<i> Very cool! :D
+</I>&gt;<i> I have tried logging/chatting and found no problems.
+</I>&gt;<i> Is there any option to avoid the usage of java.security package? Because
+</I>&gt;<i> some devices do not have this installed.
+</I>&gt;<i>
+</I>
+I'll try to rewrite it using our local MD5 library.
+
+Also found out that MSN and ICQ protocols are out of order. Check their code
+&gt;<i> asap for protocol changes (I excluded my changes to the code from causes. I
+</I>&gt;<i> tested both protocols on last stable trunk version and it didn't work there
+</I>&gt;<i> either).
+</I>&gt;<i>
+</I>&gt;<i> MSN server is pretty f**** up, and it did not work in Pidgin in the last
+</I>&gt;<i> few days either.
+</I>&gt;<i>
+</I>
+Noted. On the other hand, ICQ is really busted, so I've rewritten the
+authentication procedure in a more dynamic way. Expect updates soon. I had
+to stop testing it yesterday because I was banned from the server for
+flooding it :) I hope they've unbanned be allready. Authentication is
+completed, only roster parsing is still busted.
+
+I also have a question regarding account login/logout.
+&gt;<i> How can I fire account logout procedure from within my protocol?
+</I>&gt;<i> Reason: I get LOGOFF packet in Yahoo protocol when I login with the same
+</I>&gt;<i> account from some other client. When this happens I should change the
+</I>&gt;<i> Display to MainMenu and execute the same code as it would be executed when I
+</I>&gt;<i> press Logout button on that Account in MainMenu.
+</I>&gt;<i>
+</I>&gt;<i> This is how you fire account logout from inside a protocol:
+</I>&gt;<i>                     this.connected_=false;
+</I>&gt;<i>                     this.status_=DISCONNECTED;
+</I>&gt;<i>                     this.logout();    //optional - only if you need to
+</I>&gt;<i> send packages for log out
+</I>&gt;<i> ...the disconnected protocol is then automatically removed from the list
+</I>&gt;<i> of connected protocols by the outside loop.
+</I>&gt;<i>
+</I>
+Thanks, I'll try it.
+
+cheers,
+&gt;<i> Zoran
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i> Matej U&#353;aj
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Jimmyim-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">Jimmyim-devel at lists.berlios.dehttps</A>://lists.berlios.de/mailman/listinfo/jimmyim-devel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Jimmyim-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">Jimmyim-devel at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">https://lists.berlios.de/mailman/listinfo/jimmyim-devel</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>cheers
+matej
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071117/c2c9efb3/attachment.html">https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20071117/c2c9efb3/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000099.html">[Jimmyim-devel] Jimmyim-devel Digest, Vol 10, Issue 1
+</A></li>
+	<LI>Next message: <A HREF="000101.html">[Jimmyim-devel] Jimmyim-devel Digest, Vol 10, Issue 1
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#100">[ date ]</a>
+              <a href="thread.html#100">[ thread ]</a>
+              <a href="subject.html#100">[ subject ]</a>
+              <a href="author.html#100">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>

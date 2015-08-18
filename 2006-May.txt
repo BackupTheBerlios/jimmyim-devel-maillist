@@ -1,0 +1,446 @@
+From zoran.mesec at siol.net  Tue May  2 12:19:23 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Tue, 2 May 2006 12:19:23 +0200
+Subject: [Jimmyim-devel] MIDP 2.0
+Message-ID: <000301c66dd1$e3be2680$ef5cfea9@hlev60c246b6a2>
+
+Hello!
+
+The supported protocol for JimmyIM should be MIDP 2.0, because it includes
+secure connection(MIDP 1.0 doesn't). We need https connection for logging to
+MSN server(and probably somewhere else).
+
+CLDC?
+
+See you, 
+Zoran
+
+
+
+From janez.urevc at siol.net  Thu May  4 12:46:14 2006
+From: janez.urevc at siol.net (JAnez Urevc)
+Date: Thu, 04 May 2006 12:46:14 +0200
+Subject: [Jimmyim-devel] Delovni vikend
+Message-ID: <4459DB76.8010809@siol.net>
+
+Oj,
+
+jaz sem ugotovil, da me totalno cajt ba?e iz vseh strani in se mi zdi,
+da se bom
+najla?je spravu delat an Jimmiju, ?e naredimo en delovni vikend. In sem
+razmi?ljal takole:
+
+V vikendu 12. - 14. vas povabim na morje, k meni domov. Kaj lahko
+ponudim? Plac
+za spat (kaka spalka nebi ?kovala), wireless internet;), wire internet,
+elektriko, kavo, ?aj, lep razgled, ....
+Prevoz lahko jaz zrihtam, saj mislim, da nas bo moj avto lahko vse 4
+prepeljal
+dol in nazaj.
+?e vas zanima mi ?imprej sporo?te, ker me ?ena isti viked vabi na izlet,
+pa bi
+blo fajn, ?e ji ?imprej povem, da ne bom ?el, ker bo z vsakim dnem bolj
+razo?arana nad mano:)
+
+JAnez
+
+
+
+From sakdean at gmail.com  Thu May  4 12:48:54 2006
+From: sakdean at gmail.com (Sahel)
+Date: Thu, 4 May 2006 12:48:54 +0200
+Subject: [Jimmyim-devel] Delovni vikend
+In-Reply-To: <4459DB76.8010809@siol.net>
+References: <4459DB76.8010809@siol.net>
+Message-ID: <3568adfc0605040348h15833503u41c84af0e51b636@mail.gmail.com>
+
+Zaradi mene lahko.
+lp
+Dejan
+
+On 5/4/06, JAnez Urevc <janez.urevc at siol.net> wrote:
+> Oj,
+>
+> jaz sem ugotovil, da me totalno cajt ba?e iz vseh strani in se mi zdi,
+> da se bom
+> najla?je spravu delat an Jimmiju, ?e naredimo en delovni vikend. In sem
+> razmi?ljal takole:
+>
+> V vikendu 12. - 14. vas povabim na morje, k meni domov. Kaj lahko
+> ponudim? Plac
+> za spat (kaka spalka nebi ?kovala), wireless internet;), wire internet,
+> elektriko, kavo, ?aj, lep razgled, ....
+> Prevoz lahko jaz zrihtam, saj mislim, da nas bo moj avto lahko vse 4
+> prepeljal
+> dol in nazaj.
+> ?e vas zanima mi ?imprej sporo?te, ker me ?ena isti viked vabi na izlet,
+> pa bi
+> blo fajn, ?e ji ?imprej povem, da ne bom ?el, ker bo z vsakim dnem bolj
+> razo?arana nad mano:)
+>
+> JAnez
+>
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+
+
+From sakdean at gmail.com  Fri May  5 00:54:30 2006
+From: sakdean at gmail.com (Sahel)
+Date: Fri, 5 May 2006 00:54:30 +0200
+Subject: [Jimmyim-devel] Delovni vikend
+In-Reply-To: <445A680C.20608@gmail.com>
+References: <001c01c66f7f$1d81e6a0$ef5cfea9@hlev60c246b6a2>
+	 <445A680C.20608@gmail.com>
+Message-ID: <3568adfc0605041554p679dcf8ep312184a923b0ff93@mail.gmail.com>
+
+Za to stvar naj bi imeli cajt do jeseni za zagovorit kot jst vem.
+Ampak ja. Se ga lotevam.
+lp
+Dejan
+
+On 5/4/06, Matev? Jekovec <matevz.jekovec at gmail.com> wrote:
+> Stvar MORAMO narest in zagovorit pred koncem semestra!! Janez+Sahel - se
+> lahko zakopljeta ?e v ta GUI in napi?eta svoja dognanja na Wiki.
+> Poglejta, kar je do sedaj blo napisanega na Wikiju in pa podobne
+> projekte - kako deluje Bombus, JIMM in ?e kak?en j2me messenger.
+> Potrebujemo pa tut kak?en logotip za jimmyja, tko da ?e ima kdo kak?no
+> idejo, kar na plan.
+>
+> lp.
+> -M
+>
+> Zoran Mesec wrote:
+> > Hvala za povabilo, toda ?al se moram strinjati z Matev?em. Saj bi se z
+> > veseljem ?el mal kopat, ampak ni ?asa. Bo kar overIP :)
+> >
+> > Jaz mislim, da je bolje, ?e stvar naredimo do konca semestra - saj veste
+> > kako je med poletjem s ?olskimi stvarmi... :) - sploh pa mene en mesec med
+> > poletjem ne bo...
+> >
+> > Lp, Zoran
+> >
+> > -----Original Message-----
+> > From: Matev? Jekovec [mailto:matevz.jekovec at gmail.com]
+> > Sent: Thursday, May 04, 2006 3:14 PM
+> > To: JAnez Urevc; Zoran Mesec; Sahel
+> > Subject: Re: [Jimmyim-devel] Delovni vikend
+> >
+> > Ej, te?ko bi jest pri?el... bomo mel intenzivno pevsko v soboto
+> > dopoldne, 13. maja. Naslednji vikend mam pa jest tut rezerviran za
+> > izlet... Lahko kak?no konferen?no zvezo nardimo al pa kej tacga. Pa mamo
+> > dva tabora - Gorenjski in Primorski :)
+> >
+> > lp.
+> > -M
+> >
+> > JAnez Urevc wrote:
+> >
+> >> Oj,
+> >>
+> >> jaz sem ugotovil, da me totalno cajt ba?e iz vseh strani in se mi zdi,
+> >> da se bom
+> >> najla?je spravu delat an Jimmiju, ?e naredimo en delovni vikend. In sem
+> >> razmi?ljal takole:
+> >>
+> >> V vikendu 12. - 14. vas povabim na morje, k meni domov. Kaj lahko
+> >> ponudim? Plac
+> >> za spat (kaka spalka nebi ?kovala), wireless internet;), wire internet,
+> >> elektriko, kavo, ?aj, lep razgled, ....
+> >> Prevoz lahko jaz zrihtam, saj mislim, da nas bo moj avto lahko vse 4
+> >> prepeljal
+> >> dol in nazaj.
+> >> ?e vas zanima mi ?imprej sporo?te, ker me ?ena isti viked vabi na izlet,
+> >> pa bi
+> >> blo fajn, ?e ji ?imprej povem, da ne bom ?el, ker bo z vsakim dnem bolj
+> >> razo?arana nad mano:)
+> >>
+> >> JAnez
+> >>
+> >>
+> >
+> >
+> >
+> >
+>
+>
+>
+
+
+From zoran.mesec at siol.net  Thu May 11 23:34:39 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Thu, 11 May 2006 23:34:39 +0200
+Subject: [Jimmyim-devel] server challenge
+Message-ID: <000301c67542$b654cd20$ef5cfea9@hlev60c246b6a2>
+
+Tukajle se mi zatakne. MSN server kmalu po prijavi po?lje en t.i. challenge.
+Ta challenge je treba najprej zakodirati z MD5 - to sem naredil. Sedaj imam
+String hash, na njem moram izvajati naslednje operacije:
+
+After you have generated this hash you should store it in an array, with
+each element having a size of 8 bytes. Because the size of the MD5 hash is
+32 bytes, you will get 4 elements. Then you can treat each element as a
+regular hexidecimal number (0xec4917aa, 0x5b301715, 0x9e3947f8, 0xff981604).
+
+
+These hexadecimal numbers should be written in Little Endian order, this
+means that you should swap the bytes around in a number of languages (for
+example PHP and C#, but not Perl and Visual Basic) in order to have access
+to the values of these integers. You should also take in account the default
+Endian Order of the system you are working on (for example, Intel machines
+are LE, while Apple machines are typically using BE). 
+
+Once you have stored them in the array, and have converted each of the
+elements to regular numbers (32 bit unsigned) you should logically AND them
+with 0x7FFFFFFF. If you want to test if your code correctly swaps the bytes
+around (if needed) and if the MD5 hash is getting divided correctly, then
+you could compare them with these values:
+
+
+1: 0x2a1749ec = 706169324
+2: 0x1517305b = 353841243
+3: 0x7847399e = 2017933726
+4: 0x041698ff = 68589823
+
+
+After this, the first step is complete and you can proceed to the next step.
+
+
+
+Problem je, ker v j2me ni paketa java.nio , ki s takimi zadevami opravi
+hitro.
+
+Gremo po vrsti:
+- kako naj rezerviram tabelo, da bo vsak element imel 8 bajtov (ena mo?nost
+je, da naredim tabelo stringov in dam notr po 8 znakov hkrati)?
+- ok, v hexa ne bo te?ko spremenit, mam ?e funkcijo, ki to naredi
+- LE ok (a so mobilni telefoni Little Endian ali Big Endian?)
+- ne razumem pa tega odstavka Once you have stored...   najprej naj
+spremenim ?tevila v 32 bit unsigned(deseti?ka pomojem), potem naj pa dam
+DESETI?KA AND 0x7FFFFFFF al kaj?
+Tole je Javanska koda, ki to naredi(iz MSN Messenger knji?nice):
+private int[] getMd5Ints(byte[] md5) 
+{
+        ByteBuffer buffer =
+ByteBuffer.wrap(md5).order(ByteOrder.LITTLE_ENDIAN);
+        int[] md5ints = new int[4];
+        for (int i = 0; i < md5ints.length; i++) {
+            md5ints[i] = buffer.getInt() & 0x7fffffff;	// to o?itno kar
+dela!!!
+        }
+        return md5ints;
+    } 
+V bistvu bi blo treba samo tale ByteBuffer implementirat.
+
+Uf, bo ?e kar dost dela...
+
+Saj smo zmenjeni, da bo ta vikend delavni, ane?
+
+Lp, Zoran
+
+
+
+
+
+From zoran.mesec at siol.net  Wed May 17 18:20:31 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Wed, 17 May 2006 18:20:31 +0200
+Subject: [Jimmyim-devel] MSNProtocol progress
+Message-ID: <000901c679cd$d28fbdd0$ef5cfea9@hlev60c246b6a2>
+
+Uporaba:
+
+        MSNProtocol myProtocol = new MSNProtocol();
+        if(myProtocol.login("example at example.com", "secret_passwd))
+        {
+            myProtocol.printContacts();
+            ChatSession cs =
+myProtocol.startChatSession((Contact)myProtocol.getContacts().firstElement()
+);
+            cs.sendMsg("Wazzupp!!!");
+            cs.sendMsg("Gremo jutri na kavo?");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
+            myProtocol.logout();
+        }
+        else
+        {
+            System.out.println("Login failed!!!");
+        }
+
+Lp, Zoran
+
+
+
+From matevz.jekovec at gmail.com  Wed May 17 21:40:52 2006
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Wed, 17 May 2006 21:40:52 +0200
+Subject: [Jimmyim-devel] MSNProtocol progress
+In-Reply-To: <000901c679cd$d28fbdd0$ef5cfea9@hlev60c246b6a2>
+References: <000901c679cd$d28fbdd0$ef5cfea9@hlev60c246b6a2>
+Message-ID: <446B7C44.2070009@gmail.com>
+
+Tole sem zdej premislu in sem se odlo?u, da ne bo cs.sendMsg(), ampak
+myProtocol.sendMsg(). S tem, da bo? zravn dodal ?e argument chat
+session. Metoda sendMsg() bo vrnila kak?n exception, ?e podan
+chatSession ne bo obstajal.
+
+lp.
+-M
+
+Zoran Mesec wrote:
+> Uporaba:
+>
+>         MSNProtocol myProtocol = new MSNProtocol();
+>         if(myProtocol.login("example at example.com", "secret_passwd))
+>         {
+>             myProtocol.printContacts();
+>             ChatSession cs =
+> myProtocol.startChatSession((Contact)myProtocol.getContacts().firstElement()
+> );
+>             cs.sendMsg("Wazzupp!!!");
+>             cs.sendMsg("Gremo jutri na kavo?");
+>             try {
+>                 Thread.sleep(5000);
+>             } catch (InterruptedException ex) {
+>                 ex.printStackTrace();
+>             }
+>             myProtocol.logout();
+>         }
+>         else
+>         {
+>             System.out.println("Login failed!!!");
+>         }
+>
+> Lp, Zoran
+>   
+
+
+
+
+From sakdean at gmail.com  Sun May 21 01:30:36 2006
+From: sakdean at gmail.com (Sahel)
+Date: Sun, 21 May 2006 01:30:36 +0200
+Subject: [Jimmyim-devel] Config file storage
+Message-ID: <3568adfc0605201630j2802ced8ke80cd223dbdad3cd@mail.gmail.com>
+
+We will use RMS to store config files of jimmyim.
+I think this example tells us everything we need:
+
+http://www-128.ibm.com/developerworks/library/wi-rms/
+
+bye
+Dejan
+
+
+From zoran.mesec at siol.net  Tue May 23 20:36:28 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Tue, 23 May 2006 20:36:28 +0200
+Subject: [Jimmyim-devel] reordering SVN
+Message-ID: <000001c67e97$cf8a59f0$ef5cfea9@hlev60c246b6a2>
+
+Hello!
+
+I like the reordering of SVN. There is a method in MSNProtocol called
+hexToInt(String s) that converts string of hex numbers into a integer(this
+method is needed for parsing of MSN server challenge). I will put this
+method in file Utils.java.
+
+Cheers, Zoran 
+
+
+
+From sakdean at gmail.com  Wed May 24 03:41:06 2006
+From: sakdean at gmail.com (Sahel)
+Date: Wed, 24 May 2006 03:41:06 +0200
+Subject: [Jimmyim-devel] reordering SVN
+In-Reply-To: <000001c67e97$cf8a59f0$ef5cfea9@hlev60c246b6a2>
+References: <000001c67e97$cf8a59f0$ef5cfea9@hlev60c246b6a2>
+Message-ID: <3568adfc0605231841q1af889e5y5b23066c1f69e769@mail.gmail.com>
+
+I hope you all like the new SVN arrangement I made.
+bye
+Dejan
+
+On 5/23/06, Zoran Mesec <zoran.mesec at siol.net> wrote:
+> Hello!
+>
+> I like the reordering of SVN. There is a method in MSNProtocol called
+> hexToInt(String s) that converts string of hex numbers into a integer(this
+> method is needed for parsing of MSN server challenge). I will put this
+> method in file Utils.java.
+>
+> Cheers, Zoran
+>
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+
+
+From zoran.mesec at siol.net  Sun May 28 23:47:27 2006
+From: zoran.mesec at siol.net (Zoran Mesec)
+Date: Sun, 28 May 2006 23:47:27 +0200
+Subject: [Jimmyim-devel] RMI & Caboodle
+Message-ID: <000001c682a0$51249cd0$ef5cfea9@hlev60c246b6a2>
+
+Hello!
+
+So, we have decided to use RMI for persistent storage of data(accounts,
+etc.). Here is a plugin for quick handling with RMI for IDEs (basically it
+is just another java class). We should decide whether to use this or we will
+write our own class :
+
+http://www.netcaboodle.com/docs/netbeans-install.htm
+
+
+
+Regards, Zoran
+
+
+
+From sakdean at gmail.com  Mon May 29 01:44:21 2006
+From: sakdean at gmail.com (Sahel)
+Date: Mon, 29 May 2006 01:44:21 +0200
+Subject: [Jimmyim-devel] RMI & Caboodle
+In-Reply-To: <000001c682a0$51249cd0$ef5cfea9@hlev60c246b6a2>
+References: <000001c682a0$51249cd0$ef5cfea9@hlev60c246b6a2>
+Message-ID: <3568adfc0605281644g14b6a749qacb25f3a45ead26@mail.gmail.com>
+
+Hmmm. I don't understand. Why do we need RMI for local storage of that
+kind of data? RMI stands for Remote Method Invocation (RPC like
+stuff).
+I already sent this link. Take a better look at it.
+
+http://www-128.ibm.com/developerworks/library/wi-rms/
+
+bye
+Dejan
+
+On 5/28/06, Zoran Mesec <zoran.mesec at siol.net> wrote:
+> Hello!
+>
+> So, we have decided to use RMI for persistent storage of data(accounts,
+> etc.). Here is a plugin for quick handling with RMI for IDEs (basically it
+> is just another java class). We should decide whether to use this or we will
+> write our own class :
+>
+> http://www.netcaboodle.com/docs/netbeans-install.htm
+>
+>
+>
+> Regards, Zoran
+>
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+
+

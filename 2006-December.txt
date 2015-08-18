@@ -1,0 +1,121 @@
+From jimmyim-user at bat.berlios.de  Mon Dec 11 16:57:52 2006
+From: jimmyim-user at bat.berlios.de (jimmyim-user at bat.berlios.de)
+Date: Mon, 11 Dec 2006 16:57:52 +0100 (CET)
+Subject: [Jimmyim-devel] Bug report
+Message-ID: <20061211165752.6282.jimmyim-user@lists.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20061211/8563c4b1/attachment.html>
+
+From zoran.mesec at gmail.com  Tue Dec 12 16:04:58 2006
+From: zoran.mesec at gmail.com (Zoran Mesec)
+Date: Tue, 12 Dec 2006 16:04:58 +0100
+Subject: [Jimmyim-devel] Bug report
+In-Reply-To: <20061211165752.6282.jimmyim-user@lists.berlios.de>
+Message-ID: <001f01c71dfe$e4de6fb0$0200a8c0@HlevZoran60c246b6a2>
+
+Hello!
+
+ 
+
+Thank you for you kind words, we appreciate it.  But sory to dissapoint you,
+we are not the Reporo team.
+
+ 
+
+Regards, Zoran Mesec 
+
+JimmyIM development team
+
+  _____  
+
+From: jimmyim-user at bat.berlios.de [mailto:jimmyim-user at bat.berlios.de] 
+Sent: Monday, December 11, 2006 4:58 PM
+To: jimmyim-devel at bat.berlios.de
+Cc: zoran.mesec at gmail.com
+Subject: Bug report
+
+ 
+
+JimmyIM has a new bug:
+Submited by:Iain Rosie
+Email: iain.rosie at dsl.pipex.com
+Bug type:
+Bug decription:Hi, very impressive work, are you the guys Reporo are using
+for their IM (www.reporo.com) ? cheers Iain
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20061212/567ec337/attachment.html>
+
+From sakdean at gmail.com  Sun Dec 31 16:08:54 2006
+From: sakdean at gmail.com (Sahel)
+Date: Sun, 31 Dec 2006 16:08:54 +0100
+Subject: [Jimmyim-devel] Kateri kreten ...
+Message-ID: <3568adfc0612310708k2b7cc0e4o9329642277ccac6b@mail.gmail.com>
+
+je sel spreminjat API Protocol.java classa!?!?!?!?!?!?
+
+Pa koj kurac vam ni jasen!?!?!?
+
+APIja se ne spreminja, ko se cloveku sprdne!
+
+Pa ce je ze to potrebno (ampak ni bilo) se to sporoci na listo glede
+na to, da je to Osnovni gradnik!
+
+To niste naredili prvic in zato sm popizdu!
+APIja se ne tika! Metode se da pod deprecated ne pa da se jih brise!
+
+matr vam za novo leto
+Dejan
+
+
+From matevz.jekovec at gmail.com  Sun Dec 31 19:28:08 2006
+From: matevz.jekovec at gmail.com (=?UTF-8?B?TWF0ZXbFviBKZWtvdmVj?=)
+Date: Sun, 31 Dec 2006 19:28:08 +0100
+Subject: [Jimmyim-devel] Kateri kreten ...
+In-Reply-To: <3568adfc0612310708k2b7cc0e4o9329642277ccac6b@mail.gmail.com>
+References: <3568adfc0612310708k2b7cc0e4o9329642277ccac6b@mail.gmail.com>
+Message-ID: <45980138.4030306@gmail.com>
+
+Kaj konkretno je problem?
+Kode se nisem dotikal ?e od septembra. Zadnja stvar, ki sem jo delal iz
+moje strani je SSL povezava, ki je vse pripravljeno, samo ni je bilo
+mogo?e na lep na?in implementirati, zato so lastnosti ostale tam, ni pa
+?e nobene logike zadej.
+
+Ne spomnim se, da bi kaj brisov.
+
+
+-M
+
+Sahel pravi:
+> je sel spreminjat API Protocol.java classa!?!?!?!?!?!?
+>
+> Pa koj kurac vam ni jasen!?!?!?
+>
+> APIja se ne spreminja, ko se cloveku sprdne!
+>
+> Pa ce je ze to potrebno (ampak ni bilo) se to sporoci na listo glede
+> na to, da je to Osnovni gradnik!
+>
+> To niste naredili prvic in zato sm popizdu!
+> APIja se ne tika! Metode se da pod deprecated ne pa da se jih brise!
+>
+> matr vam za novo leto
+> Dejan
+> _______________________________________________
+> Jimmyim-devel mailing list
+> Jimmyim-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jimmyim-devel
+>
+>   
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 252 bytes
+Desc: OpenPGP digital signature
+URL: <https://lists.berlios.de/pipermail/jimmyim-devel/attachments/20061231/e0ac7a57/attachment.pgp>
+

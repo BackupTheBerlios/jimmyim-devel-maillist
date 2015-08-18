@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jimmyim-devel] setting up JimmyIM in Eclipse IDE
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jimmyim-devel/2006-October/index.html" >
+   <LINK REL="made" HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20setting%20up%20JimmyIM%20in%20Eclipse%20IDE&In-Reply-To=%3C000301c6f5bf%246636bda0%240200a8c0%40HlevZoran60c246b6a2%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000046.html">
+   <LINK REL="Next"  HREF="000049.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jimmyim-devel] setting up JimmyIM in Eclipse IDE</H1>
+    <B>Zoran Mesec</B> 
+    <A HREF="mailto:jimmyim-devel%40lists.berlios.de?Subject=Re%3A%20%5BJimmyim-devel%5D%20setting%20up%20JimmyIM%20in%20Eclipse%20IDE&In-Reply-To=%3C000301c6f5bf%246636bda0%240200a8c0%40HlevZoran60c246b6a2%3E"
+       TITLE="[Jimmyim-devel] setting up JimmyIM in Eclipse IDE">zoran.mesec at gmail.com
+       </A><BR>
+    <I>Sun Oct 22 11:49:39 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000046.html">[Jimmyim-devel] Bug report
+</A></li>
+        <LI>Next message: <A HREF="000049.html">[Jimmyim-devel] setting up JimmyIM in Eclipse IDE
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#47">[ date ]</a>
+              <a href="thread.html#47">[ thread ]</a>
+              <a href="subject.html#47">[ subject ]</a>
+              <a href="author.html#47">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello!
+
+This is how I setup JimmyIM in Eclipse:
+-after installing Eclipse &amp; eclipseME, I setup the J2ME configuration in
+Window-&gt;Preferences-&gt;J2ME:
+- First Set the WTK root(basically your folder where you installed Wirelles
+toolkit)
+- go to Device management and Import, then specify the directory(usually the
+same as WTK root) and click refresh - in my case, 4 devices were found, that
+is all you need. Click finish and then select e.q. DefaultColorPhone.
+
+Create new Project(J2ME projects - J2ME Midlet Suite) and called it JimmyIM.
+In the New J2ME Project dialog the Device-Group should be automatically
+selected(J2ME Wirelles toolkit 2.2 in my case and DefaultColorPhone for
+default device) if you have done first three steps. Do not mess with the
+Library tab and other tabs - it should work out of the box.
+
+Then just copy everything to your project folder. The project directory on
+your hard drive should look something like this(depends on the platform and
+the IDE version):
+
+.settings
+jimmy(with files Account.java, ChatSession.java, Jimmy.java,... and
+subfolders icq, jabber, media, ...)
+verified
+.claspath
+.eclipseme
+.project
+JimmyIM.jad
+
+Refresh the project and run it. A Run dialog opens up. Select Wireless
+tookit emulator and New_configuration(create one if it does not exists) with
+the Executable-&gt;Midlet jimmy.Jimmy (in my case, this were default settings).
+Run! The emulator should pop out.
+
+I did not get any warnings or errors. JimmyIM.jar and JimmyIM.jad are build
+automatically everytime you run&amp;build project in folder /deployed.
+
+Regards, 
+Zoran Mesec
+
+
+-----Original Message-----
+From: <A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-user-bounces at lists.berlios.de</A>
+[mailto:<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">jimmyim-user-bounces at lists.berlios.de</A>] On Behalf Of Mathias Sundman
+Sent: Saturday, October 21, 2006 9:53 PM
+To: Matev&#382; Jekovec
+Cc: JimmyIM-Users
+Subject: Re: [Jimmyim-user] Problem connecting to MSN network
+
+On Sat, 21 Oct 2006, Matev Jekovec wrote:
+
+&gt;<i> Mathias Sundman pravi:
+</I>&gt;&gt;<i> Hmm, that's kinda where I'm stuck right now. I'm trying to launch the
+</I>&gt;&gt;<i> app from inside Eclipse using the wireless toolkit emulator. However
+</I>&gt;&gt;<i> it just halts with the following error:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ALERT: java/lang/ClassFormatError: Bad version information.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> If I download the .jar/.jad file you provide on your site I can
+</I>&gt;&gt;<i> successfully run in it the emulator though.
+</I>&gt;<i> 
+</I>&gt;<i> Did you try running the jad manually with emulator? (emulator.exe should
+</I>&gt;<i> be located in your j2me wireless toolkit I think or even in java dir -
+</I>&gt;<i> under Linux).
+</I>
+I'm trying two diffrent tracks right now and I'm kinda stuck on both :-)
+
+1) Running it from within Eclipse using the emulator.
+2) Exporting to a JAR file and run manually in the emulator.
+
+
+Problem #1 is still stuck as above on the error &quot;Bad version information&quot;. 
+Is there any reference in the source or some desc file that refers to the 
+version of Java or the wireless toolkit you used that I might need to 
+change to match the versions I'm using?
+
+
+Problem #2, I'm not really confident with how to create the .jar and .jad 
+file properly. I rightclick the project and select Export and then 
+Java-&gt;JAR file.
+
+I'm seeing a number of problems.
+
+a) At the end of the export wizard I'm asked to enter &quot;Select the class of 
+the application entry point&quot;, but when I click Browse the window is empty 
+and even if I manually writes &quot;jimmy&quot; there it complains about that the 
+class is not selected for export or has no main method.
+
+b) If I extract the created jar file and looks in the MANIFEST.MF file it 
+only contains
+
+Manifest-Version: 1.0
+
+while the MANIFEST.MF file in your jar file contains alot more info. This 
+causes the emulator to halt when I try to run my jar file with the 
+following error:
+
+com.sun.kvem.midletsuite.InvalidJadException: Reason = 13
+The file Manifest is missing the required attribute: MIDlet-Name
+
+So, the question is how do I make Eclipse include the project details in 
+the exported manifest file?
+
+c) How do I create the .jad file. I'm currently using your .jad file and 
+simply modiles the size attribute to match my jar file.
+
+
+d) I can see in the source zip file there is a build.xml file that seems 
+to hold the attributes I need to put in the manifest file. How do I use 
+that xml file to build the .jar/.jad file?
+
+
+Sorry for all these qustions, but right now I just feel like a big 
+question mark and am not sure really where to dig for more info about 
+these problems..
+
+Cheers / Mathias
+_______________________________________________
+Jimmyim-user mailing list
+<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">Jimmyim-user at lists.berlios.de</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/jimmyim-user">https://lists.berlios.de/mailman/listinfo/jimmyim-user</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000046.html">[Jimmyim-devel] Bug report
+</A></li>
+	<LI>Next message: <A HREF="000049.html">[Jimmyim-devel] setting up JimmyIM in Eclipse IDE
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#47">[ date ]</a>
+              <a href="thread.html#47">[ thread ]</a>
+              <a href="subject.html#47">[ subject ]</a>
+              <a href="author.html#47">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jimmyim-devel">More information about the Jimmyim-devel
+mailing list</a><br>
+</body></html>
